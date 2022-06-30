@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="main">
+  <view class="nav">
+    <view
+      class="item {{item.id === pageId ? 'active' : ''}}" 
+      hover-class="{{item.id === pageId ? 'none' : 'hover'}}"
+      data-page-id="{{item.id}}"
+      bindtap="navigate"
+      wx:key="{{item.id}}" wx:for="{{menuList}}">
+      {{item.name}}
+    </view>
+  </view>
+  <scroll-view scroll-y="true" class="video-scroll"
+    scroll-x="false" bindscrolltolower="handleNextPage" 
+    lower-threshold="50"> 
+    <view class="video-list">
+      <navigator url="../play/play?id={{item.id}}"  class="item" 
+        hover-class="none"
+        wx:for="{{videoList}}" wx:key="{{item.iVideoId}}">
+        <view class="img-wrapper">
+          <image src="{{item.picUrl}}"></image>
+          <view class="play-info">
+            <view class="icon-play"></view>
+            <text class="play-times">{{item.playCount}}</text>
+            <text class="published-time">{{item.updatedAt}}
+            </text>
+          </view>
+        </view>
+        <view class="info-wrapper">
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/no-more.wxml-->
+<view class="no-more-wrap">
+  <text>没有更多了</text>
+</view>

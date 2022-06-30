@@ -1,0 +1,28 @@
+{
+  "saveCurrentNum": [
+    {
+      "id": 1,
+      "gzhName": "测试",
+      "num": 20,
+      "currentTime": "2017-05-24 9:56:33"
+    },
+    {
+      "id": 2,
+      "gzhName": "测试1111",
+      "num": 26,
+      "currentTime": "2017-05-24 10:00:33"
+    },
+    {
+      "id": "3",
+      "num": "1",
+      "gzhName": "TrumanYu",
+      "currentTime": "Wed May 24 2017 12:03:17 GMT+0800 (中国标准时间)"
+    },
+    {
+      "id": "4",
+      "num": "1",
+      "gzhName": "TrumanYu",
+      "currentTime": "Wed May 24 2017 13:05:54 GMT+0800 (中国标准时间)"
+    }
+  ]
+}

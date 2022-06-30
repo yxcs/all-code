@@ -1,0 +1,132 @@
+<!--components/package-theme.wxml-->
+<view class="wee--pacakge_theme-wrap">
+  <view class="theme-title"><text>{{datas.name}}</text></view>
+  <view class="theme-tag"><view class="hotel-tag_rb pad20">节省{{datas.precent}}%</view></view>
+  <view class="theme-price">
+    <view class="old"><view class="line"></view><text>{{datas.origin_price}}元</text></view>
+    <view class="new"><text>{{datas.price}}</text>元</view>
+  </view>
+
+  <view wx:if="{{datas.promotion_info.length}}" class="package-shock">
+    <view class="shock-title"><text>心动特惠</text></view>
+    <view class="shock-swiper">
+      <swiper indicator-dots="{{true}}" indicator-color="rgba(0,0,0,.1)" indicator-active-color="#ff4f4e">
+        <block wx:for="{{datas.promotion_info}}" wx:key="_id">
+          <swiper-item>
+            <view class="swiper-wrap bg-loading">
+              <view class="img"><image mode="scaleToFill" src="{{item.image_url}}"></image></view>
+              <view class="des">
+                <view class="des-title">{{item.title}}</view>
+                <view class="des-text"><text>• </text>{{item.description}}</view>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <view class="package-contain">
+    <view class="contain-title"><text>套餐内容</text></view>
+    <view class="contain-item">
+      <view wx:for="{{datas.info}}" wx:key="_id" class="item">• <text>{{item.desc}}\n</text></view>
+    </view>
+  </view>
+
+  <navigator 
+    wx:if="{{datas.relevance_hotels && datas.relevance_hotels.length}}" 
+    hover-class="none" 
+    url="/pages/hotelDetail/hotelDetail?hId={{datas.relevance_hotels[0].id}}">
+    <view class="package-hotel">
+      <view class="hotel-title"><text>相关酒店</text></view>
+      <view class="hotel-detail">
+        <view class="img bg-loading">
+          <image mode="scaleToFill" src="{{datas.relevance_hotels[0].cover_image_url}}"></image>
+        </view>
+        <View class="des-wrap">
+          <view class="title">{{datas.relevance_hotels[0].title}}</view>
+          <view class="des">{{datas.relevance_hotels[0].description}}</view>
+          <view class="price">
+            <view class="price-num">{{datas.relevance_hotels[0].price}}元<text>起</text></view>
+            <view class="hotel-tag_rb-sm">{{datas.relevance_hotels[0].category.name}}</view>
+          </view>
+        </View>
+      </view>
+      <view class="more"><text>查看详情 ></text></view>
+    </view>
+  </navigator>
+
+  <view class="package-recommend">
+    <view class="recommend-title"><text>推荐理由</text></view>
+    <view wx:for="{{datas.recommend_reason}}" class="recommend-list">
+      <view class="item">
+        <view class="ittle"><view></view><text>{{item.title}}</text></view>
+        <view class="des">
+          <view wx:for="{{item.desc}}" class="des-item" wx:for-item="subItem">• <text>{{subItem}}</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="package-feature">
+    <view class="feature-title"><text>套餐特色</text></view>
+    <view class="feature-des">
+      <view class="title"><view></view><text>{{datas.highlights[0].title}}</text></view>
+      <view class="des"><text>{{datas.highlights[0].description}}</text></view>
+      <view class="img bg-loading"><image mode="scaleToFill" src="{{datas.highlights[0].image_url}}"></image></view>
+    </view>
+    <navigator hover-class="none" url="/pages/packageFeature/packageFeature?pId={{datas._id}}">
+      <view class="more-wrap"><view class="hotel-tag_bb pad80">更多特色</view></view>
+    </navigator>
+  </view>
+
+  <view class="package-travel">
+    <view class="travel-title"><text>行程推荐</text></view>
+    <view class="travel-date-title"><view></view><text>第1天</text></view>
+    <view class="travel-small-title">
+      <image mode="scaleToFill" src="https://img3.weegotr.com/xcx/statics/flag.png"></image>
+      <text>{{datas.travel_plan[0].plan_title}}</text>
+    </view>
+    <view class="travel-list">
+      <view class="item">• <text>{{datas.travel_plan[0].plan_content}}</text></view>
+    </view>
+    <view class="travel-img bg-loading"><image mode="scaleToFill" src="{{datas.travel_plan[0].img_content[0].image_url}}"></image></view>
+    <view class="feature-text"><text>{{datas.travel_plan[0].img_content[0].image_desc}}</text></view>
+    <navigator hover-class="none" url="/pages/packageTravel/packageTravel?pId={{datas._id}}"><view class="more-wrap"><view class="hotel-tag_bb pad80">更多行程</view></view></navigator>
+  </view>
+
+  <view class="package-detail">
+    <view class="detail-title"><text>套餐详情</text></view>
+    <view class="detail-small-title">
+      <view class="title">
+        <view></view>
+        <text>{{datas.name}}</text>
+      </view>
+      <view class="price">{{datas.price}}元<text>起</text></view>
+    </view>
+    <view class="detail-img">
+      <swiper indicator-dots="{{true}}">
+        <block wx:for="{{datas.service_images}}" wx:key="_id">
+          <swiper-item class="bg-loading">
+            <image mode="scaleToFill" src="{{item.image_url}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="detail-list">
+      <view wx:for="{{datas.booking_info}}" wx:key="*this" class="item">• <text>{{item}}\n</text></view>
+    </view>
+  </view>
+
+  <view class="package-footer">
+    <view class="customer-info">
+      <view><navigator hover-class="none" url="/pages/expenseNote/expenseNote?pId={{datas._id}}">费用说明</navigator></view>
+      <view><navigator hover-class="none" url="/pages/preBookNote/preBookNote?pId={{datas._id}}">预定须知</navigator></view>
+    </view>
+    <view bindtap="makePhoneCall" class="customer-small-title"><image src="https://img3.weegotr.com/xcx/statics/customer-red.png"></image><text>24小时在线客服</text></view>
+    <view bindtap="makePhoneCall"  class="customer-phone"><view class="hotel-tag_bb pad20">010-57273085</view></view>
+    <view class="customer-des"><text>• 我们会继续努力，不断改善，为您提供优质服务</text></view>
+    <view class="customer-logo"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+  </view>
+
+</view>

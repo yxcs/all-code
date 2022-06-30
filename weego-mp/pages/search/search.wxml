@@ -1,0 +1,72 @@
+<!--pages/search/search.wxml-->
+<scroll-view class="wrap">
+  <view class="search-wrap">
+    <view class="search">
+      <view class="input-under"><text wx:if="{{!isFocus}}">搜索酒店/套餐/城市名称</text></view>
+      <view class="input-up">
+        <view bindtap="onSearch" class="icon"><icon type="search" color="#818181" size="18"/></view>
+        <input 
+          type="search"
+          bindinput="onSearch"
+          bindconfirm="onSearch"
+          bindfocus="onSearchFocus"
+          bindblur="onSearchBlur"
+          value="{{value}}" />
+        <view bindtap="onClearTap" class="clear"><icon type="clear" color="#818181" size="15"/></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 推荐列表 -->
+  <view class="list">
+    <!-- loading -->
+    <view wx:if="{{isSearch}}" class="footer-loading">
+      <view class="first"></view>
+      <view class="second"></view>
+      <view></view>
+    </view>
+    <!-- 搜索结果列表 -->
+    <view wx:if="{{!!value && !searchList.length && !isSearch}}" class="title">搜索结果为空</view>
+    
+    <block wx:for="{{searchList}}" wx:key="_id">
+      <view data-item="{{item}}" class="item" bindtap="onItemTap">
+        <view class="img">
+          <image wx:if="{{item.type === 'city'}}" src="https://img3.weegotr.com/xcx/statics/city.png"></image>
+          <image wx:elif="{{item.type === 'hotels'}}" src="https://img3.weegotr.com/xcx/statics/hotel-search.png"></image>
+          <image wx:else src="https://img3.weegotr.com/xcx/statics/package.png"></image>
+        </view>
+        <view class="text">
+          <view class="zh">
+            <block wx:for="{{item.nameArr}}" wx:for-item="subItem">
+              <text wx:if="{{subItem.type === 'key'}}">{{subItem.text}}</text>
+              <block wx:else>{{subItem.text}}</block>
+            </block>
+          </view>
+          <view class="en">
+            <block wx:for="{{item.nameEnArr}}" wx:for-item="subItem">
+              <text wx:if="{{subItem.type === 'key'}}">{{subItem.text}}</text>
+              <block wx:else>{{subItem.text}}</block>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view wx:if="{{!value || !searchList.length}}" class="title">为您推荐：</view>
+
+    <block wx:for="{{(!value || !searchList.length) ? recommendList : []}}" wx:key="_id">
+      <view data-item="{{item}}" class="item" bindtap="onItemTap">
+        <view class="img">
+          <image wx:if="{{item.type === 'city'}}" src="https://img3.weegotr.com/xcx/statics/city.png"></image>
+          <image wx:elif="{{item.type === 'hotels'}}" src="https://img3.weegotr.com/xcx/statics/hotel-search.png"></image>
+          <image wx:else src="https://img3.weegotr.com/xcx/statics/package.png"></image>
+        </view>
+        <view class="text">
+          <view class="zh">{{item.name}}{{item.label}}</view>
+          <view class="en">{{item.name_en}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</scroll-view>

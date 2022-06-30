@@ -1,0 +1,100 @@
+<view class="wee--order-wrap">
+  <view class="order-header">
+        
+    <block wx:if="{{canIUse}}">
+      <view class="avatar"><open-data type="userAvatarUrl"></open-data></view>
+      <view class="nickname"><open-data type="userNickName"></open-data></view>
+    </block>
+    <block wx:else>
+      <view class="avatar bg-loading"><image src="{{avatarUrl}}"></image></view>
+      <view class="nickname"><text>{{nickName}}</text></view>
+    </block>
+
+    <view wx:if="{{!isLogin}}" class="bind-phone-btn">
+      <button open-type="getUserInfo" bindgetuserinfo="wxLogin">授权登陆</button>
+    </view>
+    <view wx:elif="{{!isUserInfoAuth && !canIUse}}" class="bind-phone-btn">
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登陆</button>
+    </view>
+    <view wx:elif="{{!userPhone}}" class="bind-phone-btn">
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机绑定</button>
+    </view>
+
+  </view>
+  <view class="order-title">
+    <view class="img"><image src="https://img3.weegotr.com/xcx/statics/order-icon.png"></image></view>
+    <view class="text"><text>我的订单</text></view>
+  </view>
+  <view wx:if="{{datas.length}}" class="order-list">
+
+    <view wx:for="{{datas}}" wx:key="_id" class="item">
+      <view class="order-img bg-loading">
+        <image mode="scaleToFill" src="{{item.product_info.cover_image_url}}"></image>
+        <view class="title">
+          <text class="fs40">{{item.product_info.title}}\n</text>
+          <text class="fs30">{{item.product_info.title_en}}</text>
+        </view>
+      </view>
+      <view class="order-detail">
+        <view class="detail-item"><view class="header"><text>订单编号：</text></view><view class="info"><text>{{item.order_code}}</text></view></view>
+        <view class="detail-item">
+          <view class="header"><text>订单状态：</text></view>
+          <view class="info"><view class="tag-status status-{{item.status}}">{{item.statusText}}</view></view>
+        </view>
+        <view wx:if="{{item.product_type === 'hotels'}}" class="detail-item">
+          <view class="header"><text>入住日期：</text></view>
+          <view class="info"><text>{{item.hotel_room_info.checkInTime}}</text></view>
+        </view>
+        <view wx:else class="detail-item">
+          <view class="header"><text>入住日期：</text></view>
+          <view class="info"><text>{{item.current_date.date}}</text></view>
+        </view>
+        <view wx:if="{{item.product_type === 'hotels'}}" class="detail-item">
+          <view class="header"><text>退房日期：</text></view>
+          <view class="info"><text>{{item.hotel_room_info.checkOutTime}}</text></view>
+        </view>
+        <view wx:else class="detail-item">
+          <view class="header"><text>退房日期：</text></view>
+          <view class="info"><text>{{item.current_date.dateEnd}}</text></view>
+        </view>
+        <view wx:if="{{item.product_type === 'hotels'}}" class="detail-item">
+          <view class="header"><text>订单详情：</text></view>
+          <view class="info">
+            <text>{{item.hotel_room_info.detail.room_type}} {{item.hotel_room_info.currentRoomPrice.room_info.bed_type || ''}} {{item.hotel_room_info.mealType}}</text>
+          </view>
+        </view>
+        <view class="detail-item">
+          <view class="header"><text>费用总计：</text></view>
+          <view class="info price">
+            <text>{{item.payment.amount}}元\n</text>约{{item.payment.changeToUSD}}USD
+          </view>
+        </view>
+      </view>
+      <view class="order-btn">
+        <view data-key="{{item._id}}" bindtap="goToDetail" class="hotel-tag_bb pad80">查看订单</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view wx:if="{{!isLoading && datas.length}}" bindtap="switchToChosen" class="more-hotel"><text>点击查看更多精选推荐</text></view>
+  <view wx:if="{{!isLoading && !datas.length}}" class="no-order"> <!--  style="height: {{winHeight - 218}}px" -->
+    <view class="no-more-img">
+      <view><image src="https://img3.weegotr.com/xcx/statics/no-order.png"></image></view>
+      <view><text>您还没有订单</text></view>
+    </view>
+    <view class="goto-mall">
+      <view bindtap="switchToChosen" class="hotel-tag_rb pad80">前往商城</view>
+    </view>
+  </view>
+
+  <!-- <view wx:if="{{!isLoading && isNoMore}}" class="noMore"><text>没有更多了</text></view> -->
+  <view wx:if="{{isLoading}}" class="footer-loading">
+    <view class="first"></view>
+    <view class="second"></view>
+    <view></view>
+  </view>
+
+</view>
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

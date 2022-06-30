@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/active/index",
+    "pages/chosen/index",
+    "pages/order/index",
+    "pages/initPage/initPage",
+    "pages/subActive/subActive",
+    "pages/packageOrder/packageOrder",
+    "pages/createOrder/createOrder",
+    "pages/privacyNote/privacyNote",
+    "pages/serviceNote/serviceNote",
+    "pages/preBookNote/preBookNote",
+    "pages/expenseNote/expenseNote",
+    "pages/packageTravel/packageTravel",
+    "pages/packageFeature/packageFeature",
+    "pages/commentList/commentList",
+    "pages/highlight/highlight",
+    "pages/retreatingNote/retreatingNote",
+    "pages/chosenDetailList/chosenDetailList",
+    "pages/mallListHotel/mallListHotel",
+    "pages/mallListPackage/mallListPackage",
+    "pages/search/search",
+    "pages/packageDetail/packageDetail",
+    "pages/stroke/stroke",
+    "pages/orderDetails/orderDetails",
+    "pages/hotelDetail/hotelDetail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weego",
+    "backgroundColor": "#F5F5F5",
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#FF4F4E",
+    "borderStyle": "black",
+    "backgroundColor": "#202020",
+    "list": [
+      {
+        "text": "活动",
+        "pagePath": "pages/active/index",
+        "iconPath": "assets/active-icon.png",
+        "selectedIconPath": "assets/active-select-icon.png"
+      },
+      {
+        "text": "精选",
+        "pagePath": "pages/chosen/index",
+        "iconPath": "assets/chosen-icon.png",
+        "selectedIconPath": "assets/chosen-selected-icon.png"
+      },
+      {
+        "text": "订单",
+        "pagePath": "pages/order/index",
+        "iconPath": "assets/orders-icon.png",
+        "selectedIconPath": "assets/orders-selected-icon.png"
+      }
+    ]
+  }
+}

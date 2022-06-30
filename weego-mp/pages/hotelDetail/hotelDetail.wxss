@@ -1,0 +1,394 @@
+/* pages/hotelDetail/hotelDetail.wxss */
+@import '../../components/common.wxss';
+.wrap {
+  width: 750rpx;
+  overflow: hidden;
+}
+.date-select {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 88rpx;
+  width: 750rpx;
+}
+.date-btn {
+  height: 88rpx;
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff4f4e;
+  color: #fff;
+  text-align: center;
+}
+.date-select .check-in {
+  width: 374rpx;
+  height: 88rpx;
+}
+.check-br {
+  width: 2rpx;
+  height: 66rpx;
+  background: #fff;
+}
+.date-select .check-out {
+  width: 374rpx;
+  height: 88rpx;
+}
+.date-select .label {
+  font-size: 24rpx;
+  padding: 6rpx 0;
+}
+.date-select .time {
+  font-size: 30rpx;
+}
+
+/* room select */
+.wee--room_select-wrap {
+  width: 700rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.wee--room_select-wrap .room_select-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.wee--room_select-wrap .room_select-title image {
+  width: 31rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.wee--room_select-wrap .room-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.wee--room_select-wrap .room-filter .filter{
+  width: 233rpx;
+}
+.wee--room_select-wrap .room-filter .filter-btn {
+  width: 233rpx;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36rpx;
+}
+.wee--room_select-wrap .room-filter .btn {
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #ff4f4e;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.wee--room_select-wrap .room-filter .disable {
+  color: #818181;
+}
+.wee--room_select-wrap .room-filter .num {
+  font-size: 40rpx;
+  color: #202020;
+  padding: 0 10rpx;
+}
+.wee--room_select-wrap .room-filter .filter-des {
+  font-size: 34rpx;
+  text-align: center;
+  color: #202020;
+}
+.wee--room_select-wrap .room-filter .mid {
+  border-left: 1px solid rgba(32,32,32,.35);
+  border-right: 1px solid rgba(32,32,32,.35);
+}
+/* select 列表 */
+.wee--room_select-wrap .select-item {
+  width: 700rpx;
+  border-top: 1px solid rgba(32,32,32,.35);
+  padding: 30rpx 0;
+}
+.wee--room_select-wrap .select-con {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.wee--room_select-wrap .select-con .img {
+  width: 250rpx;
+  height: 220rpx;
+  padding: 0 20rpx;
+}
+.wee--room_select-wrap .select-con .img image {
+  width: 250rpx;
+  height: 220rpx;
+}
+.wee--room_select-wrap .select-con .title {
+  font-size: 32rpx;
+  color: #202020;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+  font-weight: 500;
+  width: 380rpx;
+}
+.wee--room_select-wrap .select-con .des {
+  font-size: 28rpx;
+  color: #202020;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 9rpx;
+}
+.wee--room_select-wrap .select-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0 10rpx 40rpx;
+}
+.wee--room_select-wrap .select-footer .price-mount {
+  font-size: 40rpx;
+  color: #ff4f4e;
+}
+.wee--room_select-wrap .select-footer .price-mount text {
+  font-size: 24rpx;
+  color: #818181;
+}
+.wee--room_select-wrap .select-footer .price-des {
+  font-size: 24rpx;
+  color: #818181;
+  padding: 0;
+  margin: 0;
+}
+
+/* 日期选择样式 */
+.time-modal {
+  width: 750rpx;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+.time-modal .date-select-header {
+  width: 750rpx;
+  height: 90rpx;
+  background: #202020;
+  text-align: center;
+  color: #fff;
+  line-height: 90rpx;
+  font-size: 34rpx;
+}
+.time-modal .date-select-header .close {
+  width: 90rpx;
+  height: 90rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url('https://img3.weegotr.com/xcx/statics/close-btn-fff.png');
+  background-size: 32rpx 32rpx;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.time-modal .date-header {
+  width: 750rpx;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #9e9e9e;
+  text-align: center;
+}
+.time-modal .date-header .check-in {
+  width: 375rpx;
+  height: 88rpx;
+}
+.time-modal .date-header .check-out {
+  width: 375rpx;
+  height: 88rpx;
+}
+.time-modal .date-header .label {
+  font-size: 24rpx;
+}
+.time-modal .date-header .time {
+  font-size: 30rpx;
+}
+.time-modal .date-header .active {
+  background: #ff4f4e;
+  color: #fff;
+}
+.week-list {
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #9e9e9e;
+  text-align: center;
+  font-size: 28rpx;
+  color: #202020;
+  background: #fff;
+}
+.week-list view {
+  width: 107rpx;
+}
+.week-list .weekend {
+  color: #ff4f4e;
+}
+.time-modal .date-select-wrap {
+  position: absolute;
+  top: 242rpx;
+  left: 0;
+  right: 0;
+  bottom: 0rpx;
+  background: #fff;
+  overflow-y: auto;
+}
+.time-modal .date-select-con {
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 120rpx;
+}
+.list-title {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #202020;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.list-day {
+  width: 750rpx;
+  overflow: hidden;
+}
+.day-line {
+  box-sizing: border-box;
+  padding: 0 4rpx;
+  height: 106rpx;
+  border-bottom: 1px solid #9e9e9e;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.day-line .day {
+  width: 106rpx;
+  height: 106rpx;
+  text-align: center;
+  line-height: 106rpx;
+  font-size: 30rpx;
+  color: #202020;
+}
+.day-line .day view {
+  width: 106rpx;
+  height: 106rpx;
+}
+
+.day .week {
+  color: #ff4f4e;
+}
+.day .unavailable {
+  color: #9e9e9e;
+  text-decoration: line-through;
+}
+.day .active {
+  background: #ff4f4e;
+  color: #fff;
+}
+
+.bottom-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 88rpx;
+  z-index: inherit;
+  font-size: 36rpx;
+  text-align: center;
+  line-height: 88rpx;
+  color: #fff;
+}
+.selecte {
+  background: #4a4a4a;
+}
+.confirm {
+  background: #ff4f4e;
+}
+
+/* loading 样式 */
+.room-none {
+  padding: 100rpx 0;
+  text-align: center;
+}
+.room-loading {
+  width: 100%;
+  padding: 100rpx 0;
+}
+.room-loading .laoding-text {
+  text-align: center;
+  font-size: 30rpx;
+  color: #202020;
+}
+.footer-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rpx 0;
+}
+.footer-loading view {
+  width: 9rpx;
+  height: 9rpx;
+  margin: 4px;
+  background-image: url('https://img3.weegotr.com/xcx/statics/dot-light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: padding-box;
+  border-radius: 100%;
+  -webkit-animation: sk-bouncedelay 1.2s infinite ease-in-out;
+  animation: sk-bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.footer-loading .first {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.footer-loading .second {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0.01);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+  }
+
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}

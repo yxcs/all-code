@@ -1,0 +1,27 @@
+<view class="header">
+  <view class="date">{{recommend.timeStr}}</view>
+  <view wx:if="{{pager !== 1}}" bindtap="goToFirst" class="first"><image src="cloud://develop-094aba.6465-develop-094aba/icon/back-top.png" /></view>
+</view>
+
+<view class="content">
+  <view class="card-wrap">
+    <view data-poem-id="{{recommend.poemsId}}" bind:tap="toToDetail" class="card">
+      <view class="lt">
+        <view>﹁{{recommend.dynasty}}﹂{{recommend.author}}</view>
+        <view>{{recommend.title}}</view>
+      </view>
+      <view class="rt">
+        <block wx:for="{{recommend.content}}" wx:key="*this">
+          <view>{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view wx:if="{{pager > 1}}" bindtap="goToPrev" class="up bdr"><image src="cloud://develop-094aba.6465-develop-094aba/icon/up.png" /></view>
+  <view wx:else class="up bdr"><image src="cloud://develop-094aba.6465-develop-094aba/icon/up-disabled.png" /></view>
+  <view wx:if="{{isMore}}" bindtap="goToNext" class="down"><image src="cloud://develop-094aba.6465-develop-094aba/icon/down.png" /></view>
+  <view wx:else class="down"><image src="cloud://develop-094aba.6465-develop-094aba/icon/down-disabled.png" /></view>
+</view>

@@ -1,0 +1,192 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<scroll-view class="wrap" scroll-y="{{true}}" wx:if="{{!pageLoading}}">
+  <view style="background-image: url('{{datas.coverImg}}');" class="order-details-header">
+    <view class="header-mask">
+      <view class="header-top-bg {{datas.product_type === 'hotels' ? 'bg-hotel' : 'bg-package'}}"></view>
+      <view wx:if="{{datas.product_type === 'hotels'}}" class="header-title"><text>{{datas.product_snapshot.name}}</text></view>
+      <view wx:if="{{datas.product_type === 'hotels'}}" class="header-title-en"><text>{{datas.product_snapshot.name_en}}</text></view>
+      <view wx:if="{{datas.product_type === 'packages'}}" class="header-package-title"><text>{{datas.product_snapshot.name}}</text></view>
+      <view wx:if="{{datas.product_type === 'hotels'}}" class="title-separator"></view>
+      <view data-phone="{{datas.product_snapshot.telephone}}" class="header-phone" bindtap="makePhoneCall">
+        <text>电话：{{datas.product_snapshot.telephone}}</text>
+      </view>
+      <view class="header-address"><text>地址：{{datas.product_snapshot.address}}</text></view>
+      <view class="header-btn">
+        <view bindtap="goToDetail" class="btn"><text>查看详情</text></view>
+      </view>
+    </view>
+  </view>
+  
+  <view wx:if="{{datas.product_type ==='hotels'}}" class="order-details-bx">
+    <view class="details-header">
+      <view class="img"></view>
+      <view class="text"><text>订单信息</text></view>
+    </view>
+    <view class="details-list">
+      <view class="item"><view class="label"><text>订单编号</text>：</view><view class="value">{{datas.order_code}}</view></view>
+      <view class="item">
+        <view class="label"><text>订单状态</text>：</view>
+        <view class="value"><view class="tag-status status-{{datas.status}}">{{datas.statusText}}</view></view>
+      </view>
+      <view class="item"><view class="label"><text>付款方式</text>：</view><view class="value">{{datas.payment.methodText}}</view></view>
+      <view class="item"><view class="label"><text>入住日期</text>：</view><view class="value">{{datas.hotel_room_info.checkInTime}}</view></view>
+      <view class="item"><view class="label"><text>退房日期</text>：</view><view class="value">{{datas.hotel_room_info.checkOutTime}}</view></view>
+      <view class="item">
+        <view class="label"><text>订单详情</text>：</view>
+        <view class="value">
+          <text>{{datas.hotel_room_info.detail.room_type}} {{datas.hotel_room_info.currentRoomPrice.room_info.bed_type || ''}} {{datas.hotel_room_info.mealType}}\n</text>
+          <text class="des">{{datas.orderDetailsDesc}}</text>
+        </view>
+      </view>
+      <view wx:if="{{datas.payment.method === 'transfer'}}" class="item">
+        <view class="label"><text>开户银行</text>：</view><view class="value">{{datas.order.transfer_account_information.bank}}元</view>
+      </view>
+      <view wx:if="{{datas.payment.method === 'transfer'}}" class="item">
+        <view class="label"><text>公司名称</text>：</view><view class="value">{{datas.transfer_account_information.company}}元</view>
+      </view>
+      <view wx:if="{{datas.payment.method === 'transfer'}}" class="item">
+        <view class="label"><text>公司账号</text>：</view><view class="value">{{datas.transfer_account_information.companyAccount}}元</view>
+      </view>
+      <view class="item"><view class="label"><text>每晚每间</text>：</view><view class="value">{{datas.mwmjPrice}}元</view></view>
+      <view class="item"><view class="label"><text>税和服务费</text>：</view><view class="value">{{datas.shfwPrice}}元</view></view>
+      <view class="item"><view class="label"><text>每晚总计</text>：</view><view class="value">{{datas.mwzjPrice}}元</view></view>
+      <view class="item">
+        <view class="label"><text>{{datas.hotel_room_info.nights}}晚总额</text>：</view>
+        <view class="value">
+          <text>{{datas.zePrice}}元\n</text>
+          <text wx:if="{{order.hotel_room_info.currentRoomPrice && order.hotel_room_info.currentRoomPrice.tax_rate}}" class="des-green">
+            说明：税和服务费 = 每晚每间 * {{datas.hotel_room_info.currentRoomPrice.tax_rate * 100}}%
+          </text>
+        </view>
+      </view>
+      <view class="item">
+        <view class="label"><text>费用总计</text>：</view>
+        <view class="value">
+          <text class="real-price">{{datas.fyzjPrice}}元\n</text>
+          <text class="des">约 {{datas.changeToUSD}} USD</text>
+        </view>
+      </view>
+
+      <view wx:if="{{datas.status === 'refund_confirmed'}}" class="item">
+        <view class="label"><text>退款金额</text>：</view>
+        <view class="value">
+          <text class="real-price">{{datas.tkjePrice}}元\n</text>
+          <text class="des">约 {{datas.tkChangeToUSD}} USD</text>
+        </view>
+      </view>
+
+      <view wx:if="{{datas.status === 'confirmed'}}" class="btn-wrap">
+        <view bindtap="goToStroke" class="btn-travel">查看行程</view>
+      </view>
+
+    </view>
+  </view>
+  <view wx:else class="order-details-bx">
+    <view class="details-header">
+      <view class="img"></view>
+      <view class="text"><text>预定信息</text></view>
+    </view>
+    <view class="details-list">
+      <view class="item"><view class="label"><text>入住日期</text>：</view><view class="value">{{datas.current_date.date}}</view></view>
+      <view class="item"><view class="label"><text>退房日期</text>：</view><view class="value">{{datas.current_date.dateEnd}}</view></view>
+      <view class="item">
+        <view class="label"><text>订单详情</text>：</view>
+        <view class="value">
+          <text>{{order.product_snapshot.booking_info || order.product_snapshot.name}}</text>
+        </view>
+      </view>
+      <view wx:if="{{datas.payment.method === 'transfer'}}" class="item">
+        <view class="label"><text>开户银行</text>：</view><view class="value">{{datas.order.transfer_account_information.bank}}元</view>
+      </view>
+      <view wx:if="{{datas.payment.method === 'transfer'}}" class="item">
+        <view class="label"><text>公司名称</text>：</view><view class="value">{{datas.transfer_account_information.company}}元</view>
+      </view>
+      <view wx:if="{{datas.payment.method === 'transfer'}}" class="item">
+        <view class="label"><text>公司账号</text>：</view><view class="value">{{datas.transfer_account_information.companyAccount}}元</view>
+      </view>
+      <view class="item">
+        <view class="label"><text>套餐原价</text>：</view><view class="value">{{datas.tcyjPrice}}元</view>
+      </view>
+      <view class="item">
+        <view class="label"><text>费用总计</text>：</view>
+        <view class="value">
+          <text class="real-price">{{datas.fyzjPrice}}元\n</text>
+          <text class="des">约 {{datas.changeToUSD}} USD</text>
+        </view>
+      </view>
+
+      <view wx:if="{{datas.status === 'refund_confirmed'}}" class="item">
+        <view class="label"><text>退款金额</text>：</view>
+        <view class="value">
+          <text class="real-price">{{datas.tkjePrice}}元\n</text>
+          <text class="des">约 {{datas.tkChangeToUSD}} USD</text>
+        </view>
+      </view>
+
+      <view wx:if="{{ false && datas.status === 'confirmed'}}" class="btn-wrap">
+        <view bindtap="goToStroke" class="btn-travel">查看行程</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="user-info-bx">
+    <view class="info-header">
+      <view class="img"></view>
+      <view class="text"><text>入住人信息</text></view>
+    </view>
+
+    <view class="info-list">
+      <view class="info-title"><text>联系人信息</text></view>
+      <view class="item" wx:if="{{!!order.contact_info.name}}"><view class="label"><text>姓名</text>：</view><view class="value">{{datas.contact_info.name}}</view></view>
+      <view class="item"><view class="label"><text>手机</text>：</view><view class="value">{{datas.contact_info.mobile}}</view></view>
+      <view class="item"><view class="label"><text>邮箱</text>：</view><view class="value">{{datas.contact_info.email}}</view></view>
+      <view class="info-title"><text>入住人</text></view>
+      <view wx:for="{{datas.concatList}}" class="item">
+        <view class="label"><text>客房{{item.roomIndex}}</text>：</view>
+        <view class="value">
+          <text wx:for="{{item.customer}}" wx:for-item="subItem">{{subItem.name}} <text class="gray">（{{subItem.gender}}）</text>\n</text>
+        </view>
+      </view>
+      <view class="info-title"><text>特殊要求</text></view>
+      <view class="info-des"><text>{{datas.extra && datas.extra.special_demand ? datas.extra.special_demand : '无特殊要求'}}</text></view>
+    </view>
+  </view>
+
+  <view class="order-tips-bx">
+    <view class="tips-header">
+      <view class="img"></view>
+      <view class="text"><text>更改条款</text></view>
+    </view>
+    <view class="tips-list">
+      <view class="item" wx:if="{{datas.policyList}}">
+        <view class="tip-title"><text>【入住政策】</text></view>
+        <view class="tip-des" wx:for="{{datas.policyList}}" wx:key="*this"><text>- {{item}}</text></view>
+      </view>
+      <view class="item" wx:if="{{datas.cancel_rule}}">
+        <view class="tip-title"><text>【取消规则】</text></view>
+        <view class="tip-des" wx:for="{{datas.cancelRuleList}}" wx:key="*this"><text>{{item}}</text></view>
+      </view>
+      <view class="item" wx:if="{{datas.cancel_rule}}">
+        <view class="tip-title"><text>【温馨提示】</text></view>
+        <view class="tip-des"><text>- 如果选择转账支付方式，需要在 24 小时内完成转账。</text></view>
+        <view class="tip-des"><text>- 申请退款且客服处理后，资金将在 1~7 个工作日内到账。</text></view>
+      </view>
+    </view>
+    <view class="tips-more">
+      <navigator hover-class="none" url="/pages/retreatingNote/retreatingNote?id={{id}}">改退流程</navigator>
+    </view>
+  </view>
+
+  <view class="order-btn">
+    <view wx:if="{{datas.status === 'unpaid' || datas.status === 'paying'}}" class="btn-cancel"><text>取消订单</text></view>
+    <view wx:if="{{datas.status === 'paid' || datas.status === 'confirmed'}}" class="btn-cancel"><text>申请退款</text></view>
+    <view wx:if="{{datas.city && datas.city.service_telephone}}" class="btn-concat"><text>咨询客服</text></view>
+  </view>
+
+  <view class="{{(status === 'unpaid' || status === 'paying') && order.payment.method !== 'transfer' ? 'pad-x' : 'pad'}}"></view>
+
+  <view wx:if="{{(status === 'unpaid' || status === 'paying') && order.payment.method !== 'transfer'}}" class="order-btn-pay">
+    <text>立即支付</text>
+  </view>
+</scroll-view>
+<page-loading wx:else />

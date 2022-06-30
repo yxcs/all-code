@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "search-tool": "../../components/search-tool/search-tool",
+    "top-tab": "../../components/top-tab/top-tab",
+    "chosen-item": "../../components/chosen-item/chosen-item",
+    "no-more": "../../components/no-more/no-more",
+    "footer": "../../components/footer/footer",
+    "hotel-item": "../../components/hotel-item/hotel-item",
+    "package-item": "../../components/package-item/package-item",
+    "page-loading": "../../components/page-loading/page-loading"
+  },
+  "navigationBarTitleText": "Weego 精选推荐",
+  "enablePullDownRefresh": true
+}

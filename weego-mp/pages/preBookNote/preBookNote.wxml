@@ -1,0 +1,30 @@
+<view class="wrap">
+  <view class="note-title"><text>预订须知</text></view>
+
+  <view class="note-list">
+
+    <view class="item">
+      <view class="title"><view></view><text>使用条件</text></view>
+      <view wx:for="{{application_conditions}}" wx:key="*this" class="des">• <text>{{item}}\n</text></view>
+    </view>
+    <view class="item">
+      <view class="title"><view></view><text>支付信息</text></view>
+      <view wx:for="{{payment_info}}" wx:key="*this" class="des">• <text>{{item}}\n</text></view>
+    </view>
+    <view class="item">
+      <view class="title"><view></view><text>订单确认</text></view>
+      <view wx:for="{{order_confirm}}" wx:key="*this" class="des">• <text>{{item}}\n</text></view>
+    </view>
+    <view class="item">
+      <view class="title"><view></view><text>改退规定</text></view>
+      <view wx:for="{{cancel_rule}}" wx:key="*this" class="des">• <text>{{item}}\n</text></view>
+    </view>
+    <view class="item">
+      <view class="title"><view></view><text>退款流程</text></view>
+      <view wx:for="{{refund_process}}" wx:key="*this" class="des">• <text>{{item}}\n</text></view>
+    </view>
+
+  </view>
+
+  <view class="footer-img"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+</view>

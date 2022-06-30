@@ -1,0 +1,189 @@
+<!--pages/createOrder/createOrder.wxml-->
+<scroll-view 
+  class="wrap" 
+  scroll-y="{{true}}" 
+  wx:if="{{!pageLoading}}"
+  scroll-top="{{scrollToTop}}"
+  scroll-with-animation="{{true}}"
+  style="height: 100%">
+  <view class="info-bx">
+    <view class="name"><text>{{datas.name}}</text></view>
+    <view wx:for="{{currentPackage.hotels}}" wx:key="_id" class="package-hotel">
+      <view class="hotel-title"><text>{{index+1}}. {{item.hotel.name}}</text></view>
+      <view class="hotel-type"><text>{{item.room_type}}</text></view>
+    </view>
+    <view wx:for="{{currentPackage.info}}" wx:key="_id" class="package-info">
+      <text>• {{item.desc}}</text>
+    </view>
+  </view>
+
+  <view class="price-bx">
+    <view class="price">
+      <text class="label">总价:</text>
+      <text class="real-price">{{datas.totalPrice}}元</text>
+      <text class="usd-price">(约 {{datas.totalPriceUSD}} USD)</text>
+    </view>
+    <view class="explain"><text>价格说明：该价格已包含服务费、增值税，不包含城市税、度假村费</text></view>
+  </view>
+
+  <view class="policy-desc">
+    <view class="label"><text>取消条款</text></view>
+    <view class="value"><text>{{datas.cancel_rule.message}}</text></view>
+    <view class="label"><text>极速预定</text></view>
+    <view class="value"><text>仅需要2步即可轻松完成预定</text></view>
+    <view class="coupon-container">
+      <view class="coupon-title"><view></view><text>优惠券</text></view>
+      <view class="form-control">
+        <view class="input"><input disabled="{{isDiscount}}" bindinput="onInputCoupon" type="text" placeholder="请输入优惠码（选填）"/></view>
+        <view wx:if="{{!isDiscount}}" class="btn" bindtap="onCheckCoupon"><text>立即使用</text></view>
+        <view wx:else class="btn-gary" bindtap="onCheckCoupon"><text>取消使用</text></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="price-detail-bx">
+  
+  </view> -->
+
+  <view class="user-info-bx">
+    <view class="header-title"><text>订单填写</text></view>
+    <view class="product-count-chooser">
+      <view class="title"><view></view><text>房间数量</text></view>
+      <view class="compute-box">
+        <view bindtap="onRoomSub" class="sub-btn"></view>
+        <view class="text"><text>{{product_count}}</text></view>
+        <view bindtap="onRoomAdd" class="add-btn"></view>
+      </view>
+    </view>
+
+    <view class="contact-bx">
+      <view class="title">
+        <view></view>
+        <viwe><text>预订人信息</text></viwe>
+        <viwe><text class="var">(必填)</text></viwe>
+      </view>
+      <view class="form-email"><input bindinput="onNameInput" type="text" placeholder="预订人姓名（拼音）" /></view>
+      <view class="form-email"><input bindinput="onEmailInput" type="text" placeholder="请输入邮箱" /></view>
+      <view class="form-phone"><input bindinput="onPhoneInput" value="{{phoneNumber}}" type="number" placeholder="请输入手机号" /></view>
+      <view wx:if="{{!userLogin.phone || (!!userLogin.phone && (userLogin.phone !== phoneNumber))}}" class="form-verifycode">
+        <input type="number" bindinput="onVerifycodeInput" placeholder="请输入验证码" />
+        <view bindtap="sendVerifycode" class="send-code">
+          <text wx:if="{{!isVCodeSending}}">获取验证码</text>
+          <text wx:else class="sending">{{leaveTime}}s</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="customers-bx">
+      <view class="title">
+        <view class="bar"></view>
+        <viwe><text>入住人信息</text></viwe>
+        <viwe><text class="var">(必填)</text></viwe>
+        <view bindtap="onShowConcatTip" class="assist-tips">?</view>
+      </view>
+      <view wx:for="{{customers}}" wx:key="*this" wx:for-index="cusIndex" class="customer-list">
+        <view class="customer-info-header">
+          <view class="text"><text>客房{{cusIndex+1}}</text>（按照实际入住人填写）</view>
+          <view 
+            wx:if="{{contacts.length}}" 
+            bindtap="onSelectContacts" 
+            data-index="{{cusIndex}}"
+            class="img">
+            <image src="https://img3.weegotr.com/xcx/statics/concat.png"></image>
+          </view>
+        </view>
+        <view wx:for="{{item.adultsList}}" wx:for-item="subItem" class="customer-info-bx">
+          <view class="select-bx">
+            <picker 
+              data-index="{{cusIndex}}" 
+              data-sub-index="{{index}}" 
+              bindchange="bindPickerChange" 
+              range-key="name" 
+              value="{{subItem.gender}}" 
+              range="{{genders}}">
+              <view class="picker"> {{subItem.gender === 'MR' ? genders[0].name : genders[1].name}} <text class="arrow-down">▼</text> </view>
+            </picker>
+          </view>
+          <view class="form-bx">
+            <view><input bindinput="onLastNameChange" data-index="{{cusIndex}}" data-sub-index="{{index}}" type="text" placeholder="姓（拼音)" value="{{subItem.last_name}}" /></view>
+            <view><input bindinput="onFirstNameChange" data-index="{{cusIndex}}" data-sub-index="{{index}}" type="text" placeholder="名（拼音)" value="{{subItem.first_name}}" /></view>
+          </view>
+        </view>
+        <view class="children-setting">
+          <view class="label"><text>儿童</text></view>
+          <view class="compute-box">
+            <view data-index="{{cusIndex}}" bindtap="onChildrenSub" class="sub-btn"></view>
+            <view class="text"><text>{{item.children}}</text></view>
+            <view data-index="{{cusIndex}}" bindtap="onChildrenAdd" class="add-btn"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="special-bx">
+      <view class="title">
+        <view class="bar"></view>
+        <viwe><text>特殊要求</text></viwe>
+        <viwe><text class="var">(必填)</text></viwe>
+        <view bindtap="onShowSpecialTip" class="assist-tips">?</view>
+      </view>
+      <view class="special-des"><text>备注特殊要求</text></view>
+      <view class="form-special"><input bindinput="onSpecialChange" type="text" placeholder="无特殊要求" /></view>
+      <view class="form-input-tip"><text>我们会向酒店发出特殊要求申请，是否满足以办理入住时酒店答复为准</text></view>
+    </view>
+  </view>
+
+  <view class="warn-tips">
+    <view class="warn-title"><text>温馨提示</text></view>
+    <view class="warn-list">
+      <view wx:for="{{hotelDatas.policy}}" wx:key="_id" class="item">
+        <view class="warn-item-title"><text>[{{item.type}}]</text></view>
+        <view wx:for="{{item.tips}}" wx:key="*this" wx:for-item="subItem" class="warn-item-text"><text>- {{subItem}}</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="weego-service">
+    <view class="service-tip">
+      <view class="tip"><text>24 小时在线服务</text></view>
+      <view class="tip"><text>专业服务 全程保障</text></view>
+    </view>
+    <view class="service-tip">
+      <view class="tip"><text>一诺千金 多重保障</text></view>
+      <view class="tip"><text>SOS 海外紧急支援</text></view>
+    </view>
+  </view>
+
+  <view class="customer-block">
+    <view bindtap="onMakePhoneCall" class="customer-image">
+      <view><image src="https://img3.weegotr.com/xcx/statics/customer-red.png"></image></view>
+      <text>24小时在线客服</text>
+    </view>
+    <view class="btn-wrap"><viwe bindtap="onMakePhoneCall" class="hotel-tag_bb pad20"><text>010-57273085</text></viwe></view>
+  </view>
+
+  <view class="footer-image"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+
+  <view class="footer-submit">
+    <view class="total-price">总额：<text>{{datas.totalPrice}}元</text></view>
+    <view bindtap="onSubmitOrder" class="submit-btn"><text>提交订单</text></view>
+  </view>
+
+  <view wx:if="{{showContactPicker}}" class="contacts-modal" catchtouchmove="myCatchTouch">
+    <view class="modal-bx">
+      <view class="modal-title"><text>联系人选择</text></view>
+      <view class="modal-item">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{contactsSelectList}}">
+            <view><checkbox value="{{index}}" checked="{{item.isChecked}}"/>{{item.last_name + ' ' + item.first_name}}</view>
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="modal-footer">
+        <view bindtap="onContactCancel" class="cancel"><text>取消</text></view>
+        <view bindtap="onContactConfirm" class="confirm"><text>确定</text></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<page-loading wx:else />

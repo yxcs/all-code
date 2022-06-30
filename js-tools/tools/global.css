@@ -1,0 +1,94 @@
+/*******************************
+ *
+ * date     @2016/7/21
+ * author   @Luo ZhiYi
+ * desc     @css global
+ * github   @https://github.com/luozyiii/src/global.css
+ *
+ * ******************************/
+ 
+ .clearfix:after {
+  content: ".";
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  font-size: 0
+}
+.clearfix {
+  zoom: 1;
+}
+.g-f-left {
+  float: left;
+}
+.g-f-right {
+  float: right;
+}
+.js-ds-none,.ds-none {
+  display: none !important;
+}
+/* 文本溢出隐藏 */
+.text-overflow {
+  display:block;          /*内联对象需加*/
+  width:31em;             /* 固定宽度 */
+  word-break:keep-all;    /* 不换行 */
+  white-space:nowrap;     /* 不换行 */
+  overflow:hidden;        /* 内容超出宽度时隐藏超出部分的内容 */
+  text-overflow:ellipsis; /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+.text-overflow-ellipsis {
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 3;
+ overflow: hidden;
+}
+
+/* 我们通常写三角形都是用伪类 请务必写上属性 content="" */
+/* 向上的三角形 */
+.triangle-up {
+  display:block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+}
+/* 向下的三角形 */
+.triangle-down {
+  display:block;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+}
+/* 向左的三角形 */
+.triangle-left {
+  display:block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+/* 向右的三角形 */
+.triangle-right {
+  display:block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-left: 100px solid red;
+  border-bottom: 50px solid transparent;
+}
+/* 快速滚动和回弹的效果 */
+.scrolling {
+  -webkit-overflow-scrolling : touch; 
+}
+/* 为元素设定的宽度和高度决定了元素的边框盒。
+就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。
+通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。 */
+.border-box {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+  -webkit-box-sizing:border-box; /* Safari */
+}

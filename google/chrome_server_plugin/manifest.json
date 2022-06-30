@@ -1,0 +1,22 @@
+{
+  "name": "获取某电商后台订单信息",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "*********获取某电商后台订单信息*********",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "contextMenus",
+    "http://localhost/chrome/"
+  ],
+  "background": {
+    "scripts": ["jquery.min.js","eventPage.js"]
+  },
+  "content_scripts": [{
+    "matches": ["https://mp.weixin.qq.com/*"],
+    "js": ["jquery.min.js", "contentscript.js"]
+  }]
+}

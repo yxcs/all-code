@@ -1,0 +1,191 @@
+/* components/hotel-concat.wxss */
+@import '../common.wxss';
+.wee--hotel_footer-wrap {
+  width: 700rpx;
+  margin: 0 auto;
+}
+.wee--hotel_equipment {
+  padding: 40rpx 0;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.wee--hotel_equipment .equipment-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.wee--hotel_equipment .equipment-title image {
+  width: 36rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.equipment-item {
+  width: 750rpx;
+  font-size: 30rpx;
+  color: #202020;
+  margin-top: 30rpx;
+}
+.equipment-item .item {
+  display: inline-block;
+  width: 350rpx;
+  margin: .1rem 0;
+}
+
+/* 注意事项 */
+.wee--hotel_notice {
+  padding: 40rpx 0;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.wee--hotel_notice .notice-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.wee--hotel_notice .notice-title image {
+  width: 36rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.wee--hotel_notice .notice-item {
+  padding: 30rpx 0;
+}
+.wee--hotel_notice .notice-item .item {
+  padding-bottom: 20rpx;
+}
+.wee--hotel_notice .notice-item .notice-item-title {
+  font-size: 30rpx;
+  color: #ff4f4e;
+  line-height: 52rpx;
+  text-align: justify;
+}
+.wee--hotel_notice .notice-item .notice-item-des {
+  font-size: 30rpx;
+  color: #202020;
+  line-height: 52rpx;
+  text-align: justify;
+}
+
+/* 联系方式 */
+.wee-hotel_concat {
+  padding: 40rpx 0;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.concat-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.concat-title view{
+  width: 8rpx;
+  height: 36rpx;
+  background-color: #ff4f4e;
+  margin-right: 12rpx;
+}
+.concat-title text {
+  font-size: 36rpx;
+  color: #202020;
+}
+.concat-item {
+  padding-top: 20rpx;
+}
+.concat-item .item {
+  width: 700rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.concat-item .des {
+  width: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.concat-item .des image {
+  margin-right: 10rpx;
+}
+.concat-item .des .address {
+  width: 25rpx;
+  height: 32rpx;
+}
+.concat-item .des .phone {
+  width: 29rpx;
+  height: 29rpx;
+}
+.concat-item .des .link {
+  width: 28rpx;
+  height: 28rpx;
+}
+.concat-item .des text {
+  color: #202020;
+  font-size: 30rpx;
+}
+.concat-item .con {
+  width: 460rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: right;
+  color: #ff4f4e;
+  font-size: 30rpx;
+}
+.concat-item .con text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 底部链接 */
+.wee-hotel_customer {
+  padding: 40rpx 0;
+}
+.wee-hotel_customer .customer-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.wee-hotel_customer .customer-title image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.customer-small-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #202020;
+  margin: 30rpx 0;
+}
+.wee-hotel_customer .customer-small-title image {
+  width: 43rpx;
+  height: 43rpx;
+  margin-right: 10rpx;
+}
+.customer-phone {
+  display: flex;
+  justify-content: center;
+}
+.customer-des {
+  margin: 60rpx 0;
+  font-size: 28rpx;
+  color: #202020;
+  text-align: center;
+}
+.customer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100rpx;
+}
+.customer-logo image {
+  width: 326rpx;
+  height: 52rpx;
+}

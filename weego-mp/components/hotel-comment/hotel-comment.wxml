@@ -1,0 +1,32 @@
+<!--components/hotel-comment/hotel-comment.wxml-->
+<view class="wee--hotel_comment-wrap">
+  <view class="comment-title"><image src="../../assets/pages/evaluate-icon.png"></image><text>评论</text></view>
+  <view class="evaluate-block">
+    <view class="left-info">
+      <view><image src="../../assets/pages/tripadvisor-icon.png"></image></view>
+      <view>来自于Tripadvisor</view>
+    </view>
+    <view class="center-info"></view>
+    <view class="right-info">
+      <view class="rank-point">{{datas.rating}}分</view>
+      <view class="comment-star">
+        <view class="stars">
+          <view style="width: {{30 * datas.rating}}rpx;"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="evaluate-title"><text>{{datas.comments[0].title}}</text></view>
+  <view class="evaluate-info">
+    <view class="quote-start"></view>
+    <view class="evaluate-content">
+      <text>{{datas.comments[0].description}}</text>
+    </view>
+    <view class="quote-end"></view>
+  </view>
+  <view class="more-comment">
+    <view class="hotel-tag_bb pad80">
+      <navigator hover-class="none" url="/pages/commentList/commentList?hId={{datas._id}}">更多评论</navigator>
+    </view>
+  </view>
+</view>

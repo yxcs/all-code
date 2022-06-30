@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "获取页面中SVG",
+  "version": "1.0.0",
+  "description": "获取页面中SVG",
+  "icons": {
+    "128": "img/icon.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "page_action": 
+  {
+    "default_icon": "img/icon.png",
+    "default_title": "我是pageAction",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["lib/jquery.min.js", "js/mian.js"],
+      "css": ["css/style.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+  "devtools_page": "devtools.html"
+}

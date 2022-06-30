@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head >
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HTML5实现网页截屏</title>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script>
+      function taoge(){
+        html2canvas($('#xttblog'), {
+          onrendered: function(canvas) {
+            // canvas 是最后一个渲染的<canvas> 元素
+            $('#btn').attr( 'href' , canvas.toDataURL() ) ;
+            $('#btn').attr( 'download' , 'xttblog.png' ) ;
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <img src="https://github.com/didiaohu/xiaoxiaoxiao/blob/master/demo/image/arrowright.png"/>
+  </body>
+</html>

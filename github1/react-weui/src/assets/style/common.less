@@ -1,0 +1,71 @@
+@import "../fonts/iconfont.css";
+@import "./component.less";
+@import "./position.less";
+@import "../../../node_modules/weui/dist/style/weui.min.css";
+
+html, body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #F8F8F8;
+  font-family: -apple-system-font, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+ul{
+  list-style: none;
+}
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1; // fix 滑动几次后可滚动区域会卡住的问题
+}
+@keyframes slideIn {
+  from {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+  }
+}
+
+.page.slideIn {
+  animation: slideIn .2s forwards;
+}
+
+.page.slideOut {
+  animation: slideOut .2s forwards;
+}
+
+
+// scrollbar
+

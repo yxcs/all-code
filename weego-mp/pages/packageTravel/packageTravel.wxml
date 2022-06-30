@@ -1,0 +1,32 @@
+<!--pages/packageTravel/packageTravel.wxml-->
+<view class="wrap">
+
+  <view class="pt-hotel">
+    <view class="title"><image src="https://img3.weegotr.com/xcx/statics/hotel.png"></image><text>入住酒店</text></view>
+    <view class="hotel">
+      <view class="img"><image mode="aspectFill" src="{{relevance_hotels[0].cover_image_url}}"></image></view>
+      <view class="text">
+        <view class="hotel-title"><text>{{relevance_hotels[0].title}}</text></view>
+        <view class="hotel-en-title"><text>{{relevance_hotels[0].title_en}}</text></view>
+        <view class="hotel-des"><text>{{relevance_hotels[0].description}}</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pt-travel">
+    <view wx:for="{{travel_plan}}" wx:key="_id" class="item">
+      <view class="title"><view></view><text>第{{item.plan_date}}天</text></view>
+      <view class="sm-title">
+        <view><image src="https://img3.weegotr.com/xcx/statics/flag.png"></image></view>
+        <text>{{item.plan_title}}</text>
+      </view>
+      <view class="des">• <text>{{item.plan_content}}</text></view>
+      <block wx:for="{{item.img_content}}" wx:for-item="subItem">
+        <view class="img"><image mode="widthFix" src="{{subItem.image_url}}"></image></view>
+        <view class="img-des"><text>{{subItem.image_desc}}</text></view>
+      </block>
+    </view>
+  </view>
+
+  <view class="footer-img"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+</view>

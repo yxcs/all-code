@@ -1,0 +1,72 @@
+<!--components/order-list/order-list.wxml-->
+<view class="wee--order-wrap">
+  <view wx:if="{{canIUse}}" class="order-header">
+    <view class="avatar"><open-data type="userAvatarUrl"></open-data></view>
+    <view class="nickname"><open-data type="userNickName"></open-data></view>
+  </view>
+  <view wx:else class="order-header">
+    <view class="avatar"><image src="{{avatarUrl}}"></image></view>
+    <view class="nickname"><text>{{nickName}}</text></view>
+  </view>
+  <view class="order-title">
+    <view class="img"><image src="https://img3.weegotr.com/xcx/statics/order-icon.png"></image></view>
+    <view class="text"><text>我的订单</text></view>
+  </view>
+  <view class="order-list">
+    <view class="item">
+      <view class="order-img">
+        <image mode="aspectFit" src="https://img2.weegotr.com/hotels/1000000/330000/328800/328749/00d2b5d9_w.jpg?x-oss-process=image/resize,m_fill,limit_0,w_750,h_464/crop,g_center,w_750,h_464/format,jpg/quality,q_82"></image>
+        <view class="title"><text class="fs40">新加坡滨华大酒店\n</text><text class="fs30">Marina Mandarin</text></view>
+      </view>
+      <view class="order-detail">
+        <view class="detail-item"><view class="header"><text>订单编号：</text></view><view class="info"><text>8Z1P3EET</text></view></view>
+        <view class="detail-item"><view class="header"><text>订单状态：</text></view><view class="info"><view class="tag-cancel">已取消</view></view></view>
+        <view class="detail-item"><view class="header"><text>入住日期：</text></view><view class="info"><text>2018年07月02日</text></view></view>
+        <view class="detail-item"><view class="header"><text>退房日期：</text></view><view class="info"><text>2018年07月03日</text></view></view>
+        <view class="detail-item"><view class="header"><text>订单详情：</text></view><view class="info"><text>豪华客房 1 张特大床或 2 张单人床 不含餐</text></view></view>
+        <view class="detail-item">
+          <view class="header"><text>费用总计：</text></view>
+          <view class="info price">
+            <text>1517元\n</text>约230USD
+          </view>
+        </view>
+      </view>
+      <view class="order-btn">
+        <view class="hotel-tag_bb pad80">查看订单</view>
+      </view>
+    </view>
+    <view class="item">
+      <view class="order-img">
+        <image mode="aspectFit" src="https://img2.weegotr.com/hotels/1000000/330000/328800/328749/00d2b5d9_w.jpg?x-oss-process=image/resize,m_fill,limit_0,w_750,h_464/crop,g_center,w_750,h_464/format,jpg/quality,q_82"></image>
+        <view class="title"><text class="fs40">新加坡滨华大酒店\n</text><text class="fs30">Marina Mandarin</text></view>
+      </view>
+      <view class="order-detail">
+        <view class="detail-item"><view class="header"><text>订单编号：</text></view><view class="info"><text>8Z1P3EET</text></view></view>
+        <view class="detail-item"><view class="header"><text>订单状态：</text></view><view class="info"><view class="tag-cancel">已取消</view></view></view>
+        <view class="detail-item"><view class="header"><text>入住日期：</text></view><view class="info"><text>2018年07月02日</text></view></view>
+        <view class="detail-item"><view class="header"><text>退房日期：</text></view><view class="info"><text>2018年07月03日</text></view></view>
+        <view class="detail-item"><view class="header"><text>订单详情：</text></view><view class="info"><text>豪华客房 1 张特大床或 2 张单人床 不含餐</text></view></view>
+        <view class="detail-item">
+          <view class="header"><text>费用总计：</text></view>
+          <view class="info price">
+            <text>1517元\n</text>约230USD
+          </view>
+        </view>
+      </view>
+      <view class="order-btn">
+        <view class="hotel-tag_bb pad80">查看订单</view>
+      </view>
+    </view>
+  </view>
+  <view class="more-hotel"><navigator hover-class="none"><text>点击查看更多精选推荐</text></navigator></view>
+  
+  <view wx:if="{{false}}" class="no-order" style="height: {{winHeight - 218}}px">
+    <view class="no-more-img">
+      <view><image src="https://img3.weegotr.com/xcx/statics/no-order.png"></image></view>
+      <view><text>您还没有订单</text></view>
+    </view>
+    <view class="goto-mall">
+      <view class="hotel-tag_rb pad80">前往商城</view>
+    </view>
+  </view>
+</view>

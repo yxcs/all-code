@@ -1,0 +1,48 @@
+<!--components/hotel-concat.wxml-->
+<view class="wee--hotel_footer-wrap">
+
+  <view wx:if="{{datas.facilities.length}}" class="wee--hotel_equipment">
+    <view class="equipment-title"><image src="https://img3.weegotr.com/xcx/statics/facilities-icon.png"></image><text>设施与服务</text></view>
+    <view class="equipment-item">
+      <view wx:for="{{datas.facilities}}" wx:key="_id" class="item"><text>• {{item.facility}}</text></view>
+    </view>
+  </view>
+
+  <view wx:if="{{policy.length}}" class="wee--hotel_notice">
+    <view class="notice-title"><image src="https://img3.weegotr.com/xcx/statics/policy-icon.png"></image><text>政策与注意事项</text></view>
+    <view class="notice-item">
+      <view wx:for="{{policy}}" wx:key="_id" class="item">
+        <view class="notice-item-title"><text>[{{item.type}}]</text></view>
+        <view class="notice-item-des">
+          <text wx:for="{{item.cons}}" wx:for-item="subItem">- {{subItem}}\n</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="wee-hotel_concat">
+    <view class="concat-title"><view></view><text>{{datas.name}}</text></view>
+    <view class="concat-item">
+      <view class="item">
+        <view class="des"><image class="address" src="https://img3.weegotr.com/xcx/statics/address-icon.png"></image><text>地址</text></view>
+        <view class="con"><text>{{datas.address}}</text></view>
+      </view>
+      <view data-phone="{{datas.telephone}}" class="item" bindtap="makePhoneCall">
+        <view class="des"><image class="phone" src="https://img3.weegotr.com/xcx/statics/phone-icon.png"></image><text>电话</text></view>
+        <view class="con"><text>{{datas.telephone}}</text></view>
+      </view>
+      <view class="item">
+        <view class="des"><image class="link" src="https://img3.weegotr.com/xcx/statics/link-icon.png"></image><text>网址</text></view>
+        <view class="con"><text>{{datas.website}}</text></view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="wee-hotel_customer">
+    <view class="customer-title" bindtap="makePhoneCall"><image src="https://img3.weegotr.com/xcx/statics/customer.png"></image><text>联系客服</text></view>
+    <view class="customer-small-title" bindtap="makePhoneCall"><image src="https://img3.weegotr.com/xcx/statics/customer-red.png"></image><text>24小时在线客服</text></view>
+    <view class="customer-phone" bindtap="makePhoneCall"><view class="hotel-tag_bb pad20">010-57273085</view></view>
+    <view class="customer-des"><text>• 我们会继续努力，不断改善，为您提供优质服务</text></view>
+    <view class="customer-logo"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+  </view>
+</view>

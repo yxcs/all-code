@@ -1,0 +1,101 @@
+.cascade--tree__wrap .by-checkbox__label {
+  font-size: 12px;
+  padding-left: 3px;
+}
+.cascade--tree__wrap .popup-content .by-checkbox__label {
+  font-size: 12px;
+  padding-left: 3px;
+  vertical-align: top;
+}
+.cascade--tree__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: transparent;
+}
+.cascade--tree__item {
+  position: relative;
+  height: 30px;
+  box-sizing: border-box;
+}
+.cascade--tree__operate {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.cascade--tree__operate.active {
+  box-shadow: 0 -1px 6px 0 rgba(0, 0, 0, .1);
+}
+.cascade--tree__operate .name {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: -3px;
+}
+.cascade--tree__operate .num {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  transform: scale(0.9);
+  color: #f00;
+}
+.cascade--tree__popup {
+  position: absolute;
+  z-index: 99;
+  left: 0px;
+  right: 0px;
+  top: 30px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, .1);
+  overflow: auto;
+  box-sizing: border-box;
+}
+.cascade--tree__popup .popup-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cascade--tree__popup .popup-content>div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cascade--tree__operate .sub-name {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.1;
+  margin: 0 0 5px -3px;
+}
+.cascade--tree__popup .popup-close {
+  text-align: right;
+}
+/* 三角箭头 */
+.cascade--tree__operate .arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  margin: -5px -3px 0;
+}
+.by-arrow-wrap {
+  display: inline-block;
+  background: transparent;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  border: 4px solid transparent;
+}
+.by-arrow-wrap.down {
+  border-top: 4px solid #333;
+  border-bottom: none;
+}
+.by-arrow-wrap.up {
+  border-bottom: 4px solid #333;
+  border-top: none;
+}

@@ -1,0 +1,28 @@
+/* pages/privacyNote/privacyNote.wxss */
+.wrap {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx 25rpx;
+}
+.title {
+  font-size: 40rpx;
+  color: #202020;
+  font-weight: 400;
+  line-height: 52rpx;
+  text-align: center;
+}
+.sm-title {
+  font-size: 30rpx;
+  line-height: 52rpx;
+  font-weight: bold;
+}
+.text {
+  font-size: 30rpx;
+  line-height: 52rpx;
+}
+.text-pad {
+  padding: 20rpx 0;
+}
+.sm-title-pad {
+  padding-top: 20rpx;
+}

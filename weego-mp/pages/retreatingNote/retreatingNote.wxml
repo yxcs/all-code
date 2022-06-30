@@ -1,0 +1,17 @@
+<!--pages/retreatingNote/retreatingNote.wxml-->
+<view class="wrap">
+  <view class="ret-list">
+    <view wx:if="{{orderConfirmList.length}}" class="item">
+      <view class="title"><view class="bar"></view><view><text>订单确认</text></view></view>
+      <view class="des" wx:for="{{orderConfirmList}}" wx:key="*this"><text>• {{item}}</text></view>
+    </view>
+    <view wx:if="{{cancelRuleList.length}}" class="item">
+      <view class="title"><view class="bar"></view><view><text>退改规定</text></view></view>
+      <view class="des" wx:for="{{cancelRuleList}}" wx:key="*this"><text>• {{item}}</text></view>
+    </view>
+    <view wx:if="{{refundProcessList.length}}" class="item">
+      <view class="title"><view class="bar"></view><view><text>退款流程</text></view></view>
+      <view class="des" wx:for="{{refundProcessList}}" wx:key="*this"><text>• {{item}}</text></view>
+    </view>
+  </view>
+</view>

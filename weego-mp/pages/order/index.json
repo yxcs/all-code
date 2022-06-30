@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "order-list": "../../components/order-list/order-list",
+    "page-loading": "../../components/page-loading/page-loading"
+  },
+  "navigationBarTitleText": "Weego 订单"
+}

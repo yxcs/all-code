@@ -1,0 +1,99 @@
+<view class="wrap">
+  <view class="logo"><image src="https://img3.weegotr.com/cms/uploads/U2YxKao3ToOeRhAU.png"></image></view>
+  <view class="title">
+    <view class="title-main"><text>{{datas.product_snapshot.name}}</text></view>
+    <view class="title-zh"><text>{{datas.hotel.name}}</text></view>
+    <view class="title-en"><text>{{datas.hotel.name_en}}</text></view>
+  </view>
+  <view class="our-tip">
+    <view><text>PLEASE PRESENT THIS VOUCHER TO THE HOTEL UPON ARRIVAL. </text></view>
+    <view><text>请携带此凭证至酒店办理入住手续. </text></view>
+    <view><text> ROOM-ONLY FEES AND ITEMS LISTED IN THE RESERVATION DETAILS ARE PAID BY WEEGO OR WEEGO PARTNERS. ALL OTHER CHARGES WILL BE COLLECTED BY HOTEL. </text></view>
+    <view><text>此单房费及预定条款中所包含的费用已预付,如有其他消费请直接付款至酒店. </text></view>
+  </view>
+  <view class="voucher-info">
+    <view>
+      • WEEGO BOOKING NUMBER (Weego预定号)：
+      <text>
+        {{datas.order_code}}
+      </text>
+    </view>
+    <view>
+      • BOOKING REFERENCE NUMBER (预定参照号)：
+      <text>
+        {{datas.voucher}}
+      </text>
+    </view>
+  </view>
+  <view class="hotel-info">
+    <view class="hotel-info-title"><text>HOTEL INFORMATION (酒店信息):</text></view>
+    <view class="hotel-detail">
+      <view class="label"><text>• HOTEL (酒店)：</text></view>
+      <view class="value"><text>{{datas.hotel.name}} {{datas.hotel.name_en}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• ADDRESS (地址)：</text></view>
+      <view class="value"><text>{{datas.hotel.address}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• TELEPHONE (电话)：</text></view>
+      <view class="value"><text>{{datas.hotel.telephone}}</text></view>
+    </view>
+  </view>
+  <view class="hotel-info">
+    <view class="hotel-info-title"><text>RESERVATION DETAILS (预定信息):</text></view>
+    <view class="hotel-detail">
+      <view class="label"><text>• CHECK-IN DATE (入住日)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.check_in_date}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• CHECK-OUT DATE (离店日)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.check_out_date}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• NUMBER OF ROOM (房间数)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.room_count}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• ROOM TYPE (房型)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.room_type}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• BREAKFAST INCLUDED (早餐)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.breakfast}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• NUMBER OF PERSON (人数)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.person_count}}</text></view>
+    </view>
+    <view class="hotel-detail">
+      <view class="label"><text>• GUEST NAME(S) (入住人姓名)：</text></view>
+      <view class="value"><text>{{datas.reserveInfo.custom_name}}</text></view>
+    </view>
+  </view>
+
+  <view class="bottom-info">
+    <view class="bottom-info-title"><text>IMPORTANT INFORMATION (重要提示)：</text></view>
+    <view class="hotel-warm-tip"><text>{{datas.hotel.warm_tip}}</text></view>
+    <view><text>In general, check-in time begins at 15:00pm and check-out time is
+      before 12:00pm (noon) on the day of departure. This varies from
+      hotel to hotel. Please check with the hotel upon arrival. Any
+      early check in or late check out, hotel may charge extra fees.</text></view>
+    <view><text>一般来说，酒店的入住时间为下午15：00，离店时间为正午12：00。这个时间有可能随酒店不同而不同，请抵达酒店时同酒店确认。如需提前入住或推迟离店，酒店会酌情加收一定的费用。</text></view>
+    <view class="use"><text>FOR HOTEL USE:</text></view>
+    <view class="use"><text>THIS SERVICE IS BOOKED AND PAYABLE BY JACTRAVEL LTD, A WEEGO&quote;S PARTNER</text></view>
+  </view>
+
+  <view class="footer">
+    <view class="service_phone"><text>Tel: 400-150-1868</text></view>
+    <view class="rule">
+      <navigator hover-class="none" url="/pages/serviceNote/serviceNote">服务声明</navigator>
+      <navigator hover-class="none" url="/pages/privacyNote/privacyNote">隐私条款</navigator>
+    </view>
+    <view class="company-info">
+      <view>北京非凡维格科技有限公司</view>
+      <view class="mid"> ©2017Weego</view>
+      <view>京ICP备15050223号</view>
+    </view>
+  </view>
+</view>

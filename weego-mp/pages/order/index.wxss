@@ -1,0 +1,372 @@
+/* pages/order/index.wxss */
+@import '../../components/common.wxss';
+page {
+  width: 750rpx;
+  height: 100%;
+}
+.wee--order-wrap {
+  width: 750rpx;
+  height: 100%;
+}
+.wee--order-wrap .order-header {
+  width: 750rpx;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('https://img3.weegotr.com/xcx/statics/blur-bg.png') no-repeat;
+  background-size: 750rpx 350rpx;
+}
+.wee--order-wrap .avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+  margin-bottom: 40rpx;
+  overflow: hidden;
+}
+.wee--order-wrap .avatar image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+}
+.wee--order-wrap .nickname {
+  font-size: 32rpx;
+  color: #fff;
+}
+
+.wee--order-wrap .login-btn {
+  font-size: 30rpx;
+  color: #fff;
+  width: 193rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #ff4f4e;
+  text-align: center;
+  border-radius: 28rpx;
+}
+.wee--order-wrap .bind-phone-btn {
+  font-size: 30rpx;
+  color: #fff;
+  width: 193rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #ff4f4e;
+  text-align: center;
+  border-radius: 28rpx;
+  margin-top: 20rpx;
+}
+.wee--order-wrap .bind-phone-btn button {
+  font-size: 30rpx;
+  color: #fff;
+  width: 193rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #ff4f4e;
+  text-align: center;
+  border-radius: 28rpx;
+}
+
+.wee--order-wrap .order-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20rpx;
+}
+.wee--order-wrap .order-title .img {
+  width: 36rpx;
+  height: 46rpx;
+  padding-right: 10rpx;
+}
+.wee--order-wrap .order-title .img image {
+  width: 36rpx;
+  height: 46rpx;
+}
+.wee--order-wrap .order-title .text {
+  font-size: 30rpx;
+  color: #220022;
+}
+
+.wee--order-wrap .order-list {
+  width: 750rpx;
+  background-color: hsla(0,0%,96%,.4);
+
+}
+.wee--order-wrap .order-list .item {
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding-bottom: 40rpx;
+}
+.wee--order-wrap .order-list .item .order-img {
+  position: relative;
+  overflow: hidden;
+  width: 750rpx;
+  height: 480rpx;
+}
+.wee--order-wrap .order-list .item .order-img image {
+  width: 750rpx;
+  height: 480rpx;
+}
+.wee--order-wrap .order-list .item .order-img .title {
+  position: absolute;
+  left: 0;
+  bottom: 15rpx;
+  padding: 0 24rpx;
+  color: #fff;
+}
+.wee--order-wrap .order-detail {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx 25rpx;
+}
+.wee--order-wrap .detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.wee--order-wrap .detail-item .header {
+  width: 200rpx;
+  text-align: left;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #202020;
+}
+.wee--order-wrap .detail-item .info {
+  width: 480rpx;
+  text-align: right;
+  font-size: 30rpx;
+  color: #202020;
+}
+.wee--order-wrap .detail-item .price {
+  color: #9d9d9d;
+  font-size: 28rpx;
+}
+.wee--order-wrap .detail-item .price text {
+  color: #ff4f4e;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.wee--order-wrap .order-btn {
+  display: flex;
+  justify-content: center;
+}
+.wee--order-wrap .more-hotel {
+  margin: 40rpx 0 100rpx 0;
+  color: #202020;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+/* 没有订单时样式 */
+.wee--order-wrap .no-order {
+  width: 750rpx;
+  background: hsla(0,0%,96%,.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 440rpx);
+}
+.wee--order-wrap .no-more-img {
+  text-align: center;
+  font-size: 30rpx;
+  color: #818181;
+}
+.wee--order-wrap .no-more-img image {
+  width: 150rpx;
+  height: 191.4rpx;
+}
+.wee--order-wrap .goto-mall {
+  margin-top: 80rpx;
+}
+
+
+/* 底部样式 */
+.wee--order-wrap .noMore {
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #9d9d9d;
+  text-align: center;
+  padding: 40rpx 0 60rpx 0;
+}
+/* loading 动画 */
+.wee--order-wrap .footer-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx 0;
+  margin-bottom: 40rpx;
+}
+.wee--order-wrap .footer-loading view {
+  width: 9rpx;
+  height: 9rpx;
+  margin: 4px;
+  background-image: url('https://img3.weegotr.com/xcx/statics/dot-light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: padding-box;
+  border-radius: 100%;
+  -webkit-animation: sk-bouncedelay 1.2s infinite ease-in-out;
+  animation: sk-bouncedelay 1.2s infinite ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.wee--order-wrap .footer-loading .first {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.wee--order-wrap .footer-loading .second {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0.01);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+  }
+
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* 状态颜色 */
+.status-cancelled,
+.status-expired {
+  background-color: #818181;
+}
+
+.status-unpaid,
+.status-paying,
+.status-refund_pending {
+  background-color: #F6A623;
+}
+
+.status-paid,
+.status-confirmed {
+  background-color: #FF4F4E;
+}
+
+.status-refund_confirmed {
+  background-color: #34D09B;
+}
+
+/* 登录弹窗 */
+.login-modal-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.4);
+}
+.login-modal-mask .login-modal {
+  width: 660rpx;
+  height: 560rpx;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -330rpx;
+  margin-top: -280rpx;
+  border-radius: 10rpx;
+  border: 1px solid #ccc;
+}
+.login-modal-mask .login-modal .modal-title {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #202020;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.login-modal-mask .login-modal .modal-logo {
+  height: 210rpx;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.login-modal .modal-logo .logo {
+  width: 91rpx;
+  height: 91rpx;
+  border-radius: 91rpx;
+  overflow: hidden;
+}
+.login-modal .modal-logo .logo image {
+  width: 91rpx;
+  height: 91rpx;
+}
+.login-modal .modal-logo .slogan {
+  text-align: center;
+  font-size: 32rpx;
+  color: #202020;
+}
+.modal-phone {
+  height: 140rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.modal-phone .phone-des {
+  font-size: 28rpx;
+  color: #6e6e6e;
+  padding-top: 30rpx;
+}
+.modal-phone .phone-number {
+  font-size: 28rpx;
+  color: #181818;
+  padding-top: 10rpx;
+}
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  color: #202020;
+}
+.modal-footer .cancel-btn {
+  width: 328rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+}
+.modal-footer .confirm-btn {
+  width: 328rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  border-left: 1px solid rgba(0,0,0,0.2);
+  color: #2B940C;
+}
+.modal-footer .confirm-btn button {
+  width: 328rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  border-left: 1px solid rgba(0,0,0,0.2);
+  color: #2B940C;
+  background: transparent;
+  border: none;
+  border-radius: none;
+}

@@ -1,0 +1,56 @@
+{
+  "name": "vue-gn-components",
+  "version": "1.0.35",
+  "private": false,
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "style": "lib/style/index.css",
+  "prepublishOnly": "npm run build",
+  "description": "一些标准组件库里可能没有的组件",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-gn-components --dest lib packages/index.js"
+  },
+  "keywords": [
+    "features",
+    "vue",
+    "components",
+    "watermark",
+    "verification"
+  ],
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huxiaocheng/vue-gn-components"
+  },
+  "author": "https://juejin.im/user/5af23b36f265da0b9d783023",
+  "homepage": "https://github.com/huxiaocheng/vue-gn-components",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "dom-to-image": "^2.6.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-router": "^4.0.0",
+    "@vue/cli-plugin-vuex": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^1.18.2",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}

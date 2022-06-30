@@ -1,0 +1,8 @@
+<!--components/index.wxml-->
+<view class='search-wrap'>
+  <navigator hover-class="none" url="/pages/search/search">
+    <view class="pchoder">
+      <image src="../../assets/pages/search-icon.png"></image><text>搜酒店/套餐/城市名称</text>
+    </view>
+  </navigator>
+</view>

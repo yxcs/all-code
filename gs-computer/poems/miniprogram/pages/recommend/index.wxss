@@ -1,0 +1,70 @@
+.wrap {
+  width: 750rpx;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #333;
+}
+.title {
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: rgba(255,255,255,0.3);
+  padding: 0 40rpx;
+}
+.title .more {
+  width: 100rpx;
+  text-align: right;
+}
+.card {
+  width: 670rpx;
+  height: calc( 100vh - 200rpx );
+  background-color: #fff;
+  margin: 60rpx auto 60rpx auto;
+}
+.poem-img {
+  width: 100%;
+  height: 100%;
+}
+.poem-img image {
+  width: 100%;
+  height: 100%;
+}
+.poem-content {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  padding: 20rpx;
+}
+.poem-content .desc {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 150rpx;
+  height: 100%;
+  font-size: 32rpx;
+}
+.poem-content .desc view {
+  writing-mode: vertical-rl;
+  letter-spacing: 4rpx;
+}
+.poem-content .sentence {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 480rpx;
+  height: 100%;
+}
+.poem-content .sentence .item {
+  width: 60rpx;
+  height: 100%;
+  line-height: 60rpx;
+  writing-mode: vertical-rl;
+  letter-spacing: 6rpx;
+  font-size: 32rpx;
+}

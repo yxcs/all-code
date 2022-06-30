@@ -1,0 +1,40 @@
+<!--pages/play/play.wxml-->
+<scroll-view scroll-x="false" class="wrap" style="height:{{wHeight}}rpx">
+    <view class="video-wrap">
+        <video autoplay="{{isAutoPlay}}" 
+            src="{{videoDetail.mp4Url}}"></video>
+    </view>
+    <view class="title-wrap">
+        <view class="title-text">
+            <view>{{videoDetail.title}}</view>
+            <view>上传时间: {{videoDetail.uploadtime}}</view>
+        </view>
+        <view class="title-num">
+            <view class="play-num"> {{videoDetail.playCount}}播放</view>
+            <view class="video-share" bindtap="onShare">
+                <image style="vertical-align:middle;" src="../../images/share.png"></image>
+                <view hidden="{{isHideShare}}" class="video-share-model">
+                    点击右上角「<text class="share-dot">…</text>」,将视频分享给好友
+                </view>
+            </view>
+        </view>
+    </view>
+    <scroll-view scroll-y="true" class="recommend-wrap" style="height: {{scrollHeight}}rpx;">
+        <view class="recommend-title">相关视频</view>
+        <view class="recommend-list">
+            <navigator url="./play?id={{item.id}}" open-type="redirect" class="item" wx:for="{{videoDetail.recommendVideo}}" wx:key="index">
+                <view class="item-img"><image src="{{item.picUrl}}"></image></view>
+                <view class="item-text">
+                    <view class="item-text-title">{{item.title}}</view>
+                    <view class="item-text-num">
+                        <view class="item-num">
+                            {{item.playCount}}播放
+                        </view>
+                        <view class="item-time">{{item.uploadtime}}</view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+        <view style="height:40rpx;"></view>
+    </scroll-view> 
+</scroll-view>

@@ -1,0 +1,30 @@
+.by--layout {
+  height: 100%;
+  .by--layout__content {
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    .by--layout__mian {
+      position: relative;
+      width: 1140px;
+      margin: 0 auto;
+      min-height: 100%;
+      .by--layout__aside {
+        position: fixed;
+        width: 240px;
+        height: 100%;
+        .el-aside {
+          height: 100%;
+          .el-menu {
+            height: 100%;
+          }
+        }
+      }
+      .by--layout__demo {
+        width: 900px;
+        position: absolute;
+        left: 240px;
+      }
+    }
+  }
+}

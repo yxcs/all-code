@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/lib/layui/css/layui.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form class="layui-form bk-search" action="/bookmark">
+      <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">标题</label>
+          <div class="layui-input-block bk-input">
+            <input id="title" type="text" name="title" placeholder="标题模糊查询" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label">类型</label>
+          <div class="layui-input-block bk-select">
+            <select id="type" name="type">
+              <option value="">全部</option>
+              <option value="wx">微信</option>
+              <option value="mobile">移动端</option>
+              <option value="other">其他</option>
+              <option value="pc">PC端</option>
+              <option value="frame">框架</option>
+              <option value="interview">面试</option>
+              <option value="design">设计</option>
+              <option value="media">新媒体</option>
+              <option value="biyao">必要</option>
+              <option value="juejin">掘金</option>
+              <option value="service">服务器</option>
+              <option value="github">Github</option>
+              <option value="document">文档</option>
+              <option value="tool">工具</option>
+              <option value="engineering">前端工程化</option>
+              <option value="movie">影视</option>
+              <option value="java">后端</option>
+              <option value="canvas">图表</option>
+              <option value="gzh">公众号</option>
+              <option value="toutiao">头条号</option>
+            </select id="title">
+          </div>
+        </div>
+        <div class="layui-inline bk-button">
+          <div id="bkSearch" class="layui-btn" lay-filter="formDemo">查询</div>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+    <table id="demo" lay-filter="test"></table>
+    <script type="text/html" id="titleTpl">
+      <a href="{{d.url}}" class="layui-table-link">{{d.title}}</a>
+    </script>
+    <script type="text/html" id="coverTpl">
+      {{#  if(d.cover){ }}
+      <img class="cover-image" src="{{d.cover}}" />
+      {{#  } else { }}
+        暂无
+      {{#  } }}
+    </script>
+    <script type="text/html" id="sourceTpl">
+      {{#  if(d.source){ }}
+        <a href="{{d.source}}" class="layui-table-link">{{d.sourceTxt}}</a>
+      {{#  } else { }}
+        {{d.sourceTxt}}
+      {{#  } }}
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/lib/layui/layui.all.js"></script>
+    <script>
+      layui.use('table', function(){
+        var table = layui.table;
+        //第一个实例
+        table.render({
+          elem: '#demo',
+          url: '/bookmark/',
+          page: true,
+          cols: [[ //表头
+            {field: 'id', title: 'ID', width: 80, sort: false},
+            {field: 'title', title: '标题', sort: false, templet: '#titleTpl'},
+            {field: 'dateTxt', title: '更新时间', sort: false},
+            {field: 'cover', title: '封面', sort: false, templet: '#coverTpl'},
+            {field: 'digest', title: '简介', sort: false},
+            {field: 'mTitle', title: '主类', sort: false},
+            {field: 'sourceTxt', title: '来源', sort: false, templet: '#sourceTpl'},
+          ]]
+        });
+      });
+
+      $('#bkSearch').click(function () {
+        var title = $('#title').val()
+        var type = $('#type').val()
+        if (title && title.length > 20) {
+          layer.alert('搜索字数超出', {
+            icon: 5,
+            title: "提示"
+          });
+        }
+        $.get('/bookmark', {page: 1, limit: 10, title: title, type: type}, function (res) {
+          console.log(res)
+        })
+      })
+    </script>
+  </body>
+</html>

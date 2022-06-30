@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+      .border-up-empty{width: 0;height: 0;border-left: 30px solid transparent;border-right: 30px solid transparent;border-bottom: 30px solid #333;position: relative;margin: 50px auto;}
+    	.border-up-empty span{display: block;width: 0;height: 0;border-left: 28px solid transparent;border-right: 28px solid transparent;border-bottom: 28px solid #F0981C;position: absolute;left: -28px;top: 2px;}
+    	.border-down-empty{width: 0;height: 0;border-left: 30px solid transparent;border-right: 30px solid transparent;border-top: 30px solid #333;position: relative;margin: 50px auto;}
+    	.border-down-empty span{display: block;width: 0;height: 0;border-left: 28px solid transparent;border-right: 28px solid transparent;border-top: 28px solid #F0981C;position: absolute;left: -28px;top: -30px;}
+    	.border-left-empty{width: 0;height: 0;border-bottom: 30px solid transparent;border-right: 30px solid #333;border-top: 30px solid transparent;position: relative;margin: 50px auto;}
+    	.border-left-empty span{display: block;width: 0;height: 0;border-bottom: 28px solid transparent;border-right: 28px solid #F0981C;border-top: 28px solid transparent;position: absolute;left: 2px;top: -28px;}
+    	.border-right-empty{width: 0;height: 0;border-left: 30px solid #333;border-bottom: 30px solid transparent;border-top: 30px solid transparent;position: relative;margin: 50px auto;}
+    	.border-right-empty span{display: block;width: 0;height: 0;border-left: 28px solid #F0981C;border-bottom: 28px solid transparent;border-top: 28px solid transparent;position: absolute;left: -30px;top: -28px;}
+      
+      /* #demo{
+          width: 100px;
+          height: 100px;
+          background-color: #333;
+          position: relative;      
+      }
+      #demo:after{
+          border:solid transparent;
+          border-left-color:#333;
+          border-width:10px;
+          width:0;
+          content:" ";
+          position:absolute;
+          left:100%;
+          top:10%;  
+      } */
+      #demo{
+        width: 100px;
+        height: 100px;
+        background-color:#fff;
+        position:relative;
+        border: 2px solid #000;    /*整体颜色边框是黑色*/
+      }
+      /*小三角*/
+      #demo:after{
+        border:solid transparent;
+        border-left-color:#fff;
+        border-width:10px;
+        content:" ";
+        position:absolute;
+        left:100%;
+        top:20px;    /*20px*/
+      }
+      /*大三角*/
+      #demo:before{
+        border:solid transparent;
+        border-left-color:#000;
+        border-width:12px;   /*10px+2px*/
+        content:" ";
+        position:absolute;
+        left:100%;
+        top:18px;    /*20px-2px*/
+      }
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="border-up-empty">
+        <span></span>
+      </div>
+      <!--向下的三角形-->
+      <div class="border-down-empty">
+        <span></span>
+      </div>
+      <!--向左的三角形-->
+      <div class="border-left-empty">
+        <span></span>
+      </div>
+      <!--向右的三角形-->
+      <div class="border-right-empty">
+        <span></span>
+      </div>
+
+      <diva id="demo"></div>
+    
+    <script src="" async defer></script>
+  </body>
+</html>

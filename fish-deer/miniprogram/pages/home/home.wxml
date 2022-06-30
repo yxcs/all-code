@@ -1,0 +1,35 @@
+<view wx:if="{{false}}">
+  <!-- 导航条 -->
+  <view></view>
+  <!-- 轮播图 -->
+  <view></view>
+  <!-- 小分类 -->
+  <view></view>
+  <!-- 列表 -->
+  <view></view>
+</view>
+
+<view class="header-tab">
+  <view class="tab-item active">前端</view>
+  <view class="tab-item">后端</view>
+  <view class="tab-item">移动端</view>
+  <view class="tab-item">服务器</view>
+  <view class="tab-item">杂文</view>
+</view>
+<view class="article-wrap">
+  <view class="article-item" wx:for="{{list}}" wx:key="_id" data-id="{{item._id}}" bind:tap="goToDetail">
+    <image src="{{item.cover}}" mode="scaleToFill" />
+    <div class="article-content">
+      <view class="article-title">{{item.title}}</view>
+      <view class="article-desc">
+        <view class="desc">
+          <image src="../../assets/see.png" />
+          <text>{{item.readNum}}</text>
+          <image class="txt" src="../../assets/collection.png" />
+          <text>{{item.collectionNum}}</text>
+        </view>
+        <view class="time"><image src="../../assets/time-circle.png" />{{item.updateAtTxt}}</view>
+      </view>
+    </div>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view class="header">
+  <view>搜索：{{tagName}}</view>
+  <view><text>共：{{count}}条</text></view>
+</view>
+<view wx:if="{{optionsList.length}}" class="list">
+  <block wx:for="{{optionsList}}" wx:key="onlyId">
+    <view data-poem-id="{{item._id}}" bind:tap="goToDetail" class="item">
+      <view class="title">{{item.name}}</view>
+      <view class="desc">
+        <view class="author">
+          <text class="name">{{item.author}}</text>
+          <text class="dynasty">{{item.dynasty}}</text>
+        </view>
+        <view class="type">{{tagName}}</view>
+      </view>
+    </view>
+  </block>
+  <view wx:if="{{!isMore}}" class="no-more">没有更多了</view>
+</view>

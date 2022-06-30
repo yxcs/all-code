@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  height: 100rpx;
+  background: #545555;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 100rpx;
+}
+.header text {
+  font-size: 24rpx;
+}
+.list {
+  padding: 40rpx 0 20rpx;
+  margin-top: 140rpx;
+  background: rgba(255,255,255,0.2);
+}
+.list .item {
+  padding: 10rpx 40rpx;
+  background: rgba(255,255,255,0.4);
+  color: #ffffff;
+  margin-bottom: 20rpx;
+}
+.list .item .title {
+  font-size: 30rpx;
+}
+.list .item .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+}
+.list .author {
+  margin-top: 10rpx;
+}
+.list .dynasty {
+  color: rgba(255,255,255,0.8);
+  padding-left: 20rpx;
+}
+
+.no-more {
+  height: 50rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ffffff;
+  line-height: 50rpx;
+}

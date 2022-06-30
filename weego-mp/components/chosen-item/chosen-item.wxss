@@ -1,0 +1,5 @@
+@import "../common.wxss";
+.wee--hotel_item-wrap swiper {
+  width: 750rpx;
+  height: 800rpx;
+}

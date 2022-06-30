@@ -1,0 +1,89 @@
+<%- include('./header.ejs') %>
+<div class="main-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form>
+          <h3>会议系统信息</h3>
+          <hr />
+          <div class="form-group">
+            <label for="loginName">会议系统登录名</label>
+            <input type="text" class="form-control" id="loginName" placeholder="会议系统登录名">
+          </div>
+          <div class="form-group">
+            <label for="loginPwd">会议系统登录密码</label>
+            <input type="password" class="form-control" id="loginPwd" placeholder="会议系统登录密码">
+          </div>
+          <hr />
+          <h3>预定会议信息</h3>
+          <hr />
+          <div class="form-group">
+            <label for="meetingname">会议名称</label>
+            <input type="text" class="form-control" id="meetingname" placeholder="会议名称">
+          </div>
+          <div class="form-group">
+            <label for="roomid">会议室</label>
+            <select class="form-control" id="roomid">
+              <option value="">--请选择--</option>
+              <option value="67">必玉</option>
+              <option value="69">必静</option>
+              <option value="73">必将</option>
+              <option value="74">必然</option>
+              <option value="77">必辉</option>
+              <option value="78">必月</option>
+              <option value="79">必果</option>
+              <option value="80">必行</option>
+              <option value="81">必定</option>
+              <option value="82">培训室</option>
+              <option value="83">极致</option>
+              <option value="84">简单</option>
+              <option value="85">知行合一</option>
+              <option value="87">洽谈室</option>
+              <option value="88">必需</option>
+              <option value="89">会客室</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startdate">日期</label>
+            <input type="date" class="form-control" id="startdate" placeholder="日期">
+          </div>
+          <div class="form-group">
+            <label for="starttime">时间</label>
+            <select class="form-control" id="starttime">
+              <option value="">--请选择--</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="duringtime">时长</label>
+            <select class="form-control" id="duringtime" name="duringtime">
+              <option value="1">1</option>
+              <option value="0">0.5</option>
+            </select>
+          </div>
+          <div id="saveMeetingMsg" class="btn btn-default">保存</div>
+        </form>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>
+<%- include('./footer.ejs') %>

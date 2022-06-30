@@ -1,0 +1,15 @@
+<!--components/detail-swiper/detail-swiper.wxml-->
+<view class="wrap">
+  <swiper indicator-dots="{{false}}" autoplay="{{true}}">
+    <block wx:for="{{datas.gallery}}" wx:key="*this">
+      <swiper-item class="bg-loading">
+        <image mode="scaleToFill" src="{{item.image_url}}" class="slide-image"/>
+        <text wx:if="{{false}}" class="tag">豪华精选</text>
+        <view wx:if="{{false}}" class="triangle-top">
+          <view class="tt1">40%</view>
+          <view class="tt2">OFF</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

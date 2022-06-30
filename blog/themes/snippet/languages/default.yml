@@ -1,0 +1,36 @@
+categories: 分类
+search: 搜索
+tags: 标签
+tagcloud: 标签
+tweets: Tweets
+prev: 前一篇
+next: 后一篇
+comment: 评论
+archive_a: 归档
+archive_b: "归档: %s"
+page: 页 %d
+recent_posts: 最近更新
+newer: 前一篇
+older: 后一篇
+share: 分享
+rss_feed: RSS
+rss: RSS
+category: 分类
+tag: Tag
+social: 联系
+friend_links: 友情链接
+read_more: 阅读
+home: 首页
+archives: 归档
+about: 关于
+search_local: 搜索
+search_google: google搜
+search_placeholder: 搜搜搜一下
+author: 作者
+date: 发布日期
+update: 更新日期
+post_categories: 分类
+post_tags: 标签
+post_licence: 授权
+notification: 通知
+toc: 内容列表

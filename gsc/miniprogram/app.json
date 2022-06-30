@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/user",
+    "pages/detail/detail",
+    "pages/recommend/recommend",
+    "pages/search/search",
+    "pages/introduce/introduce",
+    "pages/searchList/searchList",
+    "pages/author/author",
+    "pages/dynasty/dynasty",
+    "pages/cipai/cipai"
+  ],
+  "window": {
+    "backgroundColor": "#4A4A4A",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4A4A4A",
+    "navigationBarTitleText": "古诗词鉴赏",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#aaaaaa",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#4a4a4a",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./images/user.png",
+        "selectedIconPath": "./images/user-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

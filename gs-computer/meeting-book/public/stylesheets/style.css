@@ -1,0 +1,10 @@
+body { padding-top: 70px; }
+.main-wrap {
+  width: 1140px;
+  margin: 0 auto;
+}
+.nav-wid {
+  width: 1140px;
+  margin: 0 auto;
+  float: none;
+}

@@ -1,0 +1,71 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 430rpx;
+}
+.header .bg-img image {
+  width: 100%;
+  height: 350rpx;
+}
+.header .avatar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -80rpx;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  background: #eee;
+  overflow: hidden;
+}
+.header .avatar image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+}
+.header .avatar open-data {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+}
+.no-msg {
+  margin-top: 100rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+}
+
+.list {
+  padding: 40rpx 0 20rpx;
+  margin-top: 140rpx;
+  background: rgba(255,255,255,0.2);
+}
+.list .main-title {
+  font-size: 28rpx;
+  color: #ffffff;
+  padding: 0 40rpx 40rpx 40rpx;
+}
+.list .item {
+  padding: 10rpx 40rpx;
+  background: rgba(255,255,255,0.4);
+  color: #ffffff;
+  margin-bottom: 20rpx;
+}
+.list .item .title {
+  font-size: 30rpx;
+}
+.list .item .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+}
+.list .author {
+  margin-top: 10rpx;
+}
+.list .dynasty {
+  color: rgba(255,255,255,0.8);
+  padding-left: 20rpx;
+}

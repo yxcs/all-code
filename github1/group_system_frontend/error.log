@@ -1,0 +1,115 @@
+2017-4-5 16:24:13 AssertionError: '1101' == 0
+2017-4-5 16:24:16 AssertionError: '1101' == 0
+2017-4-5 16:24:20 AssertionError: '1101' == 0
+2017-4-5 16:24:20 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 16:24:25 AssertionError: 1101 == 0
+2017-4-5 16:25:07 AssertionError: '1101' == 0
+2017-4-5 16:25:09 AssertionError: '1101' == 0
+2017-4-5 16:25:13 AssertionError: '1101' == 0
+2017-4-5 16:25:13 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 16:25:18 AssertionError: 1101 == 0
+2017-4-5 16:26:16 AssertionError: 400 != 400
+2017-4-5 16:26:32 AssertionError: 400 != 400
+2017-4-5 16:26:49 AssertionError: '1101' == 0
+2017-4-5 16:26:51 AssertionError: '1101' == 0
+2017-4-5 16:26:55 AssertionError: '1101' == 0
+2017-4-5 16:26:55 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 16:27:01 AssertionError: 1101 == 0
+2017-4-5 16:27:54 AssertionError: '1101' == 0
+2017-4-5 16:27:56 AssertionError: '1101' == 0
+2017-4-5 16:28:00 AssertionError: '1101' == 0
+2017-4-5 16:28:00 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 16:28:05 AssertionError: 1101 == 0
+2017-4-5 18:20:51 AssertionError: 1 == 0
+2017-4-5 18:47:06 AssertionError: 400 != 400
+2017-4-5 18:49:10 AssertionError: 400 != 400
+2017-4-5 18:49:44 AssertionError: 400 != 400
+2017-4-5 19:06:26 AssertionError: 400 != 400
+2017-4-5 19:16:03 AssertionError: '1101' == 0
+2017-4-5 19:16:05 AssertionError: '1101' == 0
+2017-4-5 19:16:09 AssertionError: '1101' == 0
+2017-4-5 19:16:09 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 19:16:14 AssertionError: 1101 == 0
+2017-4-5 19:25:48 AssertionError: '1101' == 0
+2017-4-5 19:25:50 AssertionError: '1101' == 0
+2017-4-5 19:25:54 AssertionError: '1101' == 0
+2017-4-5 19:25:54 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 19:25:59 AssertionError: 1101 == 0
+2017-4-5 19:30:30 AssertionError: 400 != 400
+2017-4-5 19:54:27 Error: connect ETIMEDOUT 101.227.160.102:443
+2017-4-5 20:01:59 Error: timeout of 60000ms exceeded
+2017-4-5 20:12:42 Error: timeout of 60000ms exceeded
+2017-4-5 20:12:42 Error: timeout of 60000ms exceeded
+2017-4-5 20:12:42 Error: timeout of 60000ms exceeded
+2017-4-5 20:12:42 Error: timeout of 60000ms exceeded
+2017-4-5 20:17:43 AssertionError: '1101' == 0
+2017-4-5 20:17:45 AssertionError: '1101' == 0
+2017-4-5 20:17:49 AssertionError: '1101' == 0
+2017-4-5 20:17:49 Error: 连续3次同步失败，5s后尝试重启
+2017-4-5 20:17:55 AssertionError: 1101 == 0
+2017-4-5 20:29:31 Error: timeout of 60000ms exceeded
+2017-4-5 20:29:31 Error: 状态同步超过705.63s未响应，5s后尝试重启
+2017-4-5 20:50:40 AssertionError: 400 != 400
+2017-4-6 09:36:06 AssertionError: '1101' == 0
+2017-4-6 09:36:06 AssertionError: 1101 == 0
+2017-4-6 09:36:06 AssertionError: 1101 == 0
+2017-4-6 09:36:08 AssertionError: '1101' == 0
+2017-4-6 09:36:12 AssertionError: '1101' == 0
+2017-4-6 09:36:12 Error: 连续3次同步失败，5s后尝试重启
+2017-4-6 09:36:18 AssertionError: 1101 == 0
+2017-4-6 09:50:13 AssertionError: '1101' == 0
+2017-4-6 09:50:15 AssertionError: '1101' == 0
+2017-4-6 09:50:19 AssertionError: '1101' == 0
+2017-4-6 09:50:19 Error: 连续3次同步失败，5s后尝试重启
+2017-4-6 09:50:24 AssertionError: 1101 == 0
+2017-4-6 10:50:15 TypeError: Cannot read property 'Ret' of undefined
+2017-4-6 10:50:15 TypeError: Cannot read property 'Ret' of undefined
+2017-4-6 10:50:30 AssertionError: '1101' == 0
+2017-4-6 10:50:32 AssertionError: '1101' == 0
+2017-4-6 10:50:38 AssertionError: '1101' == 0
+2017-4-6 10:50:38 Error: 连续3次同步失败，5s后尝试重启
+2017-4-6 10:51:58 Error: timeout of 60000ms exceeded
+2017-4-6 10:51:58 Error: timeout of 60000ms exceeded
+2017-4-6 10:52:03 AssertionError: 1101 == 0
+2017-4-6 10:54:17 Error: timeout of 60000ms exceeded
+2017-4-6 10:56:10 Error: timeout of 60000ms exceeded
+2017-4-6 11:30:44 Error: ENOENT: no such file or directory, open 'f:\projects\group_system_frontend\log\晋.log'
+2017-4-6 12:01:47 Error: ENOENT: no such file or directory, open 'f:\projects\group_system_frontend\log\晋.log'
+2017-4-6 12:15:01 TypeError: Cannot read property 'Ret' of undefined
+2017-4-6 12:15:02 TypeError: Cannot read property 'Ret' of undefined
+2017-4-6 12:15:02 TypeError: Cannot read property 'Ret' of undefined
+2017-4-6 12:15:02 TypeError: Cannot read property 'Ret' of undefined
+2017-4-6 12:15:02 Error: read ECONNRESET
+2017-4-6 12:15:02 Error: read ECONNRESET
+2017-4-6 12:17:27 Error: timeout of 60000ms exceeded
+2017-4-6 12:17:27 Error: timeout of 60000ms exceeded
+2017-4-6 12:21:10 Error: timeout of 60000ms exceeded
+2017-4-6 12:21:10 Error: 状态同步超过113.296s未响应，5s后尝试重启
+2017-4-10 16:36:08 AssertionError: '1101' == 0
+2017-4-10 16:36:10 AssertionError: '1101' == 0
+2017-4-10 16:36:15 AssertionError: '1101' == 0
+2017-4-10 16:36:15 Error: 连续3次同步失败，5s后尝试重启
+2017-4-10 16:36:20 AssertionError: 1101 == 0
+2017-4-12 14:27:09 AssertionError: 400 != 400
+2017-4-12 14:32:49 AssertionError: 400 != 400
+2017-4-12 14:34:24 AssertionError: 400 != 400
+2017-4-12 15:00:10 AssertionError: '1101' == 0
+2017-4-12 15:00:12 AssertionError: '1101' == 0
+2017-4-12 15:00:16 AssertionError: '1101' == 0
+2017-4-12 15:00:16 Error: 连续3次同步失败，5s后尝试重启
+2017-4-12 15:00:21 AssertionError: 1101 == 0
+2017-4-12 15:06:16 AssertionError: '1101' == 0
+2017-4-12 15:06:18 AssertionError: '1101' == 0
+2017-4-12 15:06:22 AssertionError: '1101' == 0
+2017-4-12 15:06:22 Error: 连续3次同步失败，5s后尝试重启
+2017-4-12 15:06:28 AssertionError: 1101 == 0
+2017-4-12 15:10:25 AssertionError: '1101' == 0
+2017-4-12 15:10:27 AssertionError: '1101' == 0
+2017-4-12 15:10:31 AssertionError: '1101' == 0
+2017-4-12 15:10:31 Error: 连续3次同步失败，5s后尝试重启
+2017-4-12 15:10:37 AssertionError: 1101 == 0
+2017-4-12 15:36:44 AssertionError: 1 == 0
+2017-4-12 16:06:02 AssertionError: -1 == 0
+2017-4-12 16:06:04 AssertionError: -1 == 0
+2017-4-12 16:06:08 AssertionError: -1 == 0
+2017-4-12 16:06:08 Error: 连续3次同步失败，5s后尝试重启

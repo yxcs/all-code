@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+          <div>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button data-key="qddq" type="button" class="btn btn-secondary">前端大全</button>
+              <button data-key="qdjc" type="button" class="btn btn-secondary">前端教程</button>
+              <button data-key="qdsb" type="button" class="btn btn-secondary">前端速报</button>
+              <button data-key="qdzd" type="button" class="btn btn-secondary">前端之巅</button>
+              <button data-key="websys" type="button" class="btn btn-secondary">web实验室</button>
+              <button data-key="qkldby" type="button" class="btn btn-secondary">区块链大本营</button>
+            </div>
+          </div>
+          <div>
+            <ul class="list-group">
+              <% list.forEach(function(item){%>
+                <a href="<%=item.content_url %>" target="_blank"><li class="list-group-item"><%=item.title %></li></a>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $('.btn-group .btn').click(function (e) {
+        var key = e.currentTarget.dataset.key;
+        var url = location.origin + '?key=' + key;
+        window.location.replace(url)
+      })
+    </script>
+  </body>
+</html>

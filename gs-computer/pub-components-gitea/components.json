@@ -1,0 +1,6 @@
+{
+  "by-button": "./src/components/by-button/index.js",
+  "by-checkbox": "./src/components/by-checkbox/index.js",
+  "by-cascade-tree": "./src/components/by-cascade-tree/index.js",
+  "index": "./src/index.js"
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style/popup.css" />
+</head>
+<body>
+  
+  <div class="header">
+    <div><img src="../images/icon_long1.png" /></div>
+    <div>商家微信号： <a id="mojing_wx" href="javascript:void(0);">mojingfuwu001</a></div>
+    <div id="login"><a href="#">未登陆</a></div>
+  </div>
+
+  <div class="loading"></div>
+  <div class="urlNoRight">
+    请先进入卖家&nbsp;&nbsp;
+    <a href="https://trade.taobao.com/trade/itemlist/list_sold_items.htm">淘宝(天猫)</a>
+    &nbsp;&nbsp;后台
+  </div>
+  <div class="forceUpdateTure">
+    <p>请尽快更新<br /><span></span></p>
+  </div>
+  <div class="forceUpdateFalse">
+    <p>请尽快更新<br /><span></span><br /><i id="closeUpdate">(点击以关闭)</i></p>
+  </div>
+
+  <div id="content">
+    <div id="loginModal">
+      <p><label>淘宝账号&nbsp;&nbsp;&nbsp;&nbsp;</label><input disabled="disabled" id="taobaoAccount" type="text" /></p>
+      <p><label>插件编号&nbsp;&nbsp;&nbsp;&nbsp;</label><input placeholder="填写插件许可证" id="chromLoginNo" type="text" /></p>
+      <p><input type="submit" value="登陆" /></p>
+    </div>
+    
+    <div class="showMain">
+      <div class="scroll"></div>
+        
+      <div class="mainTable">
+        <table align="center" border="1" bordercolor="#C0C0C0">
+          <thead><tr><th><img src="../images/1.png" />旺旺号</th><th><img src="../images/2.png" />标记次数</th><th><img src="../images/3.png" />危险指数</th><tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <div class="pagination-pre display"><img src="../images/pagination-pre.png" /></div>
+        <div class="pagination-go display">
+          <div class="pagination-total">共<span>1</span>页</div>
+          <div><input id="goNum" type="number" /></div>
+          <div class="pagination-go-btn"><span>GO</span></div>
+          <div class="pagination-go-num"><span>1</span></div>
+        </div>
+        <div class="pagination-next display"><img src="../images/pagination-next.png" /></div>
+      </div>
+        
+      <div class="wrap">
+        <div class="subTable">
+          <table align="center" border="1" bordercolor="#C0C0C0">
+            <thead><tr><th>恶意类型</th><th>备注</th><th>标记</th><tr></thead>
+            <tbody id="subTbody"></tbody>
+          </table>
+          <div id="signSubmit"> <input type="submit" /> </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="qrCode">
+      <div class="triangle"></div>
+      <img src="../images/qrcode.jpg" />
+    </div>
+  </div>
+
+  <script src="../scripts/jquery-3.2.1.min.js"></script>
+  <script src="./popup.js"></script>
+</body>
+</html>

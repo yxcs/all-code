@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "hotel-item": "../../components/hotel-item/hotel-item",
+    "package-item": "../../components/package-item/package-item"
+  },
+  "navigationBarTitleText": "Weego 精选"
+}

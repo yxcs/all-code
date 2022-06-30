@@ -1,0 +1,16 @@
+<!--components/hotel-hightlight/hotel-hightlight.wxml-->
+<view class="wee--hotel_highlight-wrap">
+  <view class="highlight-title"><image src="https://img3.weegotr.com/xcx/statics/lightHight.png"></image><text>亮点</text></view>
+
+  <block wx:for="{{datas.highlights}}" wx:key="_id">
+    <view class="highlight-small-title"><view></view><text>{{item.title}}</text></view>
+    <view class="highlight-text">
+      <text>{{item.description}}</text>
+    </view>
+    <view class="highlight-img bg-loading"><image mode="widthFix" src="{{item.image_url}}"></image></view>
+  </block>
+
+  <view class="more-highlight">
+    <view class="hotel-tag_bb pad80"><navigator hover-class="none" url="/pages/highlight/highlight?hId={{datas._id}}">更多亮点</navigator></view>
+  </view>
+</view>

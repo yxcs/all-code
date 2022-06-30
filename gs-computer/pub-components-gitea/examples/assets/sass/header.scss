@@ -1,0 +1,20 @@
+.el-header {
+  width: 1140px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.header-model {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+  .header--logo__wrap {
+    height: 60px;
+    img {
+      margin-top: 10px;
+      width: auto;
+      height: 40px;
+    }
+  }
+}

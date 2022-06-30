@@ -1,0 +1,15 @@
+<!--components/top-tab/top-tab.wxml-->
+<view class="tab-wrap">
+  <view data-key="CHOSEN" bindtap="onTopTabChange" class="tab-item {{activeKey == 'CHOSEN' ? 'active' : ''}}">
+    <view class="text"><text>精选</text></view>
+    <view class="border"><view></view></view>
+  </view>
+  <view data-key="HOTEL" bindtap="onTopTabChange" class="tab-item {{activeKey == 'HOTEL' ? 'active' : ''}}">
+    <view class="text"><text>酒店</text></view>
+    <view class="border"><view></view></view>
+  </view>
+  <view data-key="PACKAGE" bindtap="onTopTabChange" class="tab-item {{activeKey == 'PACKAGE' ? 'active' : ''}}">
+    <view class="text"><text>套餐</text></view>
+    <view class="border"><view></view></view>
+  </view>
+</view>

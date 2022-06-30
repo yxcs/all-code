@@ -1,0 +1,33 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "get movie histoay\u001b[r",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "movie"
+  ],
+  "author": "keqi",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "cheerio": "^1.0.0-rc.2",
+    "jquery": "^3.3.1",
+    "node-gyp": "^3.8.0",
+    "pageres": "^4.5.1",
+    "parse-svg-path": "^0.1.2",
+    "phantomjs": "^2.1.7",
+    "superagent": "^4.0.0-beta.5"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "bufferhelper": "^0.2.1",
+    "iconv-lite": "^0.4.24",
+    "mongodb": "^3.1.10",
+    "qs": "^6.6.0",
+    "request": "^2.88.0",
+    "webpage": "^0.3.0"
+  }
+}

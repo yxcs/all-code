@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>logo.png">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="//g.alicdn.com/fdilab/lib3rd/viewport-units-buggyfill/0.6.2/??viewport-units-buggyfill.hacks.min.js,viewport-units-buggyfill.min.js"></script>
+    <script>
+      window.onload = function () {
+        window.viewportUnitsBuggyfill.init({ hacks: window.viewportUnitsBuggyfillHacks });
+      }
+    </script>
+    <script src="http://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <script>
+      wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: 'wx1f6a1c281091085d', // 必填，公众号的唯一标识
+        timestamp: '1596989024', // 必填，生成签名的时间戳
+        nonceStr: 'server', // 必填，生成签名的随机串
+        signature: '4fa41c4ec476bb560ec73f5ad4e46dd3c6ee0c14',// 必填，签名
+        jsApiList: [] // 必填，需要使用的JS接口列表
+      });
+      window.wx = wx
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

@@ -1,0 +1,78 @@
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .ipt input {
+  width: 500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: rgba(255,255,255, 0.9);
+  padding: 0 40rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  font-size: 28rpx;
+  color: #4a4a4a;
+  text-align: center;
+}
+.header .ipt .holder {
+  text-align: center;
+  line-height: 60rpx;
+}
+.header .btn {
+  width: 100rpx;
+  height: 60rpx;
+  padding-right: 10rpx;
+  background: rgba(255,255,255, 0.8);
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  color: #4a4a4a;
+}
+
+.select {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20rpx 40rpx 40rpx;
+}
+.select view {
+  margin: 10rpx;
+  padding: 10rpx 20rpx;
+  background: rgba(255,255,255, 0.2);
+  font-size: 28rpx;
+  color: #fff;
+}
+.select view.active {
+  background: rgba(255,255,255, 0.6);
+  color: #4a4a4a;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20rpx 40rpx 40rpx;
+  border-top: 1rpx solid #333;
+}
+.options view {
+  margin: 10rpx;
+  padding: 10rpx 20rpx;
+  background: rgba(255,255,255, 0.2);
+  font-size: 28rpx;
+  color: #fff;
+}
+.options view.active {
+  background: rgba(255,255,255, 0.6);
+  color: #4a4a4a;
+}
+
+.content {
+  padding: 40rpx 0;
+}

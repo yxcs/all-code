@@ -1,0 +1,35 @@
+/* components/index.wxss */
+.search-wrap {
+  position: relative;
+  padding: 20rpx 30rpx;
+  height: 80rpx;
+}
+.search-wrap input {
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+  right: 30rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  color: rgb(129,129,129);
+  background-color: transparent;
+}
+.pchoder {
+  width: 690rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #818181;
+  font-weight: 400;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+}
+.pchoder image {
+  width: 36rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}

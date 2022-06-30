@@ -1,0 +1,34 @@
+/* components/time-leave/time-leave.wxss */
+.wrap {
+  width: 750rpx;
+  height: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff4f4e;
+}
+.wrap .time-clock {
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 16px;
+}
+.wrap .time-clock image {
+  width: 52rpx;
+  height: 52rpx;
+}
+.wrap .time-text {
+  font-size: 30rpx;
+  color: #fff;
+}
+.wrap .time-num {
+  width: 54rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #ff4f4e;
+  background: #fff;
+  border-radius: 6rpx;
+  text-align: center;
+  margin: 0 15rpx;
+}

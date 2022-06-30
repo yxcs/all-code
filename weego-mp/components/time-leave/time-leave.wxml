@@ -1,0 +1,9 @@
+<!--components/time-leave/time-leave.wxml-->
+<view class="wrap">
+  <view class="time-clock"><image src="../../assets/pages/clock-icon-white.png"></image></view>
+  <view class="time-text">距离优惠结束仅剩</view>
+  <view class="time-num">{{days}}</view>
+  <view class="time-text">天</view>
+  <view class="time-num">{{hours}}</view>
+  <view class="time-text">时</view>
+</view>

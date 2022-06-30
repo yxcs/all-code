@@ -1,0 +1,37 @@
+{
+  "name": "by-back-cli",
+  "version": "1.0.0",
+  "description": "后端vue开发脚手架，自动项目结构目录、生成页面所需内容、功能组件等",
+  "main": "index.js",
+  "bin": {
+    "biu": "./bin/biu"
+  },
+  "scripts": {
+    "dev": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "by",
+    "vue",
+    "cli"
+  ],
+  "author": "yxcs",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "cfonts": "^2.4.6",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "download-git-repo": "^3.0.2",
+    "esm": "^3.2.25",
+    "execa": "^4.0.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "inquirer": "^7.0.1",
+    "listr": "^0.14.3",
+    "ora": "^4.0.3",
+    "semver": "^7.1.1",
+    "shelljs": "^0.8.3",
+    "update-notifier": "^4.0.0"
+  }
+}

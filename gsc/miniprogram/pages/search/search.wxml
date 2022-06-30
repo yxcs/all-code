@@ -1,0 +1,21 @@
+<view class="header">
+  <view class="ipt">
+    <input bindinput="onInputWord" placeholder="搜索诗词名称 | 作者" placeholder-class="holder" />
+  </view>
+  <view bind:tap="goToListSearch" class="btn">搜索</view>
+</view>
+
+<view class="selection">
+  <view class="select">
+    <view data-key="type" bindtap="getSubOptions" class="{{key==='type'?'active':''}}">类型</view>
+    <view data-key="author" bindtap="getSubOptions" class="{{key==='author'?'active':''}}">作者</view>
+    <view data-key="dynasty" bindtap="getSubOptions" class="{{key==='dynasty'?'active':''}}">朝代</view>
+    <view data-key="cipai" bindtap="getSubOptions" class="{{key==='cipai'?'active':''}}">词牌</view>
+  </view>
+
+  <view class="options">
+    <block wx:for="{{optionsList}}" wx:key="pyName">
+      <view data-tag-name="{{item.name}}" bind:tap="goToList">{{item.name}}</view>
+    </block>
+  </view>
+</view>

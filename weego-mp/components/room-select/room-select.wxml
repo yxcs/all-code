@@ -1,0 +1,51 @@
+<!--components/room-select/room-select.wxml-->
+<view class="wee--room_select-wrap">
+  <view class="room_select-title"><image src="https://img3.weegotr.com/xcx/statics/room-icon.png"></image><text>房间详情</text></view>
+  <view class="room-filter">
+    <view class="fliter">
+      <view class="filter-btn">
+        <view class="btn" bindtap="roomCountSubtract">-</view>
+        <view class="num">{{roomCount}}</view>
+        <view class="btn">+</view>
+      </view>
+      <view class="filter-des">房间</view>
+    </view>
+    <view class="filter mid">
+      <view class="filter-btn">
+        <view class="btn">-</view>
+        <view class="num">{{roomFilters[0].adults}}</view>
+        <view class="btn">+</view>
+      </view>
+      <view class="filter-des">成人/间</view>
+    </view>
+    <view class="filter">
+      <view class="filter-btn">
+        <view class="btn">-</view>
+        <view class="num">{{roomFilters[0].children}}</view>
+        <view class="btn">+</view>
+      </view>
+      <view class="filter-des">儿童/间</view>
+    </view>
+  </view>
+
+  <view class="select-item">
+    <view class="select-con">
+      <view class="img"><image mode="aspectFill" src="http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"></image></view>
+      <view class="text">
+        <view class="title">豪华客房<text>Deluxe Room</text></view>
+        <view class="des"><text>• </text>Deluxe Room</view>
+        <view class="des"><text>• 餐食:</text>无</view>
+      </view>
+    </view>
+    <view class="select-footer">
+      <view class="price">
+        <view class="price-mount">1212元<text> /晚 /间</text></view>
+        <view class="price-des"><text>未包含服务费和税费</text></view>
+      </view>
+      <view class="select-btn">
+        <view class="hotel-tag_bb pad20">选择房间</view>
+      </view>
+    </view>
+  </view>
+
+</view>

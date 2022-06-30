@@ -1,0 +1,10 @@
+<!--components/footer/footer.wxml-->
+<view class="footer-wrap">
+  <view class="footer-navigator">
+    <navigator hover-class="none" url="/pages/serviceNote/serviceNote">服务声明</navigator>
+    <text></text>
+    <navigator hover-class="none" url="/pages/privacyNote/privacyNote">隐私条款</navigator>
+  </view>
+  <view class="footer-company"><text>北京非凡维格科技有限公司</text></view>
+  <view class="footer-copy"><text>©2017Weego | 京ICP备15050223号</text></view>
+</view>

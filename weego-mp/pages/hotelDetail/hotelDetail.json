@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "detail-swiper": "../../components/detail-swiper/detail-swiper",
+    "time-leave": "../../components/time-leave/time-leave",
+    "hotel-theme": "../../components/hotel-theme/hotel-theme",
+    "hotel-hightlight": "../../components/hotel-hightlight/hotel-hightlight",
+    "hotel-comment": "../../components/hotel-comment/hotel-comment",
+    "room-select": "../../components/room-select/room-select",
+    "hotel-concat": "../../components/hotel-concat/hotel-concat",
+    "page-loading": "../../components/page-loading/page-loading"
+  },
+  "navigationBarTitleText": "Weego 酒店详情"
+}

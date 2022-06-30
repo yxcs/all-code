@@ -1,0 +1,23 @@
+<!--pages/chosenDetailList/chosenDetailList.wxml-->
+<view class="wrap">
+  <view class="list-header"><text>{{datas.title}}</text></view>
+  <view class="list-br">
+    <view></view>
+  </view>
+  <view class="list-desc"><text>{{datas.recommend_desc}}</text></view>
+
+  <block wx:if="{{datas.category === 'hotels'}}">
+    <block wx:for="{{datas.items}}" wx:key="id">
+      <hotel-item list-data="{{item}}"></hotel-item>
+    </block>
+  </block>
+  <block wx:else>
+    <block wx:for="{{datas.items}}" wx:key="id">
+      <package-item list-data="{{item}}"></package-item>
+    </block>
+  </block>
+
+  <view class="footer-img"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+</view>
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

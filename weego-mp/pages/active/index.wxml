@@ -1,0 +1,61 @@
+<view class="wrap">
+  <view class="active-logo">
+    <navigator hover-class="none" url="/"><image mode="scaleToFill" src="https://img3.weegotr.com/xcx/statics/818.jpg" ></image></navigator>
+  </view>
+
+  <view class="time-leave">
+    <view class="time-clock"><image src="../../assets/pages/clock-202020.png"></image></view>
+    <view class="time-text">距离优惠结束仅剩</view>
+    <view class="time-num">{{13}}</view>
+    <view class="time-text">天</view>
+    <view class="time-num">{{13}}</view>
+    <view class="time-text">时</view>
+  </view>
+
+  <view class="active-list">
+    <view class="list-title">
+      <view class="img"><image src="../../assets/pages/cup-ff4f4e.png"></image></view>
+      <view class="title"><text>限时精品特惠</text></view>
+		</view>
+		<view wx:for="{{[1,2,3,4]}}" wx:key="*this" class="active-item">
+			<view class="cover-img">
+				<image mode="aspectFill" src="https://img4.weegotr.com/hotels/1000000/450000/443700/443674/443674_171_w.jpg?x-oss-process=image/resize,m_fill,limit_0,w_754,h_466/crop,g_center,w_754,h_466/format,jpg/quality,q_82"></image>
+				<view class="tag"><image src="https://img3.weegotr.com/xcx/statics/count-down.png"></image></view>
+			</view>
+			<!-- <view class="package-title"><text>巴厘岛Four Seasons Resort Bali at Sayan休闲5日游</text></view> -->
+			<view class="hotel-title"><text>新加坡滨华大酒店</text></view>
+			<view class="hotel-title-en"><text>Marina Mandarin</text></view>
+			<view class="desc"><text>Marina Mandarin酒店提供可欣赏新加坡天际线绝美景色的典雅客房、多种餐饮选择和矿泉水泳池，充分地体现了新加坡著名的殷勤好客传统。
+					酒店周围有多处景点，如滨海艺术中心（The Esplanad）、新加坡摩天观景轮（Singapore Flyer）和新达城会展中心（Suntec City Convention Centre）距离酒店均不到1公里的路程。</text></view>
+			<view class="item-detail">
+				<view class="item-btn"><text>节省30%</text></view>
+				<view class="item-price">
+					<view class="old">
+						<text>2350元</text>
+						<view></view>
+					</view>
+					<view class="new"><text>2000</text>元</view>
+				</view>
+			</view>
+			<view class="time-leave-left">
+				<view class="time-clock"><image src="../../assets/pages/clock-202020.png"></image></view>
+				<view class="time-text">距离优惠结束仅剩</view>
+				<view class="time-num">{{13}}</view>
+				<view class="time-text">天</view>
+				<view class="time-num">{{13}}</view>
+				<view class="time-text">时</view>
+			</view>
+
+		</view>
+	</view>
+	
+	<view wx:if="{{false}}" class="footer-loading">
+		<view class="first"></view>
+		<view class="second"></view>
+		<view></view>
+	</view>
+	<block wx:else>
+		<no-more></no-more>
+		<footer></footer>
+	</block>
+</view>

@@ -1,0 +1,499 @@
+/* components/package-theme.wxss */
+@import '../common.wxss';
+.wee--pacakge_theme-wrap {
+  width: 700rpx;
+  margin: 0 auto;
+  padding: 30rpx 0;
+}
+.wee--pacakge_theme-wrap .theme-title {
+  font-size: 44rpx;
+  color: #202020;
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+  font-weight: 500;
+  text-align: center;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; */
+}
+.wee--pacakge_theme-wrap .theme-tag {
+  display: flex;
+  justify-content: center;
+}
+.theme-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.theme-price .old {
+  position: relative;
+  font-size: 28rpx;
+  color: #9d9d9d;
+  font-weight: 500;
+  padding: 0 8rpx;
+}
+.theme-price .old .line {
+  position: absolute;
+  top: 18rpx;
+  left: 0;
+  width: 100%;
+  height: 2rpx;
+  background: #ff4f4e;
+}
+.theme-price .new {
+  font-size: 28rpx;
+  color: #202020;
+  font-weight: 500;
+  margin-left: 20rpx;
+}
+.theme-price .new text{
+  font-size: 40rpx;
+  color: #ff4f4e;
+  margin-bottom: 42rpx;
+  font-weight: 500;
+}
+
+/* 心动特惠*/
+.package-shock {
+  margin: 40rpx 0;
+}
+.package-shock .shock-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.shock-swiper {
+  width: 700rpx;
+  margin: 40rpx auto;
+}
+.shock-swiper swiper {
+  height: 240rpx;
+}
+.swiper-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.swiper-wrap .img {
+  width: 220rpx;
+  height: 180rpx;
+  padding-right: 20rpx;
+}
+.swiper-wrap .img image {
+  width: 220rpx;
+  height: 180rpx;
+}
+.swiper-wrap .des-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  padding-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.swiper-wrap .des-text {
+  font-size: 30rpx;
+  color: #202020;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.swiper-wrap .des-text text {
+  color: #ff4f4e;
+}
+/* 套餐内容 */
+.package-contain {
+  margin-top: 40rpx;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.package-contain .contain-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.package-contain .contain-item {
+  margin: 40rpx 0;
+}
+.package-contain .contain-item .item {
+  font-size: 30rpx;
+  color: #ff4f4e;
+}
+.package-contain .contain-item .item text {
+  padding: 5rpx 0;
+  font-size: 30rpx;
+  color: #202020;
+}
+/* 相关酒店 */
+.package-hotel {
+  /* margin-top: 40rpx; */
+  padding: 40rpx 0;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.package-hotel .hotel-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.package-hotel .hotel-detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30rpx 0;
+}
+.package-hotel .hotel-detail .img {
+  width: 300rpx;
+  height: 200rpx;
+  padding-right: 20rpx;
+}
+.package-hotel .hotel-detail .img image {
+  width: 300rpx;
+  height: 200rpx;
+}
+.package-hotel .des-wrap .title {
+  font-size: 32rpx;
+  color: #202020;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.package-hotel .des-wrap .des {
+  font-size: 30rpx;
+  color: #202020;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 5rpx 0;
+}
+.package-hotel .des-wrap .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10rpx;
+}
+.package-hotel .price .price-num {
+  font-size: 34rpx;
+  color: #ff4f4e;
+}
+.package-hotel .price .price-num text {
+  font-size: 28rpx;
+  color: #202020;
+}
+.package-hotel .more {
+  font-size: 28rpx;
+  color: #202020;
+  text-align: center;
+}
+
+/* 推荐理由 */
+.package-recommend {
+  padding: 40rpx 0;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.package-recommend .recommend-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.package-recommend .recommend-list {
+  margin-top: 40rpx;
+}
+.package-recommend .recommend-list .ittle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.package-recommend .recommend-list .ittle view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 20rpx;
+}
+.package-recommend .recommend-list .ittle text {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #202020;
+}
+.package-recommend .recommend-list .des {
+  padding-top: 20rpx;
+}
+.package-recommend .des-item {
+  color: #ff4f4e;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.package-recommend .des-item text {
+  color: #202020;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+/* 套餐特色*/
+.package-feature {
+  padding: 40rpx 0;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.package-feature .feature-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.package-feature .feature-des {
+  padding: 30rpx 0;
+}
+.package-feature .feature-des .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.package-feature .feature-des .title view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 20rpx;
+}
+.package-feature .feature-des .title text {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #202020;
+}
+.package-feature .feature-des .des {
+  color: #202020;
+  font-size: 30rpx;
+  line-height: 52rpx;
+  margin-bottom: 30rpx;
+}
+.package-feature .feature-des .img {
+  width: 698rpx;
+  height: 432rpx;
+  margin: 0 auto;
+}
+.package-feature .feature-des .img image {
+  width: 698rpx;
+  height: 432rpx;
+}
+.package-feature .more-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 20rpx 0;
+}
+
+/* 行程推荐 */
+.package-travel {
+  padding: 40rpx 0;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.package-travel .travel-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.package-travel .travel-small-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.package-travel .travel-small-title image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.package-travel .travel-small-title text {
+  color: #202020;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.package-travel .travel-list .item {
+  color: #ff4f4e;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.package-travel .travel-list .item text{
+  color: #202020;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.package-travel .travel-img {
+  width: 698rpx;
+  height: 432rpx;
+  margin: 20rpx auto;
+}
+.package-travel .travel-img image {
+  width: 698rpx;
+  height: 432rpx;
+}
+.package-travel .feature-text {
+  color: #202020;
+  font-size: 30rpx;
+}
+.package-travel .more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+/* 套餐详情 */
+.package-detail {
+  padding: 40rpx 0;
+  /* border-bottom: 1px solid rgba(32,32,32,.35); */
+}
+.package-detail .detail-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.package-detail .detail-small-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30rpx 0;
+}
+.package-detail .detail-small-title .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 460rpx;
+}
+.package-detail .detail-small-title .title view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 10rpx;
+}
+.package-detail .detail-small-title .title text {
+  font-size: 32rpx;
+  color: #202020;
+}
+.package-detail .detail-small-title .price {
+  width: 240rpx;
+  font-size: 40rpx;
+  color: #ff4f4e;
+  text-align: right;
+}
+.package-detail .detail-small-title .price text {
+  font-size: 28rpx;
+  color: #202020;
+}
+.detail-img {
+  width: 700rpx;
+  height: 470rpx;
+}
+.detail-img swiper {
+  width: 700rpx;
+  height: 470rpx;
+}
+.detail-img image {
+  width: 700rpx;
+  height: 470rpx;
+}
+.detail-list {
+  padding-top: 20rpx;
+}
+.detail-list .item {
+  color: #ff4f4e;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.detail-list .item text {
+  color: #202020;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+/* 底部说明 */
+.package-footer {
+  padding: 40rpx 0;
+}
+.package-footer .customer-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.package-footer .customer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.package-footer .customer-info navigator {
+  font-size: 30rpx;
+  color: #202020;
+  border-bottom: 1px solid #202020;
+  margin: 0 40rpx;
+}
+.package-footer .customer-title image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.package-footer .customer-small-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #202020;
+  margin: 30rpx 0;
+}
+.package-footer .customer-small-title image {
+  width: 43rpx;
+  height: 43rpx;
+  margin-right: 10rpx;
+}
+.package-footer .customer-phone {
+  display: flex;
+  justify-content: center;
+}
+.package-footer .customer-des {
+  margin: 60rpx 0;
+  font-size: 28rpx;
+  color: #202020;
+  text-align: center;
+}
+.package-footer .customer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100rpx;
+}
+.package-footer .customer-logo image {
+  width: 326rpx;
+  height: 52rpx;
+}
+.travel-date-title {
+  color: #202020;
+  font-size: 30rpx;
+  font-weight: 500;
+  margin: 30rpx 0 50rpx 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.travel-date-title view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 8rpx;
+}

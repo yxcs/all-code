@@ -1,0 +1,115 @@
+/* components/room-select/room-select.wxss */
+@import '../common.wxss';
+.wee--room_select-wrap {
+  width: 700rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.wee--room_select-wrap .room_select-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.wee--room_select-wrap .room_select-title image {
+  width: 31rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.wee--room_select-wrap .room-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx 0;
+}
+.wee--room_select-wrap .room-filter .filter{
+  width: 233rpx;
+}
+.wee--room_select-wrap .room-filter .filter-btn {
+  width: 233rpx;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 36rpx;
+}
+.wee--room_select-wrap .room-filter .btn {
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #ff4f4e;
+  width: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.wee--room_select-wrap .room-filter .num {
+  font-size: 40rpx;
+  color: #202020;
+  padding: 0 10rpx;
+}
+.wee--room_select-wrap .room-filter .filter-des {
+  font-size: 34rpx;
+  text-align: center;
+  color: #202020;
+}
+.wee--room_select-wrap .room-filter .mid {
+  border-left: 1px solid rgba(32,32,32,.35);
+  border-right: 1px solid rgba(32,32,32,.35);
+}
+/* select 列表 */
+.wee--room_select-wrap .select-item {
+  width: 700rpx;
+  border-top: 1px solid rgba(32,32,32,.35);
+  padding: 30rpx 0;
+}
+.wee--room_select-wrap .select-con {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.wee--room_select-wrap .select-con .img {
+  width: 250rpx;
+  height: 220rpx;
+  padding: 0 20rpx;
+}
+.wee--room_select-wrap .select-con .img image {
+  width: 250rpx;
+  height: 220rpx;
+}
+.wee--room_select-wrap .select-con .title {
+  font-size: 32rpx;
+  color: #202020;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 30rpx;
+  font-weight: 500;
+}
+.wee--room_select-wrap .select-con .des {
+  font-size: 28rpx;
+  color: #202020;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 9rpx;
+}
+.wee--room_select-wrap .select-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0 10rpx 40rpx;
+}
+.wee--room_select-wrap .select-footer .price-mount {
+  font-size: 40rpx;
+  color: #ff4f4e;
+}
+.wee--room_select-wrap .select-footer .price-mount text {
+  font-size: 24rpx;
+  color: #818181;
+}
+.wee--room_select-wrap .select-footer .price-des {
+  font-size: 24rpx;
+  color: #818181;
+  padding: 0;
+  margin: 0;
+}

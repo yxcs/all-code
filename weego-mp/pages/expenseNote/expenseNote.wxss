@@ -1,0 +1,50 @@
+/* pages/serviceNote/serviceNote.wxss */
+.wrap {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 40rpx 25rpx;
+}
+.note-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.note-list {
+  padding: 30rpx 0;
+}
+.note-list .item {
+  padding: 20rpx 0;
+}
+.note-list .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.note-list .title view{
+  width: 8rpx;
+  height: 36rpx;
+  background-color: #ff4f4e;
+  margin-right: 12rpx;
+}
+.note-list .title text {
+  font-size: 36rpx;
+  color: #202020;
+}
+.note-list .des {
+  font-size: 30rpx;
+  color: #202020;
+  line-height: 52rpx;
+}
+
+/* footer */
+.footer-img {
+  display: flex;
+  justify-content: center;
+}
+.footer-img image {
+  width: 326rpx;
+  height: 52rpx;
+}

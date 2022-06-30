@@ -1,0 +1,31 @@
+.magnifier-wrap {
+  position: relative;
+  box-sizing: border-box;
+
+  .small-wrap {
+    display: inline-block;
+    z-index: 1;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 0;
+
+    .mask-wrap {
+      position: absolute;
+      cursor: move;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 1;
+    }
+  }
+
+  .max-wrap {
+    position: fixed;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background: #fff;
+    font-size: 0;
+
+    .img {
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<!--components/hotel-item.wxml-->
+<view class="wee--hotel_item-wrap">
+  <navigator url="/pages/chosenDetailList/chosenDetailList?id={{listData.id}}" hover-class="none">
+    <view class="wee--hotel_item-title">
+      <image class="huangguan" src='../../assets/pages/huangguan.png'></image>
+      <text class="text">{{listData.title}}</text>
+      <image class="triangle" src='../../assets/pages/triangle-red.png'></image>
+    </view>
+  </navigator>
+  <swiper 
+    style="height: 700rpx" 
+    indicator-dots="{{true}}" 
+    indicator-color="rgba(0,0,0,0.1)" 
+    indicator-active-color="rgba(0,0,0,0.6)" 
+    circular="{{true}}">
+    <block wx:for="{{listData.items}}" wx:key="*this">
+      <swiper-item>
+        <navigator 
+          url="/pages/{{listData.category === 'hotels' ? 'hotelDetail/hotelDetail?hId=' : 'packageDetail/packageDetail?pId='}}{{item.id}}" 
+          hover-class="none">
+          <view class="wee--hotel_item">
+            <view class="image-wrap bg-loading">
+              <image lazy-load="{{true}}" mode="scaleToFill" src="{{item.cover_image_url}}"></image>
+              <view class="img-cover"></view>
+              <view wx:if="{{listData.category === 'hotels'}}" class="title">
+                <view><text>{{item.title || item.name}}</text></view>
+                <view class="en"><text>{{item.title_en || item.name_en}}</text></view>
+              </view>
+              <view wx:else class="title-package"><text>{{item.title || item.name}}</text></view>
+              <text wx:if="{{item.category && item.category.name}}" class="tag">{{item.category.name}}</text>
+            </view>
+            <view class="des">
+              <text>{{item.introduction || item.short_introduction || item.description || ''}}</text>
+            </view>
+          </view>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

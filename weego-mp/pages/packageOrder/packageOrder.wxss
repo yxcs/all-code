@@ -1,0 +1,765 @@
+/* pages/createOrder/createOrder.wxss */
+page{ height: 100%;}
+.wrap {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 50rpx 30rpx;
+}
+.info-bx {
+  margin-bottom: 20rpx;
+}
+.info-bx .name{
+  color: #4a4a4a;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.info-bx .name-en {
+  font-size: 34rpx;
+  line-height: 42rpx;
+  margin-bottom: 10rpx;
+  font-weight: 600;
+}
+.info-bx .room-type {
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+  font-weight: 500;
+}
+.info-bx .room-type-tip {
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+  color: #ff4f4e;
+  font-weight: 400;
+}
+.info-bx .time {
+  margin-bottom: 10rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+}
+.info-bx .service {
+  margin-bottom: 10rpx;
+  font-weight: 500;
+  font-size: 30rpx;
+}
+
+.price-bx {
+  padding: 30rpx 0 20rpx;
+}
+.price-bx .label {
+  color: #4a4a4a;
+  font-size: 36rpx;
+  margin-right: 15rpx;
+}
+.price-bx .real-price {
+  color: #ff4f4e;
+  font-size: 40rpx;
+  font-weight: 500;
+}
+.price-bx .usd-price {
+  font-weight: 300;
+  margin-left: 15rpx;
+  font-size: 30rpx;
+}
+.price-bx .explain {
+  color: #ff4f4e;
+  font-size: 28rpx;
+  margin-top: 24rpx;
+}
+
+.policy-desc {
+  margin-bottom: 70rpx;
+}
+.policy-desc .label {
+  width: 134rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  background-color: #34d09b;
+  font-size: 24rpx;
+  color: #fff;
+}
+.policy-desc .label text {
+  line-height: 40rpx;
+}
+.policy-desc .value {
+  color: #4a4a4a;
+  margin-top: 5rpx;
+  font-size: 28rpx;
+}
+
+/* 价格详情 */
+.price-detail-bx {
+  border-top: 1px solid rgba(32,32,32,.35);
+  padding: 70rpx 0;
+  font-weight: 500;
+}
+.price-detail-bx .header-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #4a4a4a;
+}
+.price-detail-bx .room-type-detail {
+  font-size: 30rpx;
+  color: #303030;
+  margin-top: 40rpx;
+}
+.price-detail-bx .room-type-detail .title {
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.price-detail-bx .room-type-detail .tips {
+  font-size: 30rpx;
+  font-weight: 400;
+  margin: 8rpx 0;
+  color: #4a4a4a;
+} 
+.price-detail-bx .room-type-detail .confirm {
+  background: url('https://img3.weegotr.com/xcx/statics/lightning-icon.png') 0 no-repeat;
+  background-size: 20rpx 28rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  font-weight: 400;
+  margin: 8rpx 0;
+  color: #4a4a4a;
+}
+.price-list {
+  
+}
+.price-detail-bx .price-list .item {
+  padding-top: 30rpx;
+  margin-top: 30rpx;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.price-detail-bx .item .label,
+.price-detail-bx .item .value  {
+  color: #4a4a4a;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.price-detail-bx .item .value {
+  text-align: right;
+}
+.price-detail-bx .price-list .item .li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rpx 0;
+}
+.price-detail-bx .price-list .item .li .old-price {
+  position: relative;
+}
+.price-detail-bx .old-price .del-line {
+  position: absolute;
+  top: 20rpx;
+  left: -5rpx;
+  width: 100%;
+  height: 4rpx;
+  background: #ff4f4e;
+  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+}
+.price-detail-bx .price-list .item .li .real-price {
+  color: #ff4f4e;
+  font-size: 34rpx;
+  font-weight: 500;
+}
+.price-detail-bx .price-list .item .li .usd-price {
+  font-weight: 300;
+  font-size: 30rpx;
+}
+.price-detail-bx .explain {
+  color: #34d09b;
+  font-size: 28rpx;
+  font-weight: 400;
+}
+.coupon-container {
+  padding: 40rpx 0 70rpx 0;
+}
+.coupon-container .coupon-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coupon-container .coupon-title view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 18rpx;
+}
+.coupon-container .coupon-title text {
+  font-size: 36rpx;
+  color: #4a4a4a;
+  font-weight: 600;
+}
+.coupon-container .form-control {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.form-control .input input {
+  border: none;
+  height: 67rpx;
+  width: 400rpx;
+  font-size: 30rpx;
+  color: #202020;
+  border-radius: 40rpx;
+  margin-right: 34rpx;
+  padding-left: 29rpx;
+  background-color: #f5f5f5;
+}
+.form-control .btn {
+  font-size: 30rpx;
+  color: #fff;
+  height: 67rpx;
+  width: 160rpx;
+  background-color: #ff4f4e;
+  border-radius: 32rpx;
+  text-align: center;
+  line-height: 67rpx;
+  border-radius: 40rpx;
+}
+.form-control .btn-gary {
+  font-size: 30rpx;
+  color: #fff;
+  height: 67rpx;
+  width: 160rpx;
+  background-color: #bebdbb;
+  border-radius: 32rpx;
+  text-align: center;
+  line-height: 67rpx;
+  border-radius: 40rpx;
+}
+
+/* 填写订单 */
+.user-info-bx {
+  border-top: 1px solid rgba(32,32,32,.35);
+  padding: 70rpx 0;
+}
+.user-info-bx .header-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #4a4a4a;
+}
+.user-info-bx .product-count-chooser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 55rpx 0 70rpx 0;
+}
+.product-count-chooser .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 100%;
+}
+.product-count-chooser .title view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 18rpx;
+}
+.product-count-chooser .title text {
+  font-size: 36rpx;
+  font-weight: 600;
+  height: 48rpx;
+  color: #4a4a4a;
+}
+.product-count-chooser .compute-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.product-count-chooser .compute-box .sub-btn {
+  height: 58rpx;
+  width: 58rpx;
+  background: url('//img3.weegotr.com/xcx/statics/sub-btn.png') no-repeat;
+  background-size: 100% 100%;
+}
+.product-count-chooser .compute-box .add-btn {
+  height: 58rpx;
+  width: 58rpx;
+  background: url('//img3.weegotr.com/xcx/statics/add-btn.png') no-repeat;
+  background-size: 100% 100%;
+}
+.product-count-chooser .compute-box .text {
+  font-size: 36rpx;
+  color: rgba(0,0,0,.7);
+  margin: 0 50rpx;
+}
+.contact-bx {
+  margin-bottom: 79rpx;
+}
+.contact-bx .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 100%;
+}
+.contact-bx .title view {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 18rpx;
+}
+.contact-bx .title text {
+  font-size: 36rpx;
+  font-weight: 600;
+  height: 48rpx;
+  color: #4a4a4a;
+}
+.contact-bx .title .var {
+  font-style: normal;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: #818181;
+  padding-left: 10rpx;
+}
+.form-email input,
+.form-phone input,
+.form-verifycode input {
+  border: none;
+  height: 67rpx;
+  width: 690rpx;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+  padding-left: 29rpx;
+  font-size: 30rpx;
+  border-radius: 40rpx;
+  background-color: #f5f5f5;
+  color: #202020;
+  line-height: 67rpx;
+}
+.form-verifycode {
+  position: relative;
+}
+.send-code {
+  position: absolute;
+  top: 0;
+  right: 0rpx;
+  z-index: 50;
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+  border-left: 1px solid #ff4f4e;
+  margin-top: 15rpx;
+  color: #ff4f4e;
+}
+.send-code .sending {
+  color: #818181;
+  font-size: 28rpx;
+}
+.customers-bx {
+  margin-bottom: 79rpx;
+}
+.customers-bx .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 100%;
+}
+.customers-bx .title .bar {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 18rpx;
+}
+.customers-bx .title text {
+  font-size: 36rpx;
+  font-weight: 600;
+  height: 48rpx;
+  color: #4a4a4a;
+}
+.customers-bx .title .var {
+  font-style: normal;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: #818181;
+  padding-left: 10rpx;
+}
+.customers-bx .title .assist-tips {
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #34d09b;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+.customer-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  color: #818181;
+  padding: 30rpx 0;
+}
+.customer-info-header text{
+  color: #202020;
+}
+.customer-info-header .img {
+  width: 36rpx;
+  height: 39rpx;
+  margin-right: 10rpx;
+}
+.customer-info-header .img image{
+  width: 36rpx;
+  height: 39rpx;
+}
+.customers-bx .customer-info-bx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30rpx;
+}
+.customer-info-bx .select-bx {
+  font-size: 30rpx;
+  text-align: center;
+  color: #4a4a4a;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  line-height: 100%;
+}
+.customer-info-bx .select-bx .arrow-down {
+  color: #4a4a4a;
+  font-size: 18rpx;
+  padding-left: 20rpx;
+}
+.customer-info-bx .form-bx {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.customer-info-bx .form-bx input {
+  width: 250rpx;
+  height: 67rpx;
+  box-sizing: border-box;
+  margin-left: 20rpx;
+  padding-left: 29rpx;
+  border: none;
+  font-size: 30rpx;
+  color: #202020;
+  background-color: #f5f5f5;
+  border-radius: 34rpx;
+}
+.customers-bx .add-customer-info {
+  font-size: 28rpx;
+  color: #ff4f4e;
+}
+.children {
+  height: 67rpx;
+  line-height: 67rpx;
+  font-size: 30rpx;
+  color: #202020;
+  margin-bottom: 40rpx;
+}
+.special-bx {
+  margin-bottom: 79rpx;
+}
+.special-bx .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 100%;
+}
+.special-bx .title .bar {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 18rpx;
+}
+.special-bx .title text {
+  font-size: 36rpx;
+  font-weight: 600;
+  height: 48rpx;
+  color: #4a4a4a;
+}
+.special-bx .title .var {
+  font-style: normal;
+  font-size: 30rpx;
+  font-weight: 400;
+  color: #818181;
+  padding-left: 10rpx;
+}
+.special-bx .title .assist-tips {
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #34d09b;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+.special-bx .special-des {
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #202020;
+}
+.special-bx .form-special input {
+  border: none;
+  height: 67rpx;
+  width: 690rpx;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+  padding-left: 29rpx;
+  font-size: 30rpx;
+  border-radius: 40rpx;
+  background-color: #f5f5f5;
+  color: #202020;
+  line-height: 67rpx;
+}
+.special-bx .form-input-tip {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #ff4f4e;
+  font-weight: 400;
+}
+
+/* 温馨提示 */
+.warn-tips {
+  border-top: 1px solid rgba(32,32,32,.35);
+  padding: 70rpx 0;
+}
+.warn-tips .warn-title {
+  background: url('https://img3.weegotr.com/xcx/statics/header-icon.png') no-repeat 50%;
+  background-size: 396rpx 6rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #4a4a4a;
+}
+.warn-list .warn-item-title {
+  color: #ff4f4e;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-top: 30rpx;
+  padding-left: 30rpx;
+}
+.warn-list .warn-item-text {
+  line-height: 52rpx;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+/* weego 服务*/
+.weego-service{
+  margin-bottom: 90rpx;
+}
+.weego-service .service-tip {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.weego-service .tip {
+  width: 345rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #34d09b;
+  background: url('//img3.weegotr.com/xcx/statics/right-icon.png') 0 no-repeat;
+  background-size: 30rpx 30rpx;
+  padding-left: 45rpx;
+  margin-bottom: 18rpx;
+}
+
+/**/
+.customer-block {}
+.customer-block .customer-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #202020;
+  margin-bottom: 30rpx;
+}
+.customer-block .customer-image view{
+  width: 43rpx;
+  height: 43rpx;
+  padding-right: 10rpx;
+}
+.customer-block .customer-image view image {
+  width: 43rpx;
+  height: 43rpx;
+}
+.customer-block .btn-wrap {
+  display: flex;
+  justify-content: center;
+}
+.hotel-tag_bb {
+  height: 66rpx;
+  line-height: 66rpx;
+  border: 1px solid #000000;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #202020;
+  margin: 0 8rpx;
+  padding: 0 20rpx;
+}
+
+/**/
+.footer-image {
+  display: flex;
+  justify-content: center;
+  margin: 70rpx 0 100rpx 0;
+}
+.footer-image image {
+  width: 326rpx;
+  height: 52rpx;
+}
+
+/*底部提交*/
+.footer-submit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #ff4f4e;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 100;
+}
+.footer-submit .total-price {
+  width: 480rpx;
+  font-size: 30rpx;
+}
+.footer-submit .total-price text{
+  font-size: 44rpx;
+}
+.footer-submit .submit-btn {
+  width: 265rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-left: 1px solid #fff;
+  font-size: 36rpx;
+}
+
+.contacts-modal {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(32,32,32,.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-modal .modal-bx {
+  width: 600rpx;
+  min-height: 200rpx;
+  max-height: 750rpx;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.contacts-modal .modal-bx .modal-title {
+  font-size: 30rpx;
+  color: #202020;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #a5a5a5;
+}
+.contacts-modal .modal-bx .modal-item {
+  padding: 40rpx 30rpx 20rpx;
+  font-size: 28rpx;
+  color: #202020;
+}
+.contacts-modal .modal-bx .modal-item checkbox {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+}
+.modal-footer {
+  height: 80rpx;
+  width: 600rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #a5a5a5;
+}
+.modal-footer view {
+  width: 298rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #202020;
+}
+.modal-footer .confirm {
+  color: #1aad16;
+  border-left: 1px solid #a5a5a5;
+}
+
+
+/* package独有 */
+.package-hotel {
+
+}
+.package-hotel .hotel-title {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.package-hotel .hotel-type {
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+.package-info {
+  font-size: 30rpx;
+  color: #9d9d9d;
+  margin: 10rpx 0;
+}
+.policy-desc .coupon-container {
+  padding: 60rpx 0 0 0;
+}
+.policy-desc .coupon-container .form-control {
+  margin-top: 30rpx;
+}
+.children-setting {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 30rpx;
+}
+.children-setting .label {
+  width: 100rpx;
+}
+.children-setting .compute-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.children-setting .compute-box .sub-btn {
+  height: 58rpx;
+  width: 58rpx;
+  background: url('//img3.weegotr.com/xcx/statics/sub-btn.png') no-repeat;
+  background-size: 100% 100%;
+}
+.children-setting .compute-box .add-btn {
+  height: 58rpx;
+  width: 58rpx;
+  background: url('//img3.weegotr.com/xcx/statics/add-btn.png') no-repeat;
+  background-size: 100% 100%;
+}
+.children-setting .compute-box .text {
+  font-size: 36rpx;
+  color: rgba(0,0,0,.7);
+  margin: 0 20rpx;
+}

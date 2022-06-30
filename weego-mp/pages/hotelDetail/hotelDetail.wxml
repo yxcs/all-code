@@ -1,0 +1,145 @@
+<!--pages/hotelDetail/hotelDetail.wxml-->
+<scroll-view class="wrap" scroll-y="{{true}}" wx:if="{{!pageLoading}}">
+  <detail-swiper datas="{{datas}}"></detail-swiper>
+  <time-leave wx:if="{{false}}"></time-leave>
+  <hotel-theme datas="{{datas}}"></hotel-theme>
+  <hotel-hightlight datas="{{datas}}"></hotel-hightlight>
+  <hotel-comment datas="{{datas}}"></hotel-comment>
+  <!-- <room-select datas="{{datas}}"></room-select> -->
+
+  <view class="wee--room_select-wrap">
+    <view class="room_select-title"><image src="https://img3.weegotr.com/xcx/statics/room-icon.png"></image><text>房间详情</text></view>
+    <view class="room-filter">
+      <view class="fliter">
+        <view class="filter-btn">
+          <view data-key="roomCount" data-type="sub" class="{{(params.roomCount > 1 && !isLoading) ? 'btn' : 'btn disable'}}" bindtap="roomNumChange">-</view>
+          <view class="num">{{params.roomCount}}</view>
+          <view data-key="roomCount" data-type="add" class="{{!isLoading ? 'btn' : 'btn disable'}}" bindtap="roomNumChange">+</view>
+        </view>
+        <view class="filter-des">房间</view>
+      </view>
+      <view class="filter mid">
+        <view class="filter-btn">
+          <view data-key="adults" data-type="sub" class="{{(params.roomFilters[0].adults > 1 && !isLoading) ? 'btn' : 'btn disable'}}" bindtap="roomNumChange">-</view>
+          <view class="num">{{params.roomFilters[0].adults}}</view>
+          <view data-key="adults" data-type="add" class="{{!isLoading ? 'btn' : 'btn disable'}}" bindtap="roomNumChange">+</view>
+        </view>
+        <view class="filter-des">成人/间</view>
+      </view>
+      <view class="filter">
+        <view class="filter-btn">
+          <view data-key="children" data-type="sub" class="{{(params.roomFilters[0].childrent > 1 && !isLoading) ? 'btn' : 'btn disable'}}" bindtap="roomNumChange">-</view>
+          <view class="num">{{params.roomFilters[0].children}}</view>
+          <view data-key="children " data-type="add" class="{{!isLoading ? 'btn' : 'btn disable'}}" bindtap="roomNumChange">+</view>
+        </view>
+        <view class="filter-des">儿童/间</view>
+      </view>
+    </view>
+
+    <block wx:if="{{!isLoading}}">
+      <view class="select-item" wx:for="{{roomDatas}}" wx:key="hotel_id">
+        <view class="select-con">
+          <view class="img bg-loading">
+            <image mode="aspectFill" src="{{item.room_info.cover_image_url || (datas.gallery[1] && datas.gallery[1].image_url)}}"></image>
+            </view>
+          <view class="text">
+            <view class="title">{{item.room_info.room_type}}<text>{{item.room_info.room_type_en}}</text></view>
+            <view class="des"><text>• </text>{{item.room_type}}</view>
+            <view class="des"><text>• 餐食:</text>{{item.meal_type || '无'}}</view>
+          </view>
+        </view>
+        <view class="select-footer">
+          <view class="price">
+            <view class="price-mount">{{item.price_cny}}元<text> /晚 /间</text></view>
+            <view class="price-des"><text>未包含服务费和税费</text></view>
+          </view>
+          <view class="select-btn">
+            <view data-item="{{item}}" bindtap="getPreBooking" class="hotel-tag_bb pad20">{{item.isCurrentRoom ? '已选择' : '选择房间'}}</view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{!roomDatas.length}}" class="room-none">
+        <view><text>暂时没有房间可以预定</text></view>
+        <view><text>请尝试其他日期</text></view>
+      </view>
+    </block>
+
+    <view wx:else="{{isLoading}}" class="room-loading">
+      <view class="footer-loading">
+        <view class="first"></view>
+        <view class="second"></view>
+        <view></view>
+      </view>
+      <view class="laoding-text"><text>正在刷新房价</text></view>
+    </view>
+
+  </view>
+
+
+  <hotel-concat datas="{{datas}}"></hotel-concat>
+  <view class="date-select">
+    <view class="date-btn">
+      <view class="check-in" bindtap="onCheckTimeModal">
+        <view class="label"><text>入住</text></view>
+        <view class="time"><text>{{params.checkInTime}}</text></view>
+      </view>
+      <view class="check-br"></view>
+      <view class="check-out" bindtap="onCheckTimeModal">
+        <view class="label"><text>退房</text></view>
+        <view class="time"><text>{{params.checkOutTime}}</text></view>
+      </view>
+    </view>
+  </view>
+
+  <view style="display: {{timeModal ? 'block' : 'none'}};" class="time-modal" catchtouchmove="myCatchTouch">
+    <view class="date-select-header">
+      <view class="title">日期选择</view>
+      <view class="close" bindtap="onCloseTimeModal"></view>
+    </view>
+    <view class="date-header">
+      <view data-tab="IN" class="check-in {{dateTab === 'IN' ? 'active' : ''}}" bindtap="onCheckTimeChange">
+        <view class="label"><text>入住</text></view>
+        <view class="time"><text>{{checkInTime}}</text></view>
+      </view>
+      <view class="check-br"></view>
+      <view data-tab="OUT" class="check-out {{dateTab === 'OUT' ? 'active' : ''}}" bindtap="onCheckTimeChange">
+        <view class="label"><text>退房</text></view>
+        <view class="time"><text>{{!!checkOutTime ? checkOutTime : '--月--日'}}</text></view>
+      </view>
+    </view>
+    <view class="week-list">
+      <view class="weekend"><text>日</text></view>
+      <view><text>一</text></view>
+      <view><text>二</text></view>
+      <view><text>三</text></view>
+      <view><text>四</text></view>
+      <view><text>五</text></view>
+      <view class="weekend"><text>六</text></view>
+    </view>
+    <view class="date-select-wrap">
+      <scroll-view class="date-select-con" scroll-y="{{true}}">
+        <view class="month-wrap" wx:for="{{dateList}}">
+          <view class="list-title"><text>{{item.title}}</text></view>
+          <view class="list-day">
+            <view class="day-line" wx:for="{{item.weeks}}" wx:for-item="weekItem">
+              <view class="day" wx:for="{{weekItem}}" wx:for-item="dayItem">
+                <view 
+                  data-date="{{dayItem.id}}" 
+                  data-day="{{dayItem.day}}" 
+                  bindtap="ontapDate" 
+                  class="{{dayItem.class}} {{dateSelectList.indexOf(dayItem.id)>-1 ? 'active' : ''}}">
+                  <text>{{dayItem.day}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view wx:if="{{!dateEnd}}" class="bottom-btn selecte"><text>选择日期</text></view>
+    <view wx:else class="bottom-btn confirm" bindtap="onConfirmTime"><text>确定</text></view>
+  </view>
+</scroll-view>
+<page-loading wx:else />
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

@@ -1,0 +1,24 @@
+{
+  "name": "Focus",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "获取微信公众号关注人数",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "contextMenus",
+    "https://*/*",
+    "http://*/*",
+    "alarms"
+  ],
+  "background": {
+    "scripts": ["jquery.min.js","eventPage.js"]
+  },
+  "content_scripts": [{
+    "matches": ["https://mp.weixin.qq.com/cgi-bin/home?t=home/*"],
+    "js": ["jquery.min.js", "contentscript.js"]
+  }]
+}

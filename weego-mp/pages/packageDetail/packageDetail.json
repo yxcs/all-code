@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "detail-swiper": "../../components/detail-swiper/detail-swiper",
+    "time-leave": "../../components/time-leave/time-leave",
+    "package-theme": "../../components/package-theme/package-theme",
+    "page-loading": "../../components/page-loading/page-loading"
+  },
+  "navigationBarTitleText": "Weego 套餐详情"
+}

@@ -1,0 +1,22 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.cover-image {
+  width: 50px;
+  height: 30px;
+}
+.bk-search {
+  margin-top: 20px;
+}
+.bk-select {
+  width: 240px;
+}
+.bk-input {
+  width: 240px;
+}
+.bk-button {
+  margin-left: 40px;
+}

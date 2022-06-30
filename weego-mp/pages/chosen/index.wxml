@@ -1,0 +1,28 @@
+<!--pages/chosen/index.wxml-->
+<scroll-view class="wrap" scroll-y="{{true}}" wx:if="{{!pageLoading}}">
+  <search-tool></search-tool>
+  <top-tab bindtabChange="tabChange"></top-tab>
+  <block wx:if="{{activeKey === 'CHOSEN'}}">
+    <chosen-item wx:for="{{renderList}}" wx:key="id" list-data="{{item}}"></chosen-item>
+  </block>
+  <block wx:elif="{{activeKey === 'HOTEL'}}">
+    <hotel-item wx:for="{{renderList}}" wx:key="id" list-data="{{item}}"></hotel-item>
+  </block>
+  <block wx:else>
+    <package-item wx:for="{{renderList}}" wx:key="id" list-data="{{item}}"></package-item>
+  </block>
+  <block wx:if="{{isNoMore}}">
+    <no-more></no-more>
+    <footer></footer>
+  </block>
+  <block wx:else>
+    <view class="footer-loading">
+      <view class="first"></view>
+      <view class="second"></view>
+      <view></view>
+    </view>
+  </block>
+</scroll-view>
+<page-loading wx:else />
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  height: 100%;
+  color: #333;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+/* 全局滚动条样式 */
+$--scrollbar-thumb-background: #b4bccc;
+$--scrollbar-track-background: #fff;
+
+::-webkit-scrollbar {
+  z-index: 11;
+  width: 6px;
+
+  &:horizontal {
+    height: 6px;
+  }
+
+  &-thumb {
+    border-radius: 5px;
+    width: 6px;
+    background: $--scrollbar-thumb-background;
+  }
+
+  &-corner {
+    background: $--scrollbar-track-background;
+  }
+
+  &-track {
+    background: $--scrollbar-track-background;
+
+    &-piece {
+      background: $--scrollbar-track-background;
+      width: 6px;
+    }
+  }
+}

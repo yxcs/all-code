@@ -1,0 +1,95 @@
+/* components/hotel-theme/hotel-theme.wxss */
+@import '../common.wxss';
+.wee--hotel_theme-wrap {
+  width: 750rpx;
+  padding: 60rpx 0 30rpx 0;
+}
+.wee--hotel_theme-wrap .top-line {
+  height: 200rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/room-mask.png') no-repeat 50%;
+  background-size: 420rpx 200rpx;
+  text-align: center;
+}
+.wee--hotel_theme-wrap .main-title {
+  font-size: 54rpx;
+  color: #202020;
+  padding-top: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.wee--hotel_theme-wrap .main-des {
+  font-size: 28rpx;
+  color: #202020;
+  padding-top: 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hotel-star {
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 36rpx 0;
+}
+.hotel-star .stars {
+  width: 142rpx;
+  height: 24rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/star-default.png') no-repeat;
+  background-size: 142rpx 24rpx;
+}
+.hotel-star .stars view {
+  height: 24rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/star-current.png') no-repeat;
+  background-size: 142rpx 24rpx;
+}
+.hotel-star .num {
+  padding: 0 15rpx;
+  color: #202020;
+  font-size: 28rpx;
+}
+.hotel-abstract {
+  width: 700rpx;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+  margin: 60rpx auto 0 auto;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.hotel-abstract .abstract-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #220022;
+}
+.hotel-abstract .abstract-title image {
+  width: 40rpx;
+  height: 46rpx;
+  margin-right: 10rpx;
+}
+.hotel-abstract .abstract-text {
+  padding-top: 30rpx;
+  font-size: 30rpx;
+  color: #202020;
+}
+.tag-wrap {
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.more-arrow-button {
+  padding: 20rpx 30rpx 0rpx 30rpx;
+}
+.arrow {
+  width: 0;
+  height: 0;
+  border: 20rpx solid transparent;
+  border-top-color: #202020;
+}

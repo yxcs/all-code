@@ -1,0 +1,58 @@
+.title .add-group {
+  float: right;
+  margin-top: 10px;
+}
+
+.content-main {
+  padding: 10px;
+  min-height: 580px;
+}
+
+.operation .edit,
+.operation .view,
+.operation .link {
+  margin: 0 5px;
+}
+
+
+#loginQdUrl {
+  margin-bottom: 20px;
+  height: 160px;
+  text-align: center;
+  font-size: 0;
+}
+#loginQdUrl img {
+  width: 160px;
+  height: 160px;
+  border: dotted 1px #ccc;
+}
+#loginQdUrl .layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 160px;
+  font-size: 50px;
+  background: rgba(0,0,0,0.3);
+  color: white;
+}
+#loginQdUrl .layer .tip {
+  margin-top: 32px;
+  font-size: 16px;
+}
+#loginQdUrl .layer .icon {
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+#loginQdUrl .layer.get-uuid {
+  display: none;
+}
+#loginQdUrl .layer.scanned {
+  height: 30px;
+  margin-top: 128px;
+  font-size: 16px;
+}
+#loginQdUrl .layer.scanned::before {
+  content: '请在手机上登陆';
+  line-height: 30px;
+}

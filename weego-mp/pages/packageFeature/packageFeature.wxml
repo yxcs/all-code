@@ -1,0 +1,12 @@
+<!--pages/packageFeature/packageFeature.wxml-->
+<scroll-view class="wrap">
+  <view wx:for="{{highlights}}" wx:key="_id" class="pf-list">
+    <view class="item">
+      <view class="title"><view></view><text>{{item.title}}</text></view>
+      <view class="desc"><text>{{item.description}}</text></view>
+      <view class="img"><image mode="widthFix" src="{{item.image_url}}"></image></view>
+    </view>
+  </view>
+
+  <view class="footer-img"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+</scroll-view>

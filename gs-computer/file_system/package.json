@@ -1,0 +1,19 @@
+{
+  "name": "file_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rd": "^2.0.1",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.1.0"
+  }
+}

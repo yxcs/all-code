@@ -1,0 +1,142 @@
+/* components/order-list/order-list.wxss */
+@import '../common.wxss';
+.wee--order-wrap {
+  width: 750rpx;
+}
+.order-header {
+  width: 750rpx;
+  height: 350rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('https://img3.weegotr.com/xcx/statics/blur-bg.png') no-repeat;
+  background-size: 750rpx 350rpx;
+}
+.avatar {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+  margin-bottom: 40rpx;
+  overflow: hidden;
+}
+.avatar image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 130rpx;
+}
+.nickname {
+  font-size: 32rpx;
+  color: #fff;
+}
+.order-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20rpx;
+}
+.order-title .img {
+  width: 36rpx;
+  height: 46rpx;
+  padding-right: 10rpx;
+}
+.order-title .img image {
+  width: 36rpx;
+  height: 46rpx;
+}
+.order-title .text {
+  font-size: 30rpx;
+  color: #220022;
+}
+
+.order-list {
+  width: 750rpx;
+  background-color: hsla(0,0%,96%,.4);
+
+}
+.order-list .item {
+  background: #fff;
+  margin-bottom: 20rpx;
+  padding-bottom: 40rpx;
+}
+.order-list .item .order-img {
+  position: relative;
+  overflow: hidden;
+  width: 750rpx;
+  height: 464rpx;
+}
+.order-list .item .order-img image {
+  width: 750rpx;
+  height: 464rpx;
+}
+.order-list .item .order-img .title {
+  position: absolute;
+  left: 0;
+  bottom: 15rpx;
+  padding: 0 24rpx;
+  color: #fff;
+}
+.order-detail {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 30rpx 25rpx;
+}
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+}
+.detail-item .header {
+  width: 200rpx;
+  text-align: left;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #202020;
+}
+.detail-item .info {
+  width: 480rpx;
+  text-align: right;
+  font-size: 30rpx;
+  color: #202020;
+}
+.detail-item .price {
+  color: #9d9d9d;
+  font-size: 28rpx;
+}
+.detail-item .price text {
+  color: #ff4f4e;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+.order-btn {
+  display: flex;
+  justify-content: center;
+}
+.more-hotel {
+  margin: 40rpx 0 100rpx 0;
+  color: #202020;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+/* 没有订单时样式 */
+.no-order {
+  width: 750rpx;
+  background: hsla(0,0%,96%,.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-more-img {
+  text-align: center;
+  font-size: 30rpx;
+  color: #818181;
+}
+.no-more-img image {
+  width: 150rpx;
+  height: 191.4rpx;
+}
+.goto-mall {
+  margin-top: 80rpx;
+}

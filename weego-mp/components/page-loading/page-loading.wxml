@@ -1,0 +1,24 @@
+<view class="page-loading-wrap">
+  <view class="circle-loader">
+    <view class="circle-line l1">
+      <view class="circle circle-blue c1"></view>
+      <view class="circle circle-blue c2"></view>
+      <view class="circle circle-blue c3"></view>
+    </view>
+    <view class="circle-line l2">
+      <view class="circle circle-yellow c1"></view>
+      <view class="circle circle-yellow c2"></view>
+      <view class="circle circle-yellow c3"></view>
+    </view>
+    <view class="circle-line l3">
+      <view class="circle circle-red c1"></view>
+      <view class="circle circle-red c2"></view>
+      <view class="circle circle-red c3"></view>
+    </view>
+    <view class="circle-line l4">
+      <view class="circle circle-green c1"></view>
+      <view class="circle circle-green c2"></view>
+      <view class="circle circle-green c3"></view>
+    </view>
+  </view>
+</view>

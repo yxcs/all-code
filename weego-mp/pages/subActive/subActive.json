@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "time-leave": "../../components/time-leave/time-leave",
+    "no-more": "../../components/no-more/no-more",
+    "footer": "../../components/footer/footer"
+  },
+  "navigationBarTitleText": "活动列表"
+}

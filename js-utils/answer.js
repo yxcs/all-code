@@ -1,0 +1,21 @@
+
+// function Foo() {
+//   getName = function () { console.log(1); }
+//   return this;
+// }
+// Foo.getName = function () { console.log(2) }
+// Foo.prototype.getName = function () { console.log(3) }
+// var getName = function () { console.log(4) }
+// function getName() { console.log(5) }
+
+// // Foo.getName();
+// // getName();
+// // Foo().getName();
+// // getName();
+// // new Foo.getName();
+// // new Foo().getName();
+
+// console.log(Foo())
+
+var arr = ['a', 'm', 'c', 'd', 'n', 'o', 'k', 's']
+console.log(arr.sort())

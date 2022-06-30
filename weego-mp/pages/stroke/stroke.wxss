@@ -1,0 +1,135 @@
+/* pages/stroke/stroke.wxss */
+.wrap {
+  width: 750rpx;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100rpx 0 40rpx;
+}
+.logo image {
+  width: 230rpx;
+  height: 100rpx;
+}
+.title-main {
+  line-height: 66rpx;
+  margin-bottom: 60rpx;
+  text-align: center;
+  color: #202020;
+  font-size: 52rpx;
+}
+.title-zh {
+  line-height: 66rpx;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 48rpx;
+}
+.title-en {
+  line-height: 66rpx;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 40rpx;
+}
+
+.our-tip {
+  line-height: 52rpx;
+  font-size: 28rpx;
+  color: #202020;
+  padding: 30rpx;
+}
+.voucher-info {
+  margin: 0 46rpx;
+  border: 1px solid #ffffff;
+  padding: 30rpx 24rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 1px 4rpx rgba(23, 61, 66, 0.4);
+}
+.voucher-info text {
+  color: #ff4f4e;
+}
+.hotel-info {
+  padding: 50rpx 30rpx;
+  border-bottom: 1px solid #202020;
+}
+.hotel-info-title {
+  font-size: 32rpx;
+  color: #202020;
+  margin-bottom: 20rpx;
+}
+.hotel-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10rpx 0;
+}
+.hotel-detail .label {
+  min-width: 250rpx;
+  font-size: 028rpx;
+  color: #4a4a4a;
+}
+.hotel-detail .value {
+  font-size: 28rpx;
+  text-align: right;
+  line-height: 40rpx;
+}
+
+.bottom-info {
+  padding: 50rpx 30rpx;
+  line-height: 52rpx;
+  font-size: 28rpx;
+  color: #202020;
+}
+.bottom-info-title {
+  font-size: 32rpx;
+  color: #202020;
+}
+.hotel-warm-tip {
+  padding-bottom: 28rpx;
+  margin-bottom: 28rpx;
+  border-bottom: 1px dashed #202020;
+}
+.use {
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #202020;
+  line-height: 56rpx;
+}
+.footer {
+  height: 226rpx;
+  padding: 48rpx 0;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.service_phone {
+  text-align: center;
+  margin: 12rpx;
+  font-size: 30rpx;
+  color: #202020;
+}
+.rule {
+  display: flex;
+  justify-content: center;
+  padding: 60rpx 0 20rpx 0;
+}
+.rule navigator {
+  color: #4a4a4a;
+  margin: 0 20rpx;
+  font-size: 24rpx;
+}
+.company-info {
+  display: flex;
+  justify-content: space-around;
+}
+.company-info view {
+  color: #202020;
+  font-size: 24rpx;
+  text-align: center;
+  opacity: 0.7;
+}
+.mid {
+  padding: 0 15rpx;
+  border-left: 1px solid #202020;
+  border-right: 1px solid #202020;
+}

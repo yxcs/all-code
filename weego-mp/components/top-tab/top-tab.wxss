@@ -1,0 +1,35 @@
+/* components/top-tab/top-tab.wxss */
+.tab-wrap {
+  width: 750rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding: 28rpx 45rpx 0 45rpx;
+  display: flex;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.tab-wrap .tab-item {
+  width: 220rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.tab-wrap .tab-item .text {
+  color: #353535;
+  font-size: 36rpx;
+}
+.tab-wrap .tab-item .border {
+  width: 50rpx;
+  height: 2px;
+  background-color: transparent;
+  border-radius: 2px;
+  margin-bottom: -1px;
+}
+.tab-wrap .tab-item.active .text { 
+  color: #ff4f4e;
+  font-weight: 500;
+}
+.tab-wrap .tab-item.active .border {
+  background-color: #ff4f4e;
+}

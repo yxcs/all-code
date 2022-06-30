@@ -1,0 +1,56 @@
+<!--pages/packageDetail.wxml-->
+<scroll-view scroll-y="{{true}}" class="wrap" wx:if="{{!pageLoading}}">
+  <view class="wrap-swiper">
+    <swiper indicator-dots="{{false}}" autoplay="{{true}}">
+      <block wx:for="{{datas.gallery}}" wx:key="*this">
+        <swiper-item class="bg-loading">
+          <image mode="scaleToFill" src="{{item.image_url}}" class="slide-image"/>
+          <text wx:if="{{false}}" class="tag">豪华精选</text>
+          <view wx:if="{{!!datas.offline_time}}" class="triangle-top">
+            <view class="tt1">{{datas.precent}}%</view>
+            <view class="tt2">OFF</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <time-leave wx:if="{{!!datas.offline_time}}" datas="{{datas}}"></time-leave>
+  <package-theme datas="{{datas}}"></package-theme>
+  <view class="booking" bindtap="bookPackage"><text>立即预订</text></view>
+
+  <view wx:if="{{timeModal}}" class="date-select-modal" catchtouchmove="myCatchTouch">
+    <view class="date-select-header">
+      <view class="title">日期选择</view>
+      <view class="close" bindtap="onCloseTimeModal"></view>
+    </view>
+    <view class="week-list">
+      <view class="weekend"><text>日</text></view>
+      <view><text>一</text></view>
+      <view><text>二</text></view>
+      <view><text>三</text></view>
+      <view><text>四</text></view>
+      <view><text>五</text></view>
+      <view class="weekend"><text>六</text></view>
+    </view>
+    <view class="date-select-wrap">
+      <scroll-view class="date-select-con" scroll-y="{{true}}">
+        <view class="list" wx:for="{{dateList}}">
+          <view class="list-title"><text>{{item.title}}</text></view>
+          <view class="list-item" wx:for="{{item.weeks}}" wx:for-item="weekItem">
+            <block wx:for="{{weekItem}}" wx:for-item="dayItem">
+              <view class="day {{dateSelect === dayItem.id ? 'active' : ''}}" data-id="{{dayItem.id}}" bindtap="onTimeSelect">
+                <view class="{{!!dayItem.price ? '' : 'disabled'}}"><text>{{dayItem.day}}</text></view>
+                <view class="money"><text wx:if="{{!!dayItem.price}}">¥{{dayItem.price}}</text></view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view wx:if="{{!dateSelect}}" class="bottom-btn selecte"><text>选择日期</text></view>
+    <view wx:else class="bottom-btn confirm" bindtap="onConfirmTime"><text>确定</text></view>
+  </view>
+</scroll-view>
+<page-loading wx:else />
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

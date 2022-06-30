@@ -1,0 +1,44 @@
+<!--pages/mallListHotel/mallListHotel.wxml-->
+<scroll-view class="wrap" scroll-y="{{true}}" scroll-x="{{false}}" wx:if="{{!pageLoading}}">
+  <view class="tag-tab">
+    <swiper indicator-dots="{{false}}" autoplay="{{false}}" display-multiple-items="{{3}}">
+      <swiper-item wx:for="{{tagList}}" wx:key="_id">
+        <view data-key="{{item._id}}" class="item" bindtap="onChangeTagTab">
+          <view class="item-text {{key === item._id ? 'active' : ''}}"><text>{{item.name}}</text></view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  
+  <view class="pad"></view>
+  <view wx:for="{{hotelList}}" wx:key="id" class="wee--hotel_item padding">
+    <navigator url="/pages/hotelDetail/hotelDetail?hId={{item.id}}" hover-class="none">
+      <view class="image-wrap bg-loading">
+        <image mode="scaleToFill" src="{{item.cover_image_url}}"></image>
+        <text wx:if="{{item.category && item.category.name}}" class="tag">{{item.category.name}}</text>
+      </view>
+      <view class="bottom-title">
+        <view class="hotel"><text>{{item.title || item.name}}</text></view>
+        <view class="hotel"><text class="en">{{item.title_en || item.name_en}}</text></view>
+      </view>
+      <view class="des">
+        <text>{{item.introduction || item.short_introduction || item.description || ''}}</text>
+      </view>
+      <view class="details">
+        <view class="location"><text>{{item.city.name}}  {{item.city.name_en}}</text></view>
+        <view class="price"><view class="now"><text>{{item.price}}</text>起</view></view>
+      </view>
+    </navigator>
+  </view>
+
+  <view wx:if="{{isNoMore}}" class="noMore"><text>没有更多了</text></view>
+  <view wx:else class="footer-loading">
+    <view class="first"></view>
+    <view class="second"></view>
+    <view></view>
+  </view>
+  
+</scroll-view>
+<page-loading wx:else />
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

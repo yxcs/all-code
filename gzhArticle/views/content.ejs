@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <ul class="list-group">
+        <% list.forEach(function(item){ %>
+          <a href="<%= item.content_url %>" class="list-group-item"><%= item.title %></a>
+        <% }); %>
+      </ul>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <nav aria-label="pager">
+        <ul class="pager">
+          <% if (pager.page===1) {%>
+            <li class="disabled"><a href="javascript:void(0);">Previous</a></li>
+          <% } else {%>
+            <li><a href="?page=<%=(pager.page-1)%>">Previous</a></li>
+          <% }%>
+          <% if (pager.page===pager.count) {%>
+            <li class="disabled"><a href="javascript:void(0);">Next</a></li>
+          <% } else {%>
+            <li><a href="?page=<%=(parseInt(pager.page)+1)%>">Next</a></li>
+          <% }%>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>

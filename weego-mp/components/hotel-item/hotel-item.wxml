@@ -1,0 +1,20 @@
+<!--components/hotel-item.wxml-->
+<view class="wee--hotel_item padding">
+  <navigator url="/pages/hotelDetail/hotelDetail?hId={{listData.id}}" hover-class="none">
+    <view class="image-wrap bg-loading">
+      <image mode="scaleToFill" src="{{listData.cover_image_url}}"></image>
+      <text wx:if="{{listData.category && listData.category.name}}" class="tag">{{listData.category.name}}</text>
+    </view>
+    <view class="bottom-title">
+      <view class="hotel"><text>{{listData.title || listData.name}}</text></view>
+      <view class="hotel"><text class="en">{{listData.title_en || listData.name_en}}</text></view>
+    </view>
+    <view class="des">
+      <text>{{listData.introduction || listData.short_introduction || listData.description || ''}}</text>
+    </view>
+    <view class="details">
+      <view class="location"><text>{{listData.city.name}}  {{listData.city.name_en}}</text></view>
+      <view class="price"><view class="now"><text>{{listData.priceText}}</text>起</view></view>
+    </view>
+  </navigator>
+</view>

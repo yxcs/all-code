@@ -1,0 +1,50 @@
+/* components/hotel-hightlight/hotel-hightlight.wxss */
+@import '../common.wxss';
+.wee--hotel_highlight-wrap {
+  width: 700rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.highlight-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.highlight-title image {
+  width: 37rpx;
+  height: 46rpx;
+  margin-right: 10rpx;
+}
+.wee--hotel_highlight-wrap .highlight-small-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20rpx;
+}
+.wee--hotel_highlight-wrap .highlight-small-title view {
+  width: 8rpx;
+  height: 32rpx;
+  background-color: #ff4f4e;
+  margin-right: 13rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #202020;
+}
+.wee--hotel_highlight-wrap .highlight-text {
+  font-size: 30rpx;
+  color: #202020;
+}
+.wee--hotel_highlight-wrap .highlight-img {
+  padding: 20rpx 0;
+}
+.wee--hotel_highlight-wrap .highlight-img image {
+  width: 700rpx;
+}
+.wee--hotel_highlight-wrap .more-highlight {
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: center;
+}

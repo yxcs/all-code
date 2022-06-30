@@ -1,0 +1,22 @@
+{
+  "by-button": "./src/components/by-button/index.js",
+  "by-checkbox": "./src/components/by-checkbox/index.js",
+  "by-cascade-tree": "./src/components/by-cascade-tree/index.js",
+  "by-editor": "./src/components/by-editor/index.js",
+  "focus": "./src/directives/focus.js",
+  "multiple-space": "./src/directives/multiple-space.js",
+  "only-num": "./src/directives/only-num.js",
+  "date2str": "./src/filters/datetime/date2str.js",
+  "time2str": "./src/filters/datetime/time2str.js",
+  "currency": "./src/filters/string/currency.js",
+  "cut-str": "./src/filters/string/cutStr.js",
+  "num-format": "./src/filters/string/numFormat.js",
+  "percentage": "./src/filters/string/percentage.js",
+  "placeholder": "./src/filters/string/placeholder.js",
+  "sub-str": "./src/filters/string/subStr.js",
+  "by-ark-table": "./src/components/by-ark-table/index.js",
+  "by-slide-check": "./src/components/by-slide-check/index.js",
+  "by-magnifier": "./src/components/by-ark-table/index.js",
+  "by-img-label": "./src/components/by-img-label/index.js",
+  "index": "./src/index.js"
+}

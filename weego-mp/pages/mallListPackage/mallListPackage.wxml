@@ -1,0 +1,44 @@
+<!--pages/mallListPackage/mallListPackage.wxml-->
+<view class="wrap" scroll-y="{{true}}" scroll-x="{{false}}" wx:if="{{!pageLoading}}">
+  <view wx:for="{{datas}}" wx:key="id" class="wee--hotel_item padding">
+    <navigator url="/pages/packageDetail/packageDetail?pId={{item._id}}" hover-class="none">
+      <view class="image-wrap bg-loading">
+        <image mode="scaleToFill" src="{{item.cover_image_url}}"></image>
+        <text wx:if="{{item.category && item.category.name}}" class="tag">{{item.category.name}}</text>
+        <view wx:if="{{!!item.offline_time}}" class="triangle-top">
+          <view class="tt1">{{item.precent}}%</view>
+          <view class="tt2">OFF</view>
+        </view>
+      </view>
+      <view class="bottom-title">
+        <view class="package"><text>{{item.title || item.name}}</text></view>
+        <view><text class="en"></text></view>
+      </view>
+      <view class="des"><text>{{item.introduction || item.short_introduction || item.description || ''}}</text></view>
+      <view wx:if="{{!!item.origin_price && item.precent > 0}}" class="details">
+        <view class="percent">节省{{item.precent}}%</view>
+        <view class="price">
+          <view class="old"><text>{{item.discounted_price || item.origin_price}}元</text><text class='line'></text></view>
+          <view class="now"><text>{{item.price}}元</text>起</view>
+        </view>
+      </view>
+      <view wx:if="{{!!item.offline_time}}" class="time-leave">
+        <view class="time-icon"><image src="../../assets/pages/clock-icon.png"></image></view>
+        <view class="time-text">距离优惠结束仅剩</view>
+        <view class="time-num">{{days}}</view>
+        <view class="time-text">天</view>
+        <view class="time-num">{{hours}}</view>
+        <view class="time-text">小时</view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if="{{isNoMore}}" class="noMore"><text>没有更多了</text></view>
+  <view wx:else class="footer-loading">
+    <view class="first"></view>
+    <view class="second"></view>
+    <view></view>
+  </view>
+</view>
+<page-loading wx:else />
+<import src="../../components/img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>

@@ -1,0 +1,28 @@
+<view class="header">
+  <view class="bg-img">
+    <image src="cloud://develop-094aba.6465-develop-094aba/icon/user-bg.jpg" />
+  </view>
+  <view class="avatar">
+    <!-- <image src="cloud://develop-094aba.6465-develop-094aba/icon/user-default.png" /> -->
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+</view>
+
+<view wx:if="{{collection.length}}" class="list">
+  <view class="main-title">收藏记录</view>
+  <block wx:for="{{collection}}" wx:key="id">
+    <view data-poem-id="{{item.id}}" bind:tap="goToDetail" class="item">
+      <view class="title">{{item.name}}</view>
+      <view class="desc">
+        <view class="author">
+          <text class="name">{{item.author}}</text>
+          <text class="dynasty">{{item.dynasty}}</text>
+        </view>
+        <view class="type">{{item.tag}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:else class="no-msg">
+  暂无记录
+</view>

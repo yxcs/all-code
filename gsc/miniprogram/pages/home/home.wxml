@@ -1,0 +1,26 @@
+<view class="header" bind:tap="goToSearch">
+  <view class="ipt">
+    <input disabled="{{true}}" placeholder="搜索诗词名称 | 作者" placeholder-class="holder" />
+  </view>
+  <view class="btn">搜索</view>
+</view>
+<view class="card-title">
+  <view>每日一鉴</view>
+  <view class="more">
+    <view bind:tap="goToDay">往期</view>
+    <image src="cloud://develop-094aba.6465-develop-094aba/icon/more.png" />
+  </view>
+</view>
+<view class="card-wrap">
+  <view data-poem-id="{{recommend.poemsId}}" class="card" bind:tap="toToDetail">
+    <view class="lt">
+      <view>﹁{{recommend.dynasty}}﹂{{recommend.author}}</view>
+      <view>{{recommend.title}}</view>
+    </view>
+    <view class="rt">
+      <block wx:for="{{recommend.content}}" wx:key="*this">
+        <view>{{item}}</view>
+      </block>
+    </view>
+  </view>
+</view>

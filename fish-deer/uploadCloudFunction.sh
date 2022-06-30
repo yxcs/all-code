@@ -1,0 +1,1 @@
+"/Applications/wechatwebdevtools.app/Contents/MacOS/cli" cloud functions deploy --e develop-6fbae1 --n quickstartFunctions --r --project "/Users/yxc/Work/fish-deer" --report

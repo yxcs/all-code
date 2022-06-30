@@ -1,0 +1,54 @@
+/* pages/packageFeature/packageFeature.wxss */
+.wrap {
+  width: 750rpx;
+  padding: 30rpx 25rpx 60rpx 25rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.pf-list {
+  margin-bottom: 60rpx;
+}
+.pf-list .item {
+  margin-bottom: 40rpx;
+}
+.pf-list .item .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30rpx;
+}
+.pf-list .item .title view{
+  width: 8rpx;
+  height: 32rpx;
+  background-color: #ff4f4e;
+  margin-right: 12rpx;
+}
+.pf-list .item .title text {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #202020;
+}
+.pf-list .item .desc {
+  color: #202020;
+  font-size: 30rpx;
+  line-height: 52rpx;
+  margin-bottom: 30rpx;
+}
+.pf-list .item .img {
+  display: flex;
+  justify-content: center;
+  width: 700rpx;
+}
+.pf-list .item .img image {
+  width: 700rpx;
+}
+
+/* footer */
+.footer-img {
+  display: flex;
+  justify-content: center;
+}
+.footer-img image {
+  width: 326rpx;
+  height: 52rpx;
+}

@@ -1,0 +1,24 @@
+{
+  "manifest_version":2,
+  "name":"wx-plugin",
+  "description":"wx-plugin",
+  "version":"1.0",
+  "permissions":[
+    "webNavigation",
+    "tabs",
+    "contextMenus",
+    "https://*/*",
+    "http://*/*",
+    "alarms",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["jquery.min.js","bg.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_name": "wx-plugin",
+    "default_icon": "icon.png",
+    "default_popup": "background.html"
+  }
+}

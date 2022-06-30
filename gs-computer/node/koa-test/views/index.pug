@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/upload",method="POST")
+    input(type="file", name="up")
+    input(type="submit", value="提交")

@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+// esm node环境使用 模块化的东西：import、exports等
+require = require('esm')(module /*, options*/);
+require('./index.js').cli(process.argv);

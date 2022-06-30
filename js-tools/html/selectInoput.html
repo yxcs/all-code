@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>模糊查询下拉框dome</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+    	/*操作div样式*/
+	    #QueryDivId {
+			width:200px;
+			height:300px;
+		}
+		/*下边是input和下拉框样式 样式*/
+		#search_content {
+			max-height:200px;
+			overflow-y:scroll;
+		}
+		#search_list .li-hover {
+			color:#fff;
+			background-color:#1e90ff;
+		}
+		#search_list .li-list {
+			cursor:pointer;
+		}
+		#input_box{
+			width:197px;
+		}
+    </style>
+  </head>
+  <body>
+    <div id="QueryDivId"></div>
+  </body>
+<script type="text/javascript">
+var QueryViewObj = {
+	searchInput : function(wrapper, dataArr) {
+		wrapper = (wrapper instanceof jQuery) ? wrapper : $(wrapper);
+		wrapper.append("<input type='text' name='input' id='input_box' value='' placeholder='请输入或选择内容' /><div id='search_content' style='max-height:200px;overflow-y:scroll;'><ul style='margin:0;padding:0;' id='search_list'></ul></div>");
+		$("#search_content").hide();
+		var options = "";
+		var tempArr = [];
+		for ( var i in dataArr) {
+			options += "<li style='margin:0;padding:0;background-color:#fff;' class='li-list'>"
+					+ dataArr[i] + "</li>";
+			tempArr[i] = dataArr[i];
+		}
+		$("#search_list").html("").append(options);
+ 
+		function searchInput(tempArr) {
+			var listArr = [];
+			var text = $("#input_box").val();
+			for ( var key in tempArr) {
+				if (tempArr[key].indexOf(text) > -1) {
+					listArr.push(tempArr[key]);
+				}
+			}
+			var options = "";
+			for ( var i in listArr) {
+				options += "<li style='margin:0;padding:0;' class='li-list'>" + listArr[i] + "</li>";
+			}
+			if (options == '') {
+				$("#search_content").hide();
+			} else {
+				$("#search_content").show();
+				$("#search_list").html("").append(options);
+			}
+		}
+		$("#input_box").on("focus", function() {
+			$("#search_content").show();
+			searchInput(tempArr);
+		});
+		$("#input_box").on("keyup", function() {
+			searchInput(tempArr);
+		});
+		$("#search_content").on("mouseover", function() {
+			$(this).addClass("ul-hover");
+		});
+		$("#search_content").on("mouseout", function() {
+			$(this).removeClass("ul-hover");
+		});
+		$("#input_box").on("blur", function() {
+			if ($("#search_content").hasClass("ul-hover")) {
+				$("#search_content").show();
+			} else {
+				$("#search_content").hide();
+			}
+		});
+		$("#search_list").delegate(".li-list", "click", function() {
+			$("#search_list .li-list").removeClass("li-hover");
+			var selectText = $(this).html();
+			$("#input_box").val(selectText);
+			$("#search_content").hide();
+		});
+		$("#search_list").delegate(".li-list", "mouseover", function() {
+			$("#search_list .li-list").removeClass("li-hover");
+			$(this).addClass("li-hover");
+		});
+	}
+};
+var ZoreArray = ["貂蝉","西施","吕布","赵云","关羽","刘备","项羽","诸葛亮","奥巴马","小乔","大桥","剑灵","封号斗罗"];
+//调用方法入口（传入id，匹配的数据）
+QueryViewObj.searchInput($("#QueryDivId")[0], ZoreArray);
+</script>
+</html>

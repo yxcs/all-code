@@ -1,0 +1,39 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+iframe {
+  width: 100%;
+  border: none;
+}
+input, textarea {
+  -webkit-appearance: none;
+}
+img {
+  border: none;
+}
+a, img {
+  -webkit-touch-callout: none;
+}
+
+#iframeWrap {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* display: none; */
+}
+#iframeWrap iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.home-wrap {
+  opacity: 0;
+}

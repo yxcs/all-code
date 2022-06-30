@@ -1,0 +1,60 @@
+.g-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px;
+  li {
+    height: 36px;
+    padding: 0 15px;
+    line-height: 36px;
+    margin: 0 3px;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+      color: #e67e22;
+    }
+  }
+
+  .activePage {
+    background-color: #e67e22;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.simple__page--wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  margin-top: 30px;
+  & > div {
+    height: 36px;
+    max-width: 36%;
+    padding: 0 25px;
+    border: 1px solid #e67e22;
+    background: #e67e22;
+    color: #fff;
+    font-size: 13px;
+    line-height: 36px;
+    border-radius: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background-color: #333;
+      border-color: #333;
+    }
+  }
+}

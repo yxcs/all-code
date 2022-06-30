@@ -1,0 +1,25 @@
+<!--components/hotel-theme/hotel-theme.wxml-->
+<view class="wee--hotel_theme-wrap">
+  <view class="top-line">
+    <view class="main-title"><text>{{datas.name}}</text></view>
+    <view class="main-des"><text>{{datas.name_en}}</text></view>
+  </view>
+  <view class="hotel-star">
+    <view class="stars">
+      <view style="width: {{30 * datas.rating}}rpx;"></view>
+    </view>
+    <view class="num">{{datas.rating}}分</view>
+  </view>
+  <view class="tag-wrap">
+    <view wx:for="{{datas.tags}}" wx:key="{{_id}}" class="hotel-tag_rb pad20"><text>{{item.name}}</text></view>
+  </view>
+  <view class="hotel-abstract">
+    <view class="abstract-title"><image src="https://img3.weegotr.com/xcx/statics/intro-icon.png"></image><text>简介</text></view>
+    <view class="abstract-text">
+      <text>{{isDescMore ? sort_desc : datas.introduction}}</text>
+    </view>
+    <view class="arrow-container" wx:if="{{isDescMore}}">
+      <view bindtap="tapDescMore" class="more-arrow-button"><view class="arrow"></view></view>
+    </view>
+  </view>
+</view>

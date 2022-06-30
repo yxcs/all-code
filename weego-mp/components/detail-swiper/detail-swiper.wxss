@@ -1,0 +1,48 @@
+/* components/detail-swiper/detail-swiper.wxss */
+@import "../common.wxss";
+.wrap {}
+.wrap swiper {
+  width: 750rpx;
+  height: 464rpx;
+}
+.wrap swiper .slide-image {
+  width: 750rpx;
+  height: 464rpx;
+}
+.tag {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 156rpx;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+  border-radius: 56rpx;
+  font-size: 28rpx;
+  color: #fff;
+  background-color: rgba(255, 79, 78, 0.8);
+  padding: 0;
+}
+.wrap .triangle-top {
+  width: 140rpx;
+  height: 140rpx;
+  position: absolute;
+  top: 0rpx;
+  left: 611rpx;
+  z-index: 100;
+  background-image: url('https://img3.weegotr.com/xcx/statics/triangle-top.png');
+  background-repeat: no-repeat;
+}
+.wrap .triangle-top view {
+  width: 130rpx;
+  text-align: right;
+}
+.wrap .triangle-top .tt1 {
+  padding-top: 10rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+.wrap .triangle-top .tt2 {
+  font-size: 20rpx;
+  color: #fff;
+}

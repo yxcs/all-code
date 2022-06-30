@@ -1,0 +1,18 @@
+<%- include('./header.ejs') %>
+  <div class="main-wrap">
+    <table class="table table-bordered">
+      <thead><th>会议名称</th><th>会议室</th><th>日期</th><th>时间</th><th>时长</th><th>预定日期</th><th>任务状态</th></thead>
+      <%list.forEach((item) => {%>
+        <tr>
+          <td><%= item.meetingname %></td>
+          <td><%= item.roomName %></td>
+          <td><%= item.startdate %></td>
+          <td><%= item.starttime %></td>
+          <td><%= item.duringtime %></td>
+          <td><%= item.preBookDateTxt %></td>
+          <td><%= item.statusTxt %></td>
+        </tr>
+      <%})%>
+    </table>
+  </div>
+<%- include('./footer.ejs') %>

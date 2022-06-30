@@ -1,0 +1,19 @@
+<!--pages/serviceNote/serviceNote.wxml-->
+<view class="wrap">
+  <view class="note-title"><text>费用说明</text></view>
+
+  <view class="note-list">
+
+    <view class="item">
+      <view class="title"><view></view><text>费用包含</text></view>
+      <view wx:for="{{cost_includes}}" wx:key="*this" class="des">• <text>{{item}}\n</text></view>
+    </view>
+    <view class="item">
+      <view class="title"><view></view><text>费用不包含</text></view>
+      <view wx:for="{{cost_not_includes}}" wx:key="*this" class="des">• <text>{{item}}</text></view>
+    </view>
+
+  </view>
+
+  <view class="footer-img"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+</view>

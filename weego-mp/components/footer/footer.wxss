@@ -1,0 +1,27 @@
+/* components/footer/footer.wxss */
+.footer-wrap {
+  padding: 20rpx 0;
+}
+.footer-wrap .footer-navigator {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  color: #202020;
+  font-size: 24rpx;
+  padding: 10rpx 0;
+}
+.footer-wrap .footer-navigator text {
+  padding: 0 15rpx;
+}
+.footer-company {
+  text-align: center;
+  font-size: 24rpx;
+  color: #9d9d9d;
+  padding: 10rpx
+}
+.footer-copy {
+  text-align: center;
+  font-size: 24rpx;
+  color: #9d9d9d;
+  padding: 10rpx
+}

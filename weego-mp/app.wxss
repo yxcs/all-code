@@ -1,0 +1,8 @@
+/**app.wxss**/
+.tl{text-align: left;}
+.tc{text-align: center}
+.tr{text-align: right;}
+view {
+    padding: 0;
+    margin: 0;
+}

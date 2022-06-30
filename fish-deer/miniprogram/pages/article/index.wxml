@@ -1,0 +1,18 @@
+<view>
+  <view class="header-img">
+    <image src="{{detail.cover}}" />
+  </view>
+  <view class="header-title">{{detail.title}}</view>
+  <view class="article-desc">
+    <view class="desc">
+      <image src="../../assets/see.png" />
+      <text>{{detail.readNum}}</text>
+      <image class="txt" src="../../assets/collection.png" />
+      <text>{{detail.collectionNum}}</text>
+    </view>
+    <view class="time"><image src="../../assets/time-circle.png" />{{detail.updateAtTxt}}</view>
+  </view>
+  <view class="content">
+    <towxml nodes="{{result}}"/>
+  </view>
+</view>

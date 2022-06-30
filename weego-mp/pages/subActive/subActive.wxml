@@ -1,0 +1,48 @@
+<view class="wrap">
+  <view class="active-logo">
+    <navigator hover-class="none" url="/"><image mode="scaleToFill" src="../../assets/818.png" ></image></navigator>
+  </view>
+  <view class="time-leave">
+    <view class="time-clock"><image src="../../assets/pages/clock-202020.png"></image></view>
+    <view class="time-text">距离优惠结束仅剩</view>
+    <view class="time-num">{{13}}</view>
+    <view class="time-text">天</view>
+    <view class="time-num">{{13}}</view>
+    <view class="time-text">时</view>
+  </view>
+
+  <view wx:for="{{[1,2,3,4]}}" wx:key="*this" class="sub-active-list">
+    <view wx:if="{{true}}" class="sub-active-theme">
+      <view class="main-title"><text>新加坡滨华大酒店</text></view>
+      <view class="main-des"><text>Marina Mandarin</text></view>
+    </view>
+    <view wx:else class="sub-active-package">
+      <view class="main-title"><text>新加坡滨华大酒店新加坡滨华大酒店新加坡滨华大酒店新加坡滨华大酒店</text></view>
+    </view>
+    <view class="item-img"><image mode="aspectFill" src="https://img4.weegotr.com/hotels/1000000/450000/443700/443674/443674_171_w.jpg?x-oss-process=image/resize,m_fill,limit_0,w_754,h_466/crop,g_center,w_754,h_466/format,jpg/quality,q_82"></image></view>
+    <view class="desc">
+      <text class="start">"  </text>
+      <text>京都威斯汀酒店是全球最具特色和创新奢华点酒店之一，酒店将奢华、科技与创心刷花的点的酒店之一，酒店将奢华、科技与创心刷花的的</text>
+      <text class="end">  "</text>
+    </view>
+    <view class="item-detail mar20">
+      <view class="item-btn"><text>节省30%</text></view>
+      <view class="item-price">
+        <view class="old">
+          <text>2350元</text>
+          <view></view>
+        </view>
+        <view class="new"><text>2000</text>元</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer-loading">
+		<view class="first"></view>
+		<view class="second"></view>
+		<view></view>
+	</view>
+	<no-more></no-more>
+  <footer></footer>
+  
+</view>

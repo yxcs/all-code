@@ -1,0 +1,33 @@
+<view class="wee--comment_wrap">
+
+  <view class="evaluate-block">
+    <view class="left-info">
+      <view><image src="https://img3.weegotr.com/xcx/statics/tripadvisor-icon.png"></image></view>
+      <view>来自于Tripadvisor</view>
+    </view>
+    <view class="center-info"></view>
+    <view class="right-info">
+      <view class="rank-point">{{datas.rating}}分</view>
+      <view class="comment-star">
+        <view class="stars">
+          <view style="width: {{30 * datas.rating}}rpx;"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="comment-list">
+    <view class="item" wx:for="{{datas.comments}}" wx:key="_id">
+      <view class="title"><text>{{item.title}}</text></view>
+      <view class="details">
+        <text class="rating">{{item.rating}}.0</text>
+        <text>/5</text>
+        <text class="time">{{item.published_at}}</text>
+      </view>
+      <view class="des"><text>{{item.description}}</text></view>
+    </view>
+  </view>
+
+  <view class="footer-img"><image src="https://img3.weegotr.com/xcx/statics/logo-icon.png"></image></view>
+
+</view>

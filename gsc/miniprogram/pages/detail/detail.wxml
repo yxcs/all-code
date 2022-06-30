@@ -1,0 +1,94 @@
+<view bind:tap="onChangeTab" class="tab">
+  <view data-key="yw" class="{{activityKey === 'yw' ? 'active' : ''}}">原文</view>
+  <view data-key="zz" class="bd-lr {{activityKey === 'zz' ? 'active' : ''}}">作者</view>
+  <view data-key="kp" class="{{activityKey === 'kp' ? 'active' : ''}}">卡片</view>
+</view>
+<view class="gap"></view>
+
+<block wx:if="{{activityKey === 'yw'}}">
+  <view class="gap"></view>
+  <view class="con-wrap">
+    <view class="poem-name">{{detail.name}}</view>
+    <view class="poem-author"><text>{{detail.dynasty}}</text>{{detail.author}}</view>
+    <block wx:for="{{detail.content}}" wx:key="*this">
+      <view class="con-line">{{item}}</view>
+    </block>
+  </view>
+
+  <block wx:if="{{detail.translate.length}}">
+    <view class="gap"></view>
+    <view class="con-wrap">
+      <view class="item-title">译文：</view>
+      <block wx:for="{{detail.translate}}" wx:key="*this">
+        <view class="item-line">{{item}}</view>
+      </block>
+      <block wx:if="{{detail.translate_res.length}}">
+        <view class="gap"></view>
+        <block wx:for="{{detail.translate_res}}" wx:key="*this">
+          <view class="res"><text>{{index+1}}.</text>{{item}}</view>
+        </block>
+      </block>
+    </view>
+    <block wx:if="{{detail.notes.length}}">
+      <view class="gap"></view>
+      <view class="con-wrap">
+        <view class="item-title">注释：</view>
+        <block wx:for="{{detail.notes}}" wx:key="*this">
+          <view class="item-line">{{item}}</view>
+        </block>
+      </view>
+    </block>
+  </block>
+
+  <block wx:if="{{detail.appreciation.length}}">
+    <view class="gap"></view>
+    <view class="con-wrap">
+      <view class="item-title">赏析：</view>
+      <block wx:for="{{detail.appreciation}}" wx:key="*this">
+        <view class="item-line">{{item}}</view>
+      </block>
+      <view class="gap"></view>
+      <block wx:for="{{detail.appreciation_res}}" wx:key="*this">
+        <view class="res"><text>{{index+1}}.</text>{{item}}</view>
+      </block>
+    </view>
+  </block>
+</block>
+<block wx:elif="{{activityKey === 'zz'}}">
+  <view class="gap"></view>
+  <view class="con-wrap">
+    <view class="author-title">{{author.author}}</view>
+    <view class="lifetime"><text>{{author.lifetime}}</text></view>
+    <view class="lifetime">作品共: {{author.quantity}}</view>
+  </view>
+  <view class="gap"></view>
+  <!-- <view data-author-id="{{author._id}}" bind:tap="goToAuthor" class="author-more"> 详情 </view> -->
+</block>
+<block wx:elif="{{activityKey === 'kp'}}">
+  <view class="gap"></view>
+  <view class="card-wrap">
+    <view data-poem-id="{{detail.poemsId}}" bind:tap="toToDetail" class="card">
+      <view class="lt">
+        <view>﹁{{detail.dynasty}}﹂{{detail.author}}</view>
+        <view>{{detail.name}}</view>
+      </view>
+      <view class="rt">
+        <block wx:for="{{detail.content}}" wx:key="*this">
+          <view>{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="gap-lg"></view>
+
+<block wx:if="{{isHeard}}">
+  <view class="xin">
+    <image src="cloud://develop-094aba.6465-develop-094aba/icon/xin-active.png" />
+  </view>
+</block>
+<block wx:else>
+  <view bind:tap="onCollect" class="xin">
+    <image src="cloud://develop-094aba.6465-develop-094aba/icon/xin.png" />
+  </view>
+</block>

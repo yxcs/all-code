@@ -1,0 +1,3 @@
+<view class="pre-screen">
+  <image src="../../assets/logo_half.png" mode="aspectFit" />
+</view>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>line-height设置% 数字以及em | 蜗牛博客</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/logo.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <script src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+    <meta name="description" content="抓不住似水流年，逃不过此间少年">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <link rel="preload" href="/assets/css/0.styles.7be58d34.css" as="style"><link rel="preload" href="/assets/js/app.36481073.js" as="script"><link rel="preload" href="/assets/js/3.36104d35.js" as="script"><link rel="preload" href="/assets/js/13.12d4b94f.js" as="script"><link rel="prefetch" href="/assets/js/10.851277d8.js"><link rel="prefetch" href="/assets/js/11.8646d530.js"><link rel="prefetch" href="/assets/js/12.d3bd459b.js"><link rel="prefetch" href="/assets/js/14.886c5616.js"><link rel="prefetch" href="/assets/js/15.08ed4b09.js"><link rel="prefetch" href="/assets/js/16.9f09b45a.js"><link rel="prefetch" href="/assets/js/17.7f1eb80f.js"><link rel="prefetch" href="/assets/js/18.5e63d0f9.js"><link rel="prefetch" href="/assets/js/19.14c464b4.js"><link rel="prefetch" href="/assets/js/20.73a02d42.js"><link rel="prefetch" href="/assets/js/21.c01bbdd6.js"><link rel="prefetch" href="/assets/js/22.6fd17d36.js"><link rel="prefetch" href="/assets/js/23.c45d9f16.js"><link rel="prefetch" href="/assets/js/24.2315633d.js"><link rel="prefetch" href="/assets/js/25.ddaa59bb.js"><link rel="prefetch" href="/assets/js/26.08b94396.js"><link rel="prefetch" href="/assets/js/27.cfc89920.js"><link rel="prefetch" href="/assets/js/28.7bf0649e.js"><link rel="prefetch" href="/assets/js/29.b2f7d873.js"><link rel="prefetch" href="/assets/js/30.5eda8e0f.js"><link rel="prefetch" href="/assets/js/31.d3ed9c85.js"><link rel="prefetch" href="/assets/js/32.ccb985ec.js"><link rel="prefetch" href="/assets/js/4.4c0f2eba.js"><link rel="prefetch" href="/assets/js/5.d93e9add.js"><link rel="prefetch" href="/assets/js/6.35f9017f.js"><link rel="prefetch" href="/assets/js/7.5049467e.js"><link rel="prefetch" href="/assets/js/8.8dd97ad1.js"><link rel="prefetch" href="/assets/js/9.0931944b.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.bf0b7d3a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7be58d34.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="蜗牛博客" class="logo"> <span class="site-name can-hide">蜗牛博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  原理
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  VUE
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  REACT
+</a></li><li class="dropdown-item"><!----> <a href="/ui/" class="nav-link">
+  UI
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="样式" class="dropdown-title"><span class="title">样式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link router-link-active">
+  原理
+</a></li><li class="dropdown-item"><!----> <a href="/layout/" class="nav-link">
+  布局
+</a></li><li class="dropdown-item"><!----> <a href="/animate/" class="nav-link">
+  动效
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  NODE
+</a></li><li class="dropdown-item"><!----> <a href="/java/" class="nav-link">
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/server/" class="nav-link">
+  服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="架构" class="dropdown-title"><span class="title">架构</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/components/" class="nav-link">
+  组件库
+</a></li><li class="dropdown-item"><!----> <a href="/framedesign/" class="nav-link">
+  框架设计
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  杂文
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/" class="nav-link">
+  原理
+</a></li><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">
+  VUE
+</a></li><li class="dropdown-item"><!----> <a href="/react/" class="nav-link">
+  REACT
+</a></li><li class="dropdown-item"><!----> <a href="/ui/" class="nav-link">
+  UI
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="样式" class="dropdown-title"><span class="title">样式</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/css/" class="nav-link router-link-active">
+  原理
+</a></li><li class="dropdown-item"><!----> <a href="/layout/" class="nav-link">
+  布局
+</a></li><li class="dropdown-item"><!----> <a href="/animate/" class="nav-link">
+  动效
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/" class="nav-link">
+  NODE
+</a></li><li class="dropdown-item"><!----> <a href="/java/" class="nav-link">
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/server/" class="nav-link">
+  服务器
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="架构" class="dropdown-title"><span class="title">架构</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/components/" class="nav-link">
+  组件库
+</a></li><li class="dropdown-item"><!----> <a href="/framedesign/" class="nav-link">
+  框架设计
+</a></li></ul></div></div><div class="nav-item"><a href="/essay/" class="nav-link">
+  杂文
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/css/BFC-IFC-GFC-FFC.html" class="sidebar-link">BFC、IFC、GFC和FFC</a></li><li><a href="/css/line-height设置百分比数字以及em.html" class="active sidebar-link">line-height设置% 数字以及em</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>line-height百分比在面试中可能经常问到。例如你知道line-height:120%和line-height:1.2的区别吗？</p> <p>现在就说一下行高带单位和不带单位的区别，例如下面的例子：</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token property">line-height</span><span class="token punctuation">:</span>26px<span class="token punctuation">;</span> 表示行高为26个像素
+<span class="token property">line-heigth</span><span class="token punctuation">:</span>120%<span class="token punctuation">;</span> 表示行高为当前字体大小的120%
+<span class="token property">line-height</span><span class="token punctuation">:</span>2.6em<span class="token punctuation">;</span> 表示行高为当前字体大小的2.6倍
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>带单位的行高都有继承性，其子元素继承的是计算值，如父元素的字体大小为14px，定义行高line-height:2em;则计算值为 28px，不会因其子元素改变字体尺寸而改变行高。(例如：父元素14px，子元素12px,那么行高就是28px，子元素虽然字体是12px，行高还是父元素的行高)</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token property">line-height</span><span class="token punctuation">:</span>2.6<span class="token punctuation">;</span>表示行高为当前字体大小的2.6倍
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>不带单位的行高是直接继承，而不是计算值，如父元素字体尺寸为14px，行高line-height:2;子元素字体为12px，不需要再定义行高，他默认的行高为24px。（例如：子元素12px，他的行高是24px,不会继承父元素的28px）</p> <p>只是单纯的文字描述，可能同学看了会很晕！不清楚是怎么回事！下面我再补充一下案例吧！</p> <p>大家把下面代码copy到html中</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">.parent1</span><span class="token punctuation">{</span><span class="token property">font-size</span><span class="token punctuation">:</span>14px<span class="token punctuation">;</span><span class="token property">line-height</span><span class="token punctuation">:</span> 150%<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span>10px<span class="token punctuation">}</span>
+    <span class="token selector">.parent2</span><span class="token punctuation">{</span><span class="token property">font-size</span><span class="token punctuation">:</span>14px<span class="token punctuation">;</span><span class="token property">line-height</span><span class="token punctuation">:</span> 1.5<span class="token punctuation">;</span> <span class="token property">background</span><span class="token punctuation">:</span> #999<span class="token punctuation">;</span><span class="token property">padding</span><span class="token punctuation">:</span>10px<span class="token punctuation">}</span>
+    <span class="token selector">.child</span><span class="token punctuation">{</span><span class="token property">font-size</span><span class="token punctuation">:</span>26px<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span> #ccc<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+ 
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>parent1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>child<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>line-height: 150%;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ 
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/&gt;</span></span>
+ 
+ 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>parent2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>child<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>line-height: 1.5;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>其中，一个是有百分比的，一个是没有百分比的！预览图如下：</p> <p><img src="/vue/line-height_set_value/20161205145801847.png" alt="设置值"></p> <p>如上图，有百分比的haorooms_children 继承了父级元素14*1.5=21px</p> <p>没有百分比，不带单位的是自己的1.5倍，也就是26*1.5=39px;</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/css/BFC-IFC-GFC-FFC.html" class="prev">
+        BFC、IFC、GFC和FFC
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.36481073.js" defer></script><script src="/assets/js/3.36104d35.js" defer></script><script src="/assets/js/13.12d4b94f.js" defer></script>
+  </body>
+</html>

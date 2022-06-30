@@ -1,0 +1,31 @@
+{
+  "name": "@by/ark-table",
+  "version": "0.2.12",
+  "description": "方舟系统专供表格，表格头吸顶，表格底吸底",
+  "author": "yxcs",
+  "private": false,
+  "repository": {},
+  "homepage": "",
+  "bugs": "",
+  "license": "MIT",
+  "keywords": [
+    "ark",
+    "table",
+    "element-iu",
+    "component-library"
+  ],
+  "main": "index.js",
+  "scripts": {
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

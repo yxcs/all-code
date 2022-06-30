@@ -1,0 +1,25 @@
+/* pages/retreatingNote/retreatingNote.wxss */
+.wrap {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 40rpx 30rpx;
+}
+.ret-list .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 32rpx;
+  color: #202020;
+}
+.ret-list .title .bar {
+  width: 8rpx;
+  height: 34rpx;
+  background-color: #ff4f4e;
+  margin-right: 10rpx;
+}
+.ret-list .des {
+  font-size: 30rpx;
+  color: #202020;
+  line-height: 52rpx;
+  margin: 30rpx 0;
+}

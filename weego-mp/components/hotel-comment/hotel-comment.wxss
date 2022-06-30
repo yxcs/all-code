@@ -1,0 +1,87 @@
+/* components/hotel-comment/hotel-comment.wxss */
+@import '../common.wxss';
+.wee--hotel_comment-wrap {
+  width: 700rpx;
+  margin: 30rpx auto 0 auto;
+  padding-top: 30rpx;
+  border-top: 1px solid rgba(32,32,32,.35);
+}
+.wee--hotel_comment-wrap .comment-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40rpx;
+  color: #202020;
+}
+.wee--hotel_comment-wrap .comment-title image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.wee--hotel_comment-wrap .evaluate-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx 0;
+}
+.wee--hotel_comment-wrap .evaluate-block .left-info {
+  text-align: center;
+  color: #202020;
+  font-size: 30rpx;
+}
+.wee--hotel_comment-wrap .evaluate-block .left-info image {
+  width: 76rpx;
+  height: 76rpx;
+}
+.wee--hotel_comment-wrap .evaluate-block .center-info {
+  height: 80rpx;
+  width: 1px;
+  background-color: #303030;
+  opacity: .2;
+  margin: 0 35rpx;
+}
+.wee--hotel_comment-wrap .right-info .rank-point {
+  height: 76rpx;
+}
+.wee--hotel_comment-wrap .right-info .stars {
+  width: 142rpx;
+  height: 24rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/star-default.png') no-repeat;
+  background-size: 142rpx 24rpx;
+  line-height: 52rpx;
+}
+.wee--hotel_comment-wrap .right-info .stars view {
+  height: 24rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/star-current.png') no-repeat;
+  background-size: 142rpx 24rpx;
+}
+.wee--hotel_comment-wrap .evaluate-title {
+  margin: 50rpx auto 25rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: #202020;
+}
+.wee--hotel_comment-wrap .evaluate-info .quote-start {
+  margin-bottom: 24rpx;
+  height: 30rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/quote-start-icon.png') no-repeat;
+  background-size: 34rpx 30rpx;
+}
+.wee--hotel_comment-wrap .evaluate-info .evaluate-content {
+  padding: 0 34rpx;
+  color: #202020;
+  font-size: 30rpx;
+  line-height: 52rpx;
+}
+.wee--hotel_comment-wrap .evaluate-info .quote-end {
+  margin-top: 24rpx;
+  margin-bottom: 4rpx;
+  height: 30rpx;
+  background: url('https://img3.weegotr.com/xcx/statics/quote-end-icon.png') 100% no-repeat;
+  background-size: 34rpx 30rpx;
+}
+.wee--hotel_comment-wrap .more-comment {
+  display: flex;
+  justify-content: center;
+  margin: 30rpx 0;
+}

@@ -1,0 +1,57 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"appid": "wx14f9e0fdf55d8eaa",
+	"projectname": "gsc",
+	"libVersion": "2.4.3",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "作者作品",
+					"pathName": "pages/introduce/introduce",
+					"query": "id=5c22f15c97880d3b825dad85&type=author"
+				},
+				{
+					"id": 2,
+					"name": "首页",
+					"pathName": "pages/searchList/searchList",
+					"query": "tagName=写景"
+				}
+			]
+		}
+	}
+}

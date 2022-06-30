@@ -1,0 +1,33 @@
+<!--components/hotel-item.wxml-->
+<view class="wee--hotel_item padding">
+  <navigator url="/pages/packageDetail/packageDetail?pId={{listData.id}}" hover-class="none">
+    <view class="image-wrap bg-loading">
+      <image mode="scaleToFill" src="{{listData.cover_image_url}}"></image>
+      <text wx:if="{{listData.category && listData.category.name}}" class="tag">{{listData.category.name}}</text>
+      <view wx:if="{{!!listData.offline_time}}" class="triangle-top">
+        <view class="tt1">{{precent}}%</view>
+        <view class="tt2">OFF</view>
+      </view>
+    </view>
+    <view class="bottom-title">
+      <view class="package"><text>{{listData.title || listData.name}}</text></view>
+      <view><text class="en"></text></view>
+    </view>
+    <view class="des"><text>{{listData.description || listData.introduction || listData.short_introduction || ''}}</text></view>
+    <view wx:if="{{!!listData.originPriceText && precent > 0}}" class="details">
+      <view class="percent">节省{{precent}}%</view>
+      <view class="price">
+        <view class="old"><text>{{listData.discountedPriceText || listData.originPriceText}}元</text><text class='line'></text></view>
+        <view class="now"><text>{{listData.priceText}}元</text>起</view>
+      </view>
+    </view>
+    <view wx:if="{{!!listData.offline_time}}" class="time-leave">
+      <view class="time-icon"><image src="../../assets/pages/clock-icon.png"></image></view>
+      <view class="time-text">距离优惠结束仅剩</view>
+      <view class="time-num">{{days}}</view>
+      <view class="time-text">天</view>
+      <view class="time-num">{{hours}}</view>
+      <view class="time-text">小时</view>
+    </view>
+  </navigator>
+</view>

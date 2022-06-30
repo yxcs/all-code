@@ -1,0 +1,32 @@
+[
+  {
+    "mId": "1576240849353",
+    "roomid": "87",
+    "startdate": "2019-12-18",
+    "starttime": "16:00",
+    "duringtime": "1",
+    "meetingname": "会议",
+    "status": "pending",
+    "preBookTime": "Fri Dec 13 2019 20:40:49 GMT+0800 (中国标准时间)",
+    "u": "wangqian@idstaff.com",
+    "p": "vanCo8GwYfs3Z8Fb",
+    "roomName": "洽谈室",
+    "preBookDateTxt": "2019-12-13 20:40:49",
+    "statusTxt": "等待"
+  },
+  {
+    "mId": "1576240921026",
+    "roomid": "78",
+    "startdate": "2019-12-16",
+    "starttime": "17:00",
+    "duringtime": "1",
+    "meetingname": "会议",
+    "status": "pending",
+    "preBookTime": "Fri Dec 13 2019 20:42:01 GMT+0800 (中国标准时间)",
+    "u": "dulonglong@idstaff.com",
+    "p": "By3.1415926",
+    "roomName": "必月",
+    "preBookDateTxt": "2019-12-13 20:42:01",
+    "statusTxt": "等待"
+  }
+]

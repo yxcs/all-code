@@ -1,0 +1,40 @@
+/* pages/chosenDetailList/chosenDetailList.wxss */
+.wrap {
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 40rpx 0;
+}
+.list-header {
+  margin-top: 30rpx;
+  font-size: 40rpx;
+  color: #202020;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 30rpx;
+}
+.list-br {
+  display: flex;
+  justify-content: center;
+  padding-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+.list-br view{
+  width: 70rpx;
+  border-bottom: 1px solid rgba(32,32,32,.35);
+}
+.list-desc {
+  font-size: 32rpx;
+  color: #202020;
+  padding: 0 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.footer-img {
+  display: flex;
+  justify-content: center;
+  margin: 50rpx 0;
+}
+.footer-img image {
+  width: 326rpx;
+  height: 52rpx;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "egg-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "EGG_SERVER_ENV=local egg-bin dev",
+    "start": "EGG_SERVER_ENV=prod egg-bin dev",
+    "test": "egg-bin test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^2.25.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.14.0"
+  }
+}

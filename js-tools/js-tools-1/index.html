@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class='ao'></div>
+
+<!-- CSS -->
+<style>
+    .ao {
+        display: inline-block;
+        width: 0;
+    }
+    .ao::before {
+        content: "love 你 love";
+        outline: 2px solid #f00;
+        color: #0f0;
+    }
+    
+</style>
+
+<script>
+
+let foo = function(){
+  console.log(1)
+}
+(function foo(){
+  foo = 10;
+  console.log(foo); 
+}());
+console.log(foo); 
+
+console.log("%c%c博客名称%cAE博客", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#3fa9f5;line-height:28px;font-size:16px;");
+console.log("%c%c网站地址%chttp://www.aeink.com", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#ff9900;line-height:28px;font-size:16px;");
+console.log("%c%c企鹅号码%c774740085", "line-height:28px;", "line-height:28px;padding:4px;background:#222;color:#fff;font-size:16px;margin-right:15px", "color:#008000;line-height:28px;font-size:16px;");
+console.log("%c%c咸鱼永远是咸鱼 、即使翻身以后", "line-height:28px;", "line-height:28px;padding:4px 0px;color:#fff;font-size:16px;background-image:-webkit-gradient(linear,left top,right top,color-stop(0,#ff22ff),color-stop(1,#5500ff));color:transparent;-webkit-background-clip:text;");
+var urls = window.location.href;
+
+</script>
+</body>
+</html>
